@@ -1,0 +1,19 @@
+{
+  "name": "popular-proxima",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.0.6",
+    "prism-themes": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.0"
+  }
+}

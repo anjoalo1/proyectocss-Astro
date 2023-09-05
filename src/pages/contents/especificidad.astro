@@ -1,0 +1,76 @@
+---
+import Code from "../../components/Code.astro";
+import Articlep from "../../components/Articlep.astro";
+import Layout from "../../layouts/Layout.astro";
+import Addimagen from "../../components/Addimagen.astro";
+
+
+const htmlLang = "language-html line-numbers";
+const cssLang = "language-css line-numbers";
+
+const codigo1=`
+p {
+    color: red;
+  }
+  /*ultima regla*/
+  p {
+    color: blue;
+  }
+`;
+
+const codigo2 =`
+<p> Este texto será azul. </p>
+`;
+
+const codigo3 = `
+p{color: blue;}                        /* valor especificidad = 0,0,0,1 */
+h1 li{color: coral;}                   /* valor especificidad = 0,0,0,2 */
+.micolor{color: aqua;}                 /* valor especificidad = 0,0,1,0 */
+li.nothin{color: mintcream;}           /* valor especificidad = 0,0,1,1 */
+h2.fill span.count{color: sienna;}     /* valor especificidad = 0,0,2,2 */
+#you{color: chocolate;}                /* valor especificidad = 0,1,0,0 */
+div#dir .far{color: darkgrey;}         /* valor especificidad = 0,1,1,1 */
+`;
+
+
+
+---
+
+<Layout title="Especificidad">
+    <main>
+        <h1 class="title-h1">ESPECIFICIDAD</h1>
+        <Articlep>
+            <h2 class="title-h2">¿Concepto de sobreescribir?</h2>
+            <p class="parrafo"> El concepto de que las reglas se sobreescriban en CSS se debe a la forma en que los navegadores aplican los estilos a los elementos HTML y cómo resuelven los conflictos entre las diferentes reglas que se pueden aplicar al mismo elemento. Este proceso se conoce como cascada (cascade) en CSS. </p>
+            <p class="parrafo">La cascada se basa en la especificidad y la procedencia de las reglas. Cuando un navegador renderiza una página web, sigue estos pasos para aplicar los estilos:</p>
+
+            <ul class="parrafo">
+                <li>Recopilación de reglas: El navegador recopila todas las reglas CSS que encuentra en los archivos externos, hojas de estilo internas y en línea (definidas directamente en el HTML) que están asociadas con la página.</li>
+                <li> Orden de precedencia: Una vez que se recopilan todas las reglas, el navegador evalúa la especificidad de cada regla para determinar cuál es más específica. La especificidad es lo que decide cuál regla prevalecerá en caso de conflictos. </li>
+                <li> Resolución de conflictos: Si dos o más reglas tienen la misma especificidad, el navegador aplicará la última regla que se definió en el código CSS. Esto se debe a que CSS se lee de arriba a abajo, y la última regla definida tiene prioridad sobre las anteriores. </li>
+            </ul>
+            <p class="parrafo"> Veamos un ejemplo para ilustrar este proceso: </p>
+            <Code codigo={codigo1} typeLan={cssLang}></Code>
+            <Code codigo={codigo2} typeLan={htmlLang}></Code>
+            <p class="parrafo"> En este caso, el texto del párrafo se mostrará en color azul, ya que la segunda regla tiene la misma especificidad que la primera (selector de tipo), pero se definió más tarde y, por lo tanto, tiene más peso. </p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">¿Que es especificidad en css?</h2>
+            <p class="parrafo"> En CSS, la especificidad es un concepto que determina qué reglas se aplicarán a un elemento HTML cuando existen múltiples reglas que podrían afectarlo. Es decir, cuando hay conflictos entre estilos aplicados a un mismo elemento, la especificidad decide cuál prevalecerá.</p>
+            <p class="parrafo"> La especificidad se mide en términos de puntos de especificidad, que son valores numéricos asignados a cada tipo de selector en CSS. Cuanto mayor sea el número de puntos de especificidad, más específica será la regla y, por lo tanto, tendrá más prioridad. </p>
+            <p class="parrafo"> Hay cuatro tipos principales de selectores en CSS y cada uno tiene un valor específico en términos de puntos: </p>
+            <ul class="parrafo">
+                <li>Selectores universales (*), atributo y pseudo-elementos: Tienen un valor de 0 puntos de especificidad, lo que significa que son los menos específicos.</li>
+                <li>Selectores de tipo y pseudo-clases: Tienen un valor de 1 punto de especificidad. Se refieren a elementos HTML específicos, como div, p, a, etc., o a estados particulares de elementos, como :hover o :active.</li>
+                <li>Selectores de clase, atributo y pseudo-clases: Tienen un valor de 10 puntos de especificidad. Se refieren a clases o atributos específicos en HTML, como .mi-clase o [type="text"].</li>
+                <li>Selectores de ID: Tienen un valor de 100 puntos de especificidad. Se refieren a identificadores únicos en HTML, como #mi-id.</li>
+            </ul>
+            <Code codigo={codigo3} typeLan={cssLang}></Code>
+            <p class="parrafo"> Cuando varios selectores se aplican al mismo elemento, la regla con la mayor especificidad se aplicará. Si dos reglas tienen la misma especificidad, la última definida en el código CSS prevalecerá. </p>
+            <p class="parrafo"> En Visual Studio Code, si colocas el mouse encima de una regla CSS, te dirá la especificidad. </p>
+            <Addimagen direccion={'../../../src/assets/cursorup.jpg'}></Addimagen>
+           
+        
+        </Articlep>
+    </main>
+</Layout>

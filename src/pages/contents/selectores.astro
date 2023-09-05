@@ -1,0 +1,420 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Code from '../../components/Code.astro'; 
+import Addimagen from  '../../components/Addimagen.astro';
+import Articlep from '../../components/Articlep.astro';
+const title="selectores";
+const htmlLang = "language-html line-numbers";
+const cssLang = "language-css line-numbers";
+const codigo = `
+/*selector de párrafo*/
+p {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+/*selector del elemento body*/
+body{
+  margin-top: 15px;
+  color: blue;
+}
+/*selector de lista*/
+
+li{
+  border: 1px  solid white;
+}
+`;
+
+const codigo2 =`
+/*selector de clase rojo*/
+.rojo{
+  color: red;
+}
+/*selector de clase mayúsculas*/
+.mayusculas{
+  text-transform: uppercase;
+}
+`;
+
+const codigo3 = `
+/*selector de id título*/
+#titulo{
+  font-size: 16px;
+}
+/*selector de id resaltar*/
+#resaltar{
+font-weight: bold;
+}
+`;
+
+
+const codigo4 =`
+div p {
+  /* Estilos para los párrafos dentro de un div */
+}
+`;
+
+const codigo5 = `
+section div span {
+   /* Estilos para el span dentro de un div dentro de una section */
+  }
+`;
+
+const codigo6=`
+elemento_padre > elemento_hijo {
+  /* Propiedades CSS */
+}
+`;
+
+
+const codigo7 =`
+<div id="contenedor">
+  <p>Este es un párrafo dentro del contenedor.</p>
+  <span>Este es un span dentro del contenedor.</span>
+  <div>
+    <p>Este es un párrafo anidado dentro de un div dentro del contenedor.</p>
+  </div>
+</div>
+`;
+
+const codigo8 =`
+#contenedor > p {
+  color: blue;
+}
+`;
+
+const codigo9 = [
+{contenido:
+  `<!-- codigo html-->\n<p class="destacado">Este es un párrafo con la clase "destacado"</p>\n<p>Este es un párrafo sin ninguna clase</p>\n<p class="destacado">Este es otro párrafo con la clase "destacado"</p>\n
+  `},
+  {
+    contenido:
+  `/*codigo css*/\np.destacado {\ncolor: red;\nfont-weight: bold;\n}\n
+    `
+  }
+];
+
+
+const codigo10 =`
+<!-- codigo html-->
+<input type="text"> input con el type="text">
+<input type="email"> input con el type="email">
+`;
+
+const codigo11 =
+`
+input[type="text"] {
+  color: red;
+}
+`;
+
+const codigo12 =`
+a[href^="https"] {
+  font-weight: bold;
+}
+`;
+
+const codigo13 =`
+img[src$=".png"] {
+  border: 1px solid black;
+}
+`;
+
+const codigo14 = `
+a[href*="google"] {
+  color: blue;
+}
+`;
+const codigo15 = `
+p[class~="destacado"] {
+  color: red;
+}
+`;
+
+const codigo16=`
+element1 + element2 {
+    /* Estilos para element2 que sigue inmediatamente a element1 */
+}
+`;
+const codigo17=`
+<ul>
+  <li>Elemento 1</li>
+  <li>Elemento 2</li>
+  <li>Elemento 3</li>
+  </ul>
+`;
+const codigo18=`
+li + li {
+    margin-top: 10px;
+}
+`;
+
+const codigo19=`
+<div class="container">
+  <h1>Título principal</h1>
+  <p>Este es un párrafo después del título principal.</p>
+  <h2>Subtítulo 1</h2>
+  <p>Este es un párrafo después del subtítulo 1.</p>
+  <h2>Subtítulo 2</h2>
+  <p>Este es un párrafo después del subtítulo 2.</p>
+</div>`;
+const codigo20=`
+.container h1 + p {
+    font-style: italic;
+    color: blue;
+}
+
+.container h2 + p {
+    font-weight: bold;
+    color: green;
+}
+`;
+
+
+const codigo21=`element1 ~ element2 {
+    /* Estilos para element2 que es un hermano de element1 */
+}`;
+const codigo22=`<div class="container">
+  <p>Primer párrafo</p>
+  <h2>Subtítulo</h2>
+  <p>Segundo párrafo</p>
+  <h3>Segundo párrafo</h3>
+  <p>Tercer párrafo</p>
+</div>`;
+const codigo23=`.container h2 ~ p {
+    color: red;
+}`;
+
+
+const code = codigo9[0].contenido;
+
+const etiquetaH =`&lt;p&gt;`;
+
+
+---
+
+<Layout title={title}>
+    <main>
+        <h1 class='title-h1'>SELECTOR</h1>
+        <Articlep>
+            <h2 class='title-h2'>Que es un selector?</h2>
+            <p class='parrafo'>Un selector en CSS es una parte fundamental de las reglas de estilo que se utilizan para aplicar estilos a elementos HTML específicos. Los selectores permiten al navegador identificar qué elementos deben recibir los estilos definidos en las reglas de CSS.</p>
+            <p class='parrafo'> Selectores de tipo o de etiqueta: Se utilizan para seleccionar elementos HTML basados en su nombre de etiqueta. Por ejemplo, el selector p selecciona todos los elementos de párrafo &lt;p&gt;. en el documento.</p>
+            <p class='parrafo'> Aquí algunos ejemplos: </p>
+            <Code codigo={codigo} typeLan={cssLang}></Code>
+            <p class="parrafo"> Selectores de clase: Se utilizan para seleccionar elementos que tienen un atributo class específico. Se definen anteponiendo un punto (.) al nombre de la clase. Por ejemplo, el selector .mi-clase selecciona todos los elementos que tienen class="mi-clase". </p>
+            <p class="parrafo"> Aquí algunos ejemplos: </p>
+            <Code codigo={codigo2} typeLan={cssLang}></Code>
+            <p class="parrafo"> Selectores de ID: Se utilizan para seleccionar un elemento específico que tiene un atributo id único. Se definen anteponiendo un signo de numeral # al nombre del ID. Por ejemplo, el selector #mi-id selecciona el elemento que tiene id="mi-id". </p>
+            <p class="parrafo"> Aquí algunos ejemplos: </p>
+            <Code codigo={codigo3} typeLan={cssLang}></Code>
+            <p class="parrafo"></p>
+            
+        </Articlep>
+
+        <Articlep>
+          <h2 class="title-h2"> Selector Descendiente </h2>
+          <p class="parrafo"> Un selector descendiente en CSS es una forma de seleccionar un elemento HTML específico que está anidado dentro de otro elemento. Permite aplicar estilos a un elemento hijo basado en su relación con un elemento padre. </p>
+          <p class="parrafo"> La sintaxis para un selector descendiente es bastante sencilla. Se utiliza un espacio entre los selectores para indicar la relación de descendencia. Por ejemplo, si queremos seleccionar todos los párrafos &lt;p&gt; que están dentro de un elemento &lt;div&gt;, podemos usar el siguiente selector descendiente: </p>
+          <Code codigo={codigo4} typeLan={cssLang}></Code>
+          <p class="parrafo"> En este caso, el selector div p seleccionará todos los elementos <span class="res">&lt;p&gt;</span> que sean descendientes directos o indirectos de un elemento <span class="res">&lt;div&gt;</span>. </p>
+          <p class="parrafo"> Es importante tener en cuenta que los selectores descendientes pueden ser anidados a varios niveles. Por ejemplo, si queremos seleccionar un elemento <span class="res">&lt;span&gt;</span> que está dentro de un elemento <span class="res">&lt;div&gt;</span> que a su vez está dentro de un elemento <span class="res">&lt;section&gt;</span>, podemos utilizar el siguiente selector descendiente: </p>
+          <Code codigo={codigo5} typeLan={cssLang}></Code>
+        </Articlep>
+
+        <Articlep>
+          <h2 class="title-h2"> Selector Descendiente (>)</h2>
+          <p class="parrafo"> En CSS, el selector descendiente <span class="res">(>)</span> se utiliza para seleccionar elementos hijos directos de otro elemento. Esto significa que solo seleccionará elementos que son hijos inmediatos de un elemento específico, excluyendo a los nietos y otros elementos descendientes más profundos. </p>
+          <p class="parrafo"> La sintaxis básica del selector descendiente es la siguiente: </p>
+          <Code codigo={codigo6} typeLan={cssLang}></Code>
+          <p class="parrafo"> Aquí, "elemento_padre" es el elemento del cual quieres seleccionar los elementos hijos directos, y "elemento_hijo" es el tipo de elemento que deseas seleccionar. Solo los elementos "elemento_hijo" que sean hijos directos del "elemento_padre" serán afectados por las reglas CSS dentro de ese bloque. </p>
+          <p class="parrafo"> Por ejemplo, si tienes el siguiente HTML: </p>
+          <Code codigo={codigo7} typeLan={htmlLang}></Code>
+          <p class="parrafo">Puedes usar el selector descendiente para aplicar estilos solo a los párrafos que son hijos directos del div con el id "contenedor": </p>
+          <Code codigo={codigo8} typeLan={cssLang}></Code>
+          <p class="parrafo">En este ejemplo, solo el primer párrafo ("Este es un párrafo dentro del contenedor.") se verá afectado por el color azul, ya que es el único párrafo que es hijo directo del div con el id "contenedor". </p>
+          <p class="parrafo"> Recuerda que el selector descendiente solo afecta a los elementos que son hijos directos, no a los elementos que están más profundamente anidados. Si deseas aplicar estilos a elementos descendientes en cualquier nivel de anidamiento, sin importar si son hijos directos o no, puedes usar simplemente un espacio en blanco como selector (selector de descendencia).</p>
+        </Articlep>
+
+        <Articlep>
+          <h2 class="title-h2"> Combinación selector (etiqueta y clase) </h2>
+          <p class="parrafo"> La combinación de una etiqueta y una clase en CSS te permite seleccionar elementos específicos que coincidan tanto con la etiqueta como con la clase especificada. Esto te permite aplicar estilos a elementos particulares dentro de un grupo más amplio de elementos con la misma etiqueta. </p>
+          <p class="parrafo"> La sintaxis para combinar una etiqueta y una clase en CSS es simplemente concatenar el nombre de la etiqueta y el nombre de la clase sin espacios entre ellos. </p>
+          <p class="parrafo"> Aquí tienes un ejemplo de cómo combinar una etiqueta y una clase en CSS </p>
+          <Code codigo={codigo9[0].contenido} typeLan={htmlLang}></Code>
+          <Code codigo={codigo9[1].contenido} typeLan={cssLang}></Code>
+          <p class="parrafo"> En este ejemplo, el selector <span class="res">p.destacado</span> selecciona los elementos <span class="res">&lt;p&gt;</span> que también tienen la clase <span class="res">"destacado"</span> aplicada. Los estilos definidos en las reglas CSS se aplicarán solo a esos elementos. En este caso, los párrafos con la clase "destacado" se mostrarán en rojo y en negrita. </p>
+          <p class="parrafo"> Es importante destacar que cuando combinas una etiqueta y una clase en CSS, estás especificando una regla más específica que solo la etiqueta o la clase por sí solas. Esto puede ser útil para aplicar estilos a elementos específicos en situaciones donde hay múltiples elementos con la misma etiqueta pero con diferentes clases aplicadas. </p>
+        </Articlep>
+
+        <Articlep>
+          <h2 class="title-h2"> Selectores de atributo </h2>
+          <p class="parrafo"> Los selectores de atributo en CSS te permiten seleccionar elementos HTML en función de los valores de sus atributos. Estos selectores te dan la flexibilidad de aplicar estilos a elementos que cumplan ciertos criterios en términos de sus atributos. </p>
+          <p class="parrafo"> Hay varios tipos de selectores de atributo disponibles en CSS, y aquí te presentaré algunos ejemplos comunes: </p>
+          <ol class="listas">
+          <li class="listas">
+            <>Selector de atributo exacto <span class="res">[atributo="valor"]</span>: Selecciona elementos que tengan un atributo específico con un valor exacto. Por ejemplo:
+
+            <Code codigo={codigo10} typeLan={htmlLang}></Code>
+            <Code codigo={codigo11} typeLan={cssLang}></Code>
+          
+            <p class="parrafo">Este selector seleccionará todos los elementos <span class="res">&lt;input&gt;</span> de tipo "text" y les aplicará el estilo de color rojo.</p>
+            </li>
+            <li>Selector de atributo que comienza con <span class="res">[atributo^="valor"]</span>: Selecciona elementos que tengan un atributo específico cuyo valor comience con un texto determinado. Por ejemplo: 
+            <Code codigo={codigo12} typeLan={cssLang}></Code>
+            
+            <p class="parrafo"> Este selector seleccionará todos los elementos <span class="res">&lt;a&gt;</span> que tengan el atributo href que comience con <span class="res">"https"</span> y les aplicará el estilo de texto en negrita. </p>
+            </li>
+            <li>
+              Selector de atributo que termina con <span class="res">[aributo$="valor"]</span>: Selecciona elementos que tengan un atributo específico cuyo valor termine con un texto determinado. Por ejemplo:
+              <Code codigo={codigo13} typeLan={cssLang}></Code>
+              <p class="parrafo">Este selector seleccionará todas las imágenes <span class="res">&lt;img&gt;</span> que tengan el atributo src que termine con ".png" y les aplicará un borde de 1 píxel sólido de color negro. </p>
+            </li>
+            <li>
+              El selector de atributo <span class="res">*=</span> en CSS se utiliza para seleccionar elementos que tengan un atributo específico que contenga un valor determinado en cualquier posición dentro del valor del atributo.
+              <p class="parrafo"> La sintaxis del selector de atributo <span class="res">*=</span> es la siguiente: <span class="res">[atributo*="valor"]</span>. </p>
+              <p class="parrafo"> Aquí tienes un ejemplo para ilustrar su uso: </p>
+              <Code codigo={codigo14} typeLan={cssLang}></Code>
+              <p class="parrafo">En este ejemplo, el selector <span class="res">a[href*="google"]</span> seleccionará todos los elementos que tengan el atributo href que contenga la cadena "google" en cualquier posición. Se les aplicará el estilo de color azul.</p>
+              <p class="parrafo">Esto significa que se seleccionarán elementos con href que contengan "google.com", "google.es", "http://www.google.com", "https://www.google.com/search", entre otros.</p>
+              <p class="parrafo">El selector *= puede ser útil cuando deseas aplicar estilos a elementos que contienen un valor específico dentro de un atributo, sin importar su posición exacta en el valor del atributo.</p>
+            </li>
+            <li> El selector <span class="res">~=</span> en CSS se utiliza para seleccionar elementos que tienen un atributo específico con un valor que coincide con una palabra completa dentro de una lista separada por espacios.
+
+              <p class="parrafo"> La sintaxis del selector <span class="res">~=</span> es la siguiente: <span class="res">[atributo~="valor"]</span>. </p>
+              <p class="parrafo"> Aquí tienes un ejemplo para ilustrar su uso: </p>
+              <Code codigo={codigo15} typeLan={cssLang}></Code>
+              <p class="parrafo">En este ejemplo, el selector <span class="res"></span> seleccionará todos los elementos <span class="res">&lt;p&gt;</span> que tengan el atributo class con el valor "destacado" como una palabra completa en una lista de clases separadas por espacios. Se les aplicará el estilo de color rojo. </p>
+              <p class="parrafo"> Esto significa que se seleccionarán elementos como <span class="res">&lt;p class="destacado"&gt;&lt;/p&gt</span>, <span class="res">&lt;p class="otra-clase destacado"&gt;&lt;/p&gt;</span> , pero no se seleccionarán elementos como <span class="res">&lt;p class="no-destacado"&gt;</span> o <span class="res">&lt;p class="destacadototalmente"&gt; . &lt;/p&gt;</span>
+                <p class="parrafo"> El selector <span class="res">~=</span> puede ser útil cuando deseas aplicar estilos a elementos que tienen un valor específico como una palabra completa dentro de una lista de atributos separados por espacios, como en el caso de las clases CSS. </p>
+          </li>
+            <p class="parrafo"></p>
+          </ol>
+        </Articlep>
+
+        <Articlep>
+          <h2 class="title-h2">Selector de Hermanos '+'</h2>
+          <p class="parrafo"> El selector + es un selector de adyacencia que se utiliza para seleccionar elementos que son inmediatamente adyacentes a otro elemento específico. Esto significa que el selector + selecciona el segundo elemento solo si sigue inmediatamente al primer elemento y ambos comparten el mismo padre. </p>
+          <p class="parrafo">La sintaxis básica del selector + es la siguiente: </p>
+          <Code codigo={codigo16} typeLan={cssLang}></Code>
+          
+          <p class="parrafo"> Aquí hay un ejemplo para ilustrar cómo se utiliza: /p>
+            <Code codigo={codigo17} typeLan={htmlLang}></Code>
+            <Code codigo={codigo18} typeLan={cssLang}></Code>
+          <p class="parrafo"> En este ejemplo, todos los elementos <span class="res">&lt;li&gt;</span> excepto el primero tendrían un margen superior de 10px, ya que el selector li + li selecciona los elementos  que siguen inmediatamente a otro elemento <span class="res">&lt;li&gt;</span>. </p>
+          <p class="parrafo"> Es importante tener en cuenta que el selector <span class="res">+</span> solo selecciona el segundo elemento adyacente y no se aplica a elementos posteriores si hay varios elementos adyacentes. Además, el selector + solo funciona para elementos que comparten el mismo padre directo. </p>
+          <p class="parrafo"> Aquí hay un resumen de las características clave del selector + en CSS: </p>
+
+          <ol class="parrafo">
+            <li>Selecciona elementos adyacentes inmediatos.</li>
+            <li>Se aplica solo si los elementos comparten el mismo padre directo.</li>
+            <li>Se utiliza para aplicar estilos al segundo elemento adyacente y no a elementos posteriores.</li>
+          </ol>
+          <p class="parrafo"> Aquí tienes un ejemplo donde se utilizan los selectores + para aplicar estilos a elementos h2 y p que siguen inmediatamente a un elemento h1, todos dentro de un mismo div: </p>
+          <Code codigo={codigo19} typeLan={htmlLang}></Code>
+          <Code codigo={codigo20} typeLan={cssLang}></Code>
+          
+          <p class="parrafo"> En este ejemplo, estamos aplicando estilos a los elementos p que siguen inmediatamente a un elemento h1 y a los elementos p que siguen inmediatamente a un elemento h2, ambos dentro del mismo div con la clase container. Las reglas CSS hacen que los párrafos después de los títulos principales (h1) tengan un estilo en cursiva y color azul, mientras que los párrafos después de los subtítulos (h2) tendrán un estilo en negrita y color verde. </p>
+          <p class="parrafo"> Recuerda que el selector + se utiliza para seleccionar solo el elemento inmediatamente adyacente. Si hubiera más elementos p entre los títulos y subtítulos, no se aplicarían estos estilos. Solo los párrafos directamente después de los títulos o subtítulos recibirían los estilos definidos en las reglas CSS. </p>
+        </Articlep>
+
+        <Articlep>
+          <h2 class="title-h2">Selector de Hermanos (~)</h2>
+          <p class="parrafo"> El selector de hermanos (~) se utiliza para seleccionar todos los elementos element2 que son hermanos del elemento element1 y que comparten el mismo padre, independientemente de su posición en la jerarquía del árbol de elementos. A diferencia del selector de adyacencia (+), que solo selecciona el elemento inmediatamente siguiente, el selector de hermanos seleccionará todos los elementos hermanos que cumplan con el criterio de selección. </p>
+          <p class="parrafo"> La sintaxis básica del selector de hermanos es la siguiente: </p>
+          <Code codigo={codigo21} typeLan={cssLang}></Codig>
+            <p class="parrafo"> Aquí tienes un ejemplo para ilustrar cómo se utiliza: </p>
+          <Code codigo={codigo22} typeLan={htmlLang}></Codig>
+          <Code codigo={codigo23} typeLan={cssLang}></Codig>
+          <p class="parrafo"> En este ejemplo, todos los elementos p que son hermanos del elemento h2 dentro del mismo elemento div con la clase container tendrán un color de texto rojo. </p>
+          <p class="parrafo"> Es importante destacar que el selector de hermanos ~ seleccionará todos los elementos que cumplan con el criterio de selección, no solo el siguiente elemento. Además, los elementos seleccionados pueden estar en cualquier posición después del elemento de referencia en el flujo del documento. </p>
+          <p class="parrafo"> En resumen, el selector de hermanos element1 ~ element2 en CSS se utiliza para aplicar estilos a todos los elementos element2 que son hermanos del elemento element1 y comparten el mismo padre, sin importar su posición relativa. </p>
+          <p class="parrafo"></p>
+        </Articlep>
+
+        <Articlep>
+          <h2 class="title-h2">Pseudoclases</h2>
+          <p class="parrafo"> Las pseudoclases en CSS son selectores especiales que se utilizan para seleccionar y estilizar elementos en ciertos estados o situaciones específicas. Estas pseudoclases permiten aplicar estilos a elementos que no pueden ser seleccionados mediante los selectores de elementos regulares. Las pseudoclases se indican utilizando un colon (:) seguido del nombre de la pseudoclase. </p>
+          <p class="parrafo"> Las pseudoclases en CSS pueden utilizarse para seleccionar elementos en función de diversos factores, como su posición, estado, contenido, interacción del usuario, entre otros. Aquí hay algunos ejemplos de pseudoclases y sus significados: </p>
+
+          <ol class="parrafo">
+            <li>:hover Se aplica cuando el cursor del mouse se coloca sobre un .</li>
+            <li>:active Se aplica cuando un elemento está siendo activamente presionado por el usuario (como un botón mientras se mantiene presionado).</li>
+            <li>:focus Se aplica cuando un elemento recibe el enfoque (por ejemplo, cuando se hace clic en un campo de entrada).</li>
+            <li>:first-child Se aplica al primer elemento hijo de su padre.</li>
+            <li>:last-child Se aplica al último elemento hijo de su padre.</li>
+            <li>:nth-child(n) Se aplica a elementos hijos basados en su posición en relación con sus hermanos.</li>
+            <li>:nth-of-type(n) Similar a :nth-child, pero se aplica solo a elementos del mismo tipo.</li>
+            <li>:not(selector) Selecciona elementos que no coinciden con el selector especificado.</li>
+            <li>:empty Se aplica a elementos que no tienen contenido.</li>
+            <li>:checked Se aplica a elementos de entrada (como casillas de verificación o botones de opción) que están marcados.</li>
+            <li>:disabled Se aplica a elementos de entrada que están deshabilitados.</li>
+            <li>:target Se aplica al elemento que se ha seleccionado como destino de una ancla en la URL.</li>
+          </ol>
+
+          <p class="parrafo"> Estos son solo algunos ejemplos de las muchas pseudoclases disponibles en CSS. Las pseudoclases son una parte fundamental de la capacidad de CSS para crear estilos dinámicos y responder a interacciones del usuario y estados específicos. Permiten diseñar interacciones más atractivas y mejorar la usabilidad de una página web. </p>
+          <p class="parrafo">Aquí tienes una lista de 50 pseudoclases en CSS</p>
+         <div>
+          <ol class="parrafo">
+            <li><span>:active</span></li>
+            <li><span>:focus</span></li>
+            <li><span>:hover</span></li>
+            <li><span>:link</span></li>
+            <li><span>:visited</span></li>
+            <li><span>:nth-child()</span></li>
+            <li><span>:nth-of-type()</span></li>
+            <li><span>:first-child</span></li>
+            <li><span>:last-child</span></li>
+            <li><span>:first-of-type</span></li>
+            <li><span>:last-of-type</span></li>
+            <li><span>:not()</span></li>
+            <li><span>:empty</span></li>
+            <li><span>:target</span></li>
+            <li><span>:enabled</span></li>
+            <li><span>:disabled</span></li>
+            <li><span>:checked</span></li>
+            <li><span>:required</span></li>
+            <li><span>:optional</span></li>
+            <li><span>:read-only</span></li>
+            <li><span>:read-write</span></li>
+            <li><span>:valid</span></li>
+            <li><span>:invalid</span></li>
+            <li><span>:root</span></li>
+            <li><span>:lang()</span></li>
+            <li><span>:fullscreen</span></li>
+            <li><span>:focus-within</span></li>
+            <li><span>:indeterminate</span></li>
+            <li><span>:default</span></li>
+            <li><span>:placeholder-shown</span></li>
+            <li><span>:target</span></li>
+            <li><span>:valid</span></li>
+            <li><span>:invalid</span></li>
+            <li><span>:in-range</span></li>
+            <li><span>:out-of-range</span></li>
+            <li><span>:user-error</span></li>
+            <li><span>:nth-last-child()</span></li>
+            <li><span>:nth-last-of-type()</span></li>
+            <li><span>:only-child</span></li>
+            <li><span>:only-of-type</span></li>
+            <li><span>:last-child</span></li>
+            <li><span>:first-letter</span></li>
+            <li><span>:first-line</span></li>
+            <li><span>:selection</span></li>
+            <li><span>:before</span></li>
+            <li><span>:after</span></li>
+            <li><span>:first-line</span></li>
+            <li><span>:first-letter</span></li>
+          </ol>
+         </div>
+
+        </Articlep>
+
+    </main>
+</Layout>
+
+
+<style>
+  div ol li span{
+    color: red;
+  }
+</style>

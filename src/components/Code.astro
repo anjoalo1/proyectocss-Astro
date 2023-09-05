@@ -1,0 +1,53 @@
+---
+
+
+
+
+
+interface Props {
+	codigo: string;
+    typeLan: string;
+}
+
+const { codigo, typeLan } = Astro.props;
+---
+
+
+<div class="code-css">
+    <pre>
+        <code  class={typeLan}>
+         {codigo}
+        </code>
+      </pre>
+</div>
+
+
+
+
+
+
+
+<style>
+
+ pre{
+        overflow: auto;
+    } 
+
+    code{
+        font-size: 1rem;
+    }
+
+
+
+    .code-css{
+        min-width: none;
+        max-width: 800px;
+        font-size: 1rem;
+    }
+
+
+    
+
+
+ 
+</style>

@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Code from '../components/Code.astro';
+import imageAgregar from '../assets/agregar_archivo_css.jpg'; 
+import Addimagen from  '../components/Addimagen.astro';
+import Articlep from '../components/Articlep.astro';
+
+
+
+const title ="CURSO CSS";
+
+const imagenExportar = '../src/assets/agregar_archivo_css.jpg';
+const javascriptLang = "language-javascript line-numbers";
+const htmlLang = "language-html line-numbers";
+const cssLang = "language-css line-numbers";
+const codeHtml = `<html>
+					<head>
+					<!-- href ="aqui entre las comillas se coloca la ruta del archivo" -->
+					<link rel="stylesheet" href="styles/style.css"> 
+					</head>
+					<body>			
+					</body>
+				</html>`;
+
+const codecss = `
+				.codigo{
+					font-size: 2rem;
+					color: #1223A9;
+
+				}
+`;
+
+interface Providers{
+	data:string;
+	contenido:string;
+}
+
+const probandoVariable = '<p>hola desde parrafo</p>';
+---
+
+<Layout title="Curso css">
+
+	<main>
+
+		<h1 class="title-h1">CURSO CSS</h1>
+
+		<Articlep>
+			<h2 class="title-h2">¿Qué es CSS?</h2>
+			<p class="parrafo">CSS (Cascading Style Sheets) es un lenguaje de hojas de estilo utilizado para describir la presentación y el aspecto visual de un documento HTML o XML. Es una tecnología fundamental en el desarrollo web y permite controlar la apariencia de los elementos en una página web, como el color de fondo, el tamaño de la fuente, la disposición de los elementos, los márgenes, el espaciado y muchos otros aspectos visuales.</p>
+			<p class="parrafo">CSS trabaja en conjunto con HTML para separar la estructura y el contenido de un documento web de su estilo. Mientras que HTML se encarga de definir los elementos y la estructura de una página web, CSS se utiliza para aplicar estilos y diseñar cómo se mostrarán esos elementos en la pantalla.</p>
+		</Articlep>
+
+
+		<Articlep>
+			<h2 class="title-h2">¿Como lo agrego a mi proyecto?</h2>
+
+			<p class="parrafo">En el proyecto donde tengas tu codigo html, por lo general creas una carpeta nueva de nombre styles, dentro de esta carpeta crear un archivo de extension css.</p>
+
+			<!-- <img src="../assets/agregar_archivo_css.jpg" height="400px"> -->
+			<Addimagen direccion='../assets/agregar_archivo_css.jpg'></Addimagen>
+			<p class="parrafo">Para agregar CSS a un proyecto web, puedes seguir estos pasos generales:</p>
+			<p class="parrafo">Crear un archivo CSS: Primero, crea un archivo CSS separado con extensión ".css". Puedes nombrarlo como desees, por ejemplo, "style.css". Este archivo contendrá todas las reglas y estilos que deseas aplicar a tu proyecto. </p>
+			<p class="parrafo"> Vincular el archivo CSS: Abre tu archivo HTML en un editor de texto y agrega una etiqueta en la sección . Dentro de la etiqueta , establece el atributo "href" para apuntar al archivo CSS que creaste en el paso anterior. Por ejemplo: </p>
+			<p class="parrafo"> Asegúrate de que el atributo "href" apunte correctamente al archivo CSS y esté en la misma ubicación o ruta relativa adecuada. </p>
+			<Code codigo={codeHtml} typeLan={htmlLang}></Code>
+		</Articlep>
+
+
+		<!-- <Articlep>
+			<h2>{article5[0].contenido}</h2>
+			<p>{article5[1].contenido}</p>
+			<Addimagen direccion={article5[2].contenido}></Addimagen>
+			<p>{article5[3].contenido}</p>
+			<p>{article5[4].contenido}</p>
+			<p>{article5[5].contenido}</p>
+			<p>{article5[6].contenido}</p>
+			<Code codigo={article5[7].contenido} typeLan={htmlLang}></Code>
+		</Articlep> -->
+
+
+
+
+		<!-- <Articlep>
+			{
+				<h2>{article4[0].contenido}</h2>
+				<Addimagen direccion={article4[1].contenido}></Addimagen>
+				<p>{article4[2].contenido}</p>
+			}
+
+			<Code codigo={codigoExtraido} typeLan={javascriptLang}></Code>
+		</Articlep> -->
+
+	
+	</main>
+	
+	
+
+	
+	
+	
+
+</Layout>
+
+
+<style>
+
+	body{
+		margin: 0;
+	}
+
+	
+
+	.cat-2{
+		color: blue;
+		font-size: 2rem;
+	}
+
+	.title-h1{
+		font-size: 4rem;
+		color: white;
+
+	}
+
+	.paf{
+		font-size: 1.5rem;
+	}
+
+	.image{
+		min-width: 300px;
+		max-width: 700px;
+		overflow: auto;
+	}
+
+	.code-css{
+        min-width: 280px;
+        max-width: 700px;
+        color: white;
+        background-color: #262626;
+        overflow: auto;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+
+	
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	
+	
+
+
+</style>
