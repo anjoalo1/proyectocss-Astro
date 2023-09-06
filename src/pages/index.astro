@@ -36,6 +36,33 @@ interface Providers{
 }
 
 const probandoVariable = '<p>hola desde parrafo</p>';
+
+const codigo1 =`
+selector {
+  propiedad1: valor1;
+  propiedad2: valor2;
+}`;
+const codigo2 =`
+p {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+ `;
+
+ const codigo3=`
+ /*
+Este es un comentario y no
+será tenido en cuenta por el navegador
+*/
+
+
+/*Aquí estoy aplicando un estilo a la clase nombre,
+el color es azul*/
+.nombre{
+  color: blue;
+}
+ `;
 ---
 
 <Layout title="Curso css">
@@ -65,30 +92,36 @@ const probandoVariable = '<p>hola desde parrafo</p>';
 			<Code codigo={codeHtml} typeLan={htmlLang}></Code>
 		</Articlep>
 
+		<Articlep>
+			<h2 class="title-h2">Esctructura CSS</h2>
+			<p class="parrafo">Las reglas CSS se utilizan para aplicar estilos a los elementos HTML en una página web. Cada regla CSS consta de dos partes principales: un selector y un bloque de declaración. Aquí tienes la estructura básica de una regla CSS:</p>
+			<Addimagen direccion={'../../src/assets/estructura_css.jpg'}></Addimagen>
+			<p class="parrafo"> Selector: El selector apunta a los elementos HTML a los que se aplicarán los estilos. Puede ser el nombre de un elemento, una clase, un identificador, un atributo o incluso una combinación de ellos. Aquí tienes algunos ejemplos:</p>
+			<ul class="parrafo">
+				<li>Nombre de elemento: p selecciona todos los elementos <span class="res">&lt;p&gt;</span>.</li>
+				<li> Clase: .clase selecciona todos los elementos con la clase CSS "clase".</li>
+				<li> Identificador: #id selecciona el elemento con el identificador CSS "id".</li>
+			</ul>
+			<p class="parrafo"> Bloque de declaración: El bloque de declaración está contenido entre llaves { } y contiene una o más declaraciones separadas por punto y coma ;. Cada declaración consta de una propiedad y su valor, separados por dos puntos :. Aquí tienes un ejemplo: </p>
+			<Code codigo={codigo1} typeLan={cssLang}></Code>
+			<p class="parrafo"> Las propiedades representan los aspectos que deseas cambiar, como el color del texto, el tamaño de la fuente, el margen, el fondo, etc. Los valores son los ajustes específicos que deseas aplicar a esas propiedades, como "rojo" para el color del texto, "14px" para el tamaño de la fuente, etc. </p>
+			<p class="parrafo"> Por ejemplo: </p>
+			<Code codigo={codigo2} typeLan={cssLang}></Code>
 
-		<!-- <Articlep>
-			<h2>{article5[0].contenido}</h2>
-			<p>{article5[1].contenido}</p>
-			<Addimagen direccion={article5[2].contenido}></Addimagen>
-			<p>{article5[3].contenido}</p>
-			<p>{article5[4].contenido}</p>
-			<p>{article5[5].contenido}</p>
-			<p>{article5[6].contenido}</p>
-			<Code codigo={article5[7].contenido} typeLan={htmlLang}></Code>
-		</Articlep> -->
+			<p class="parrafo">En este caso, se aplicarían los estilos a todos los elementos <span class="res">&lt;p&gt;</span>, estableciendo el color del texto en rojo, el tamaño de la fuente en 14 píxeles y el margen superior en 10 píxeles. </p>
+		</Articlep>
+		<Articlep>
+			<h2 class="title-h2">Comentarios En CSS </h2>
+			<p class="parrafo"> Un comentario de código CSS es una línea o bloque de texto que se utiliza para explicar o documentar partes del código CSS. Estos comentarios no afectan la forma en que se renderiza el sitio web, ya que son ignorados por el navegador. </p>
+			<p class="parrafo"> Los comentarios de CSS son útiles para hacer notas sobre el propósito o la función de ciertas reglas CSS, así como para proporcionar información adicional a otros desarrolladores que pueden trabajar en el mismo código más adelante. </p>
+			<p class="parrafo"> Hay un tipo de comentarios en CSS: </p>
+			<p class="parrafo"> Se inician con <span class="res">/*</span> y se cierran con <span class="res">*/</span>. Todo lo que se encuentra entre estas marcas se considera un comentario y no se ejecutará. Por ejemplo: </p>
+			<Code codigo={codigo3} typeLan={cssLang}></Code>
+			<p class="parrafo"> Recuerda que esta es solo una estructura básica, y CSS ofrece muchas más opciones y propiedades para personalizar los estilos de tus elementos HTML. </p>
+		</Articlep>
 
 
-
-
-		<!-- <Articlep>
-			{
-				<h2>{article4[0].contenido}</h2>
-				<Addimagen direccion={article4[1].contenido}></Addimagen>
-				<p>{article4[2].contenido}</p>
-			}
-
-			<Code codigo={codigoExtraido} typeLan={javascriptLang}></Code>
-		</Articlep> -->
+	
 
 	
 	</main>
