@@ -1,0 +1,159 @@
+---
+import Articlep from "../../components/Articlep.astro";
+import Code from "../../components/Code.astro";
+import Layout from "../../layouts/Layout.astro";
+const htmlLang = "language-html line-numbers";
+const cssLang = "language-css line-numbers";
+
+const codigo1 =`
+width: 300px; /* Establece el ancho en 300 píxeles, donde 300 es un número entero. */
+margin-top: 20px; /* Establece un margen superior de 20 píxeles, donde 20 es un número entero. */
+z-index: 2; /* Establece el índice z en 2, donde 2 es un número entero. */
+
+`;
+
+const codigo2=`
+p {
+  font-size: 16px; /* Tamaño de fuente base */
+}
+
+.texto-grande {
+  font-size: 1.5em; /* Tamaño de fuente 1.5 veces el tamaño base, es decir, 24px */
+}
+
+`;
+const codigo3=`p {
+  font-size: 16px; /* Tamaño de fuente base */
+}
+
+.texto-grande {
+  font-size: 2ex; /* Tamaño de fuente igual a 32px si la altura de la letra "x" es de 16px */
+}
+`;
+const codigo4=`p {
+  font-size: 16px; /* Tamaño de fuente base */
+}
+
+.texto-ancho-ch {
+  width: 10ch; /* Ancho igual al ancho de 10 caracteres "0", es decir, 160px si la fuente es de 16px por caracter. */
+}
+`;
+const codigo5=`.elemento {
+  width: 50vw; /* Establece el ancho del elemento al 50% del ancho de la ventana gráfica. */
+}
+`;
+const codigo6=`.elemento {
+  height: 80vh; /* Establece la altura del elemento al 80% de la altura de la ventana gráfica. */
+}
+`;
+const codigo7=`.elemento {
+  font-size: 3vmin; /* Establece el tamaño de fuente al 3% de la dimensión más pequeña de la ventana gráfica. */
+}
+`;
+const codigo8=``;
+const codigo9=``;
+const codigo10=``;
+const codigo11=``;
+---
+
+
+
+
+<Layout title="unidades">
+    <main>
+        <h1 class="title-h1">UNIDADES EN CSS</h1>
+        <Articlep>
+            <h2 class="title-h2">Concepto de unidad en CSS</h2>
+            <p class="parrafo">Las unidades en CSS son valores que se utilizan para medir y definir tamaños, distancias y otros atributos de elementos en una página web. Estas unidades permiten especificar cuánto espacio o dimensiones debe ocupar un elemento en relación con otros elementos en la página o con el tamaño de la ventana del navegador. Las unidades en CSS pueden ser estáticas o relativas, y cada una tiene su propio propósito y uso.</p>
+            <p class="parrafo">Aquí tienes una descripción de las principales unidades en CSS:</p>
+            <p class="parrafo">Unidades Estáticas (Static Units o Absolute Units): Estas unidades tienen un valor fijo y no cambian en función del contexto de visualización. Algunas de las unidades estáticas más comunes son:</p>
+            <ul class="parrafo">
+                <li>Píxeles (px): La unidad más común y absoluta. Un píxel representa la mínima unidad de resolución en una pantalla.</li>
+                <li>Centímetros (cm), Milímetros (mm) y Pulgadas (in): Estas unidades representan medidas físicas reales y se utilizan en contextos de impresión.</li>
+            </ul>
+            <p class="parrafo">Unidades Relativas (Relative Units): Estas unidades son flexibles y se adaptan al contexto de visualización, lo que las hace ideales para crear diseños responsivos y escalables. Algunas unidades relativas comunes son:</p>
+            <ul class="parrafo">
+                <li>Porcentaje (%): Representa una fracción del valor de referencia, como el ancho o la altura del elemento padre.</li>
+                <li>Em (em): Se basa en el tamaño de fuente del elemento actual y permite definir tamaños y dimensiones en función de la fuente.</li>
+                <li>Rem (rem): Similar a "em", pero se basa en el tamaño de fuente del elemento raíz (normalmente el tamaño de fuente del elemento <html>).</li>
+                <li>Viewport Width (vw) y Viewport Height (vh): Estas unidades se basan en el tamaño de la ventana gráfica del navegador y permiten crear diseños adaptativos al tamaño de la pantalla.</li>
+            </ul>
+            <p class="parrafo">Otras Unidades Específicas: Además de las unidades estáticas y relativas, CSS también ofrece otras unidades específicas para ciertos contextos, como las unidades de tiempo en animaciones CSS (s, ms) o las unidades de ángulo en transformaciones (deg, rad, grad).</p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Tipos de datos</h2>
+            
+            <p class="parrafo"><span class="res">Entero:</span> en CSS, la palabra "entero" no se utiliza como un valor específico o una unidad de medida. En lugar de eso, CSS utiliza números enteros en diversas propiedades para definir dimensiones, posiciones y otras características de los elementos de una página web.</p>
+            <p class="parrafo">Un número entero simplemente se refiere a un valor numérico que no contiene decimales ni fracciones. Puedes utilizar números enteros para establecer anchos, alturas, márgenes, rellenos, posiciones y otros atributos en CSS. Por ejemplo:</p>
+            <Code codigo={codigo1} typeLan={cssLang}></Code>
+            <p class="parrafo">En estos ejemplos, los números enteros se utilizan en combinación con unidades (como "px" para píxeles) para definir propiedades CSS. Los números enteros son una parte fundamental de la sintaxis de CSS y se utilizan en diversas situaciones para controlar la apariencia y el diseño de elementos en una página web.</p>
+            <p class="parrafo"><span class="res">Number</span>En CSS, la palabra "number" (número en español) se utiliza para referirse a un valor numérico que se utiliza para definir propiedades y atributos en una hoja de estilo. Estos valores numéricos pueden ser enteros o números con decimales. Los números se utilizan en una variedad de contextos en CSS para establecer dimensiones, tamaños, espacios, márgenes, opacidades y otros aspectos relacionados con la presentación y el diseño de elementos en una página web.</p>
+            <p class="parrafo"><span class="res">Porcentaje</span>En CSS, los porcentajes (representados por el símbolo "%") son valores relativos que se utilizan para definir proporciones y relaciones en el diseño y el diseño de elementos en una página web. Los porcentajes son una parte fundamental de las unidades de medida en CSS y se emplean en diversos contextos para crear diseños adaptables y responsivos.</p>
+            <p class="parrafo"><span class="res">Fraccioin (fr):</span>La unidad de medida "fr" en CSS (que significa "fracción" o "fraction" en inglés) se utiliza en el contexto de las rejillas (grid layouts) de CSS, específicamente en CSS Grid Layout. Esta unidad permite distribuir el espacio disponible en un contenedor de manera proporcional entre las columnas o filas de la rejilla. La unidad "fr" es especialmente útil para crear diseños de rejilla flexibles y adaptables.</p>
+            <p class="parrafo">La unidad "fr" representa una fracción del espacio disponible en el contenedor de la rejilla. Cuando se utiliza "fr" para definir las dimensiones de las columnas o filas en una rejilla, se especifica cuánto espacio relativo debería ocupar cada columna o fila en relación con las demás.</p>
+            <p class="parrafo">La unidad "fr" es especialmente útil para crear diseños de rejilla que se adapten de manera efectiva a diferentes tamaños de pantalla y dispositivos, ya que permite que las columnas o filas se expandan o contraigan de acuerdo con las necesidades del diseño.</p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Absolute Length Units" (Unidades de Longitud Absolutas)</h2>
+            <p class="parrafo">en CSS son unidades de medida que representan una longitud o distancia fija e invariable, independiente de las características de la pantalla o el dispositivo en el que se visualice una página web. Estas unidades se utilizan para definir tamaños y dimensiones precisas en CSS, y suelen estar relacionadas con unidades físicas del mundo real.</p>
+            <ol class="parrafo">
+                <li><span class="res">Píxeles (px):</span> El píxel es la unidad de medida más común y ampliamente utilizada en CSS. Un píxel representa la mínima unidad de resolución en una pantalla y se utiliza para definir tamaños precisos y constantes. Por ejemplo, width: 200px; establece un ancho fijo de 200 píxeles para un elemento.</li>
+                <li>Inches (in): La pulgada es una unidad de medida que representa una longitud en el sistema imperial y estadounidense. En CSS, una pulgada (1in) se refiere a una pulgada física del mundo real, aproximadamente equivalente a 2.54 centímetros. Esta unidad se utiliza para establecer tamaños absolutos en una página web, pero no es la más común debido a la variabilidad en el tamaño de pantalla de los dispositivos.</li>
+                <li>Centimeters (cm): El centímetro es una unidad de medida del sistema métrico. En CSS, un centímetro (1cm) se refiere a una longitud de un centímetro del mundo real. Esta unidad puede ser utilizada para definir tamaños absolutos, pero, al igual que las pulgadas, no es la elección más común para el diseño web debido a la variabilidad de los dispositivos.</li>
+                <li>Millimeters (mm): El milímetro es una unidad de medida más pequeña del sistema métrico que se utiliza comúnmente en impresión y diseño técnico. En CSS, un milímetro (1mm) es igual a un milímetro del mundo real. Al igual que las pulgadas y los centímetros, se utiliza para tamaños absolutos.</li>
+                <li>Quarter Millimeters (Q): Un cuarto de milímetro es una unidad de medida más precisa utilizada principalmente en diseño gráfico y tipografía. En CSS, un cuarto de milímetro (1Q) se utiliza para dimensiones muy precisas y es igual a 0.25 milímetros.</li>
+                <li>Points (pt): El punto es una unidad de medida utilizada principalmente en impresión y diseño gráfico. En CSS, un punto (1pt) se refiere a 1/72 de una pulgada y se utiliza a menudo para especificar tamaños de fuente. Es especialmente común en hojas de estilo para impresión.</li>
+            </ol>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Unidades relativas</h2>
+            <p class="parrafo">Las unidades "em" y "ex" son unidades de medida relativas utilizadas en CSS para definir tamaños de fuente y dimensiones que se basan en el tamaño de fuente actual o en la altura de la letra, respectivamente. Aquí tienes una explicación de cada una:</p>
+            <p class="parrafo"><span class="res">Em (em):</span> La unidad "em" se utiliza principalmente para establecer tamaños de fuente relativos. Un "em" representa la altura del carácter "M" en la fuente actual o el tamaño de fuente del elemento padre. Por lo tanto, si defines un elemento con un tamaño de fuente de "1.5em", el tamaño de fuente del elemento será 1.5 veces el tamaño de fuente del elemento padre.</p>
+            <p class="parrafo">Ejemplo:</p>
+            <Code codigo={codigo2} typeLan={cssLang}></Code>
+            <p class="parrafo"><span class="res">Ex (ex):</span> La unidad "ex" también es una unidad de medida relativa utilizada para definir tamaños en función de la altura de la letra (x-height) de la fuente actual. La altura de la letra "x" se refiere a la altura de letras minúsculas sin ascendentes ni descendentes, como "a", "e", "m", etc. Si defines un elemento con un tamaño de "2ex", su altura será igual a dos veces la altura de la letra "x" en la fuente actual.</p>
+            <p class="parrafo">Ejemplo:</p>
+            <Code codigo={codigo3} typeLan={cssLang}></Code>
+            <p class="parrafo">Ambas unidades "em" y "ex" son útiles para crear diseños escalables y adaptativos, ya que permiten que los tamaños de fuente y las dimensiones se ajusten automáticamente en función del contexto y las preferencias del usuario. La elección entre "em" y "ex" dependerá de tus necesidades específicas de diseño y de si deseas basarte en el tamaño de fuente o en la altura de la letra en tu diseño.</p>
+        </Articlep>
+
+        <Articlep>
+            <h2 class="title-h2">Unidad "ch"</h2>
+            <p class="parrafo">en CSS se utiliza para medir la longitud de un carácter (character) en la fuente actual. Un carácter típico tiene un ancho que es aproximadamente igual a la anchura de un carácter "0" (cero) en la fuente actual. Esto hace que "1ch" sea igual al ancho de un carácter "0", "2ch" sea igual al doble de ese ancho, y así sucesivamente.</p>
+            <p class="parrafo">La unidad "ch" es útil para crear diseños que dependen de la anchura de los caracteres de la fuente actual. Puede ser especialmente útil en aplicaciones donde deseas que elementos, como cuadros de texto o elementos de diseño, tengan dimensiones basadas en el ancho de los caracteres de la fuente utilizada.</p>
+            <p class="parrafo">una </p>
+            <p class="parrafo">Ejemplo</p>
+            <Code codigo={codigo4} typeLan={cssLang}></Code>
+            <p class="parrafo">Ten en cuenta que la compatibilidad con la unidad "ch" puede variar según el navegador, por lo que es importante verificar que funcione correctamente en los navegadores que planeas utilizar en tu proyecto.</p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">"Viewport-relative" (unidades relativas a la ventana gráfica)</h2>
+            <p class="parrafo">En CSS se utilizan para definir tamaños y dimensiones en función del tamaño de la ventana gráfica del navegador, lo que las hace especialmente útiles para crear diseños responsivos y adaptables. Estas unidades permiten que los elementos se ajusten automáticamente al tamaño de la pantalla del dispositivo. Las principales unidades viewport-relative en CSS son:</p>
+            <p class="parrafo"><span class="res">Viewport Width (vw):</span> La unidad "vw" representa una fracción del ancho de la ventana gráfica (viewport). Un valor de "1vw" equivale al 1% del ancho total de la ventana gráfica. Puedes usar "vw" para definir tamaños de elementos que deben escalar con respecto al ancho de la pantalla.</p>
+            <p class="parrafo">Ejemplo</p>
+            <Code codigo={codigo5} typeLan={cssLang}></Code>
+            <p class="parrafo"><span class="res">Viewport Height (vh):</span> La unidad "vh" representa una fracción de la altura de la ventana gráfica. Al igual que "vw", "1vh" equivale al 1% de la altura total de la ventana gráfica. Se utiliza para definir tamaños de elementos que deben adaptarse al alto de la pantalla.</p>
+            <p class="parrafo">Ejemplo</p>
+            <Code codigo={codigo6} typeLan={cssLang}></Code>
+            <p class="parrafo"><span class="res">Viewport Minimum (vmin) y Viewport Maximum (vmax):</span> Estas unidades se basan en la dimensión más pequeña (vmin) o más grande (vmax) de la ventana gráfica. "1vmin" equivale al 1% de la dimensión más pequeña, ya sea el ancho o la altura, y "1vmax" equivale al 1% de la dimensión más grande.</p>
+            <p class="parrafo">Ejemplo</p>
+            <Code codigo={codigo7} typeLan={cssLang}></Code>
+            <p class="parrafo">Estas unidades viewport-relative son especialmente útiles para crear diseños web que se adapten a una amplia variedad de tamaños de pantalla y dispositivos. Al utilizar estas unidades en lugar de valores fijos, puedes lograr que tus elementos se redimensionen automáticamente en función de las dimensiones de la ventana gráfica del navegador, lo que mejora la experiencia del usuario en dispositivos de diferentes tamaños.</p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Unidades de medida más utilizadas en CSS</h2>
+            <ol class="parrafo">
+                <li><span class="res">Píxeles (px):</span> Los píxeles son la unidad de medida más común en CSS. Un píxel representa la unidad más pequeña de resolución en una pantalla y se utiliza para definir tamaños precisos y constantes de elementos en una página web. Es especialmente útil cuando se necesita un control exacto sobre las dimensiones de los elementos.</li>
+                <li><span class="res">Porcentajes (%):</span> Los porcentajes se utilizan para definir tamaños y dimensiones relativos en relación con el tamaño de su contenedor o elemento padre. Esto facilita la creación de diseños responsivos que se adaptan al tamaño de la pantalla del dispositivo del usuario.</li>
+                <li><span class="res">Em (em):</span> El "em" se basa en el tamaño de fuente del elemento actual y permite definir tamaños y dimensiones de manera relativa. Es útil para crear diseños escalables y adaptables, ya que los valores "em" se heredan y pueden ajustarse de manera dinámica en función del tamaño de fuente del elemento padre.</li>
+            </ol>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+        </Articlep>
+
+
+    </main>
+</Layout>

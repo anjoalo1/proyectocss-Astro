@@ -1,0 +1,115 @@
+---
+import Code from "../../components/Code.astro";
+import Articlep from "../../components/Articlep.astro";
+import Layout from "../../layouts/Layout.astro";
+import Addimagen from "../../components/Addimagen.astro";
+const htmlLang = "language-html line-numbers";
+const cssLang = "language-css line-numbers";
+
+const codigo1=`selector {
+    padding: valor;
+  }`;
+const codigo2=`
+/* Aplicará 10px de relleno en todos los lados */
+padding: 10px;
+
+`;
+const codigo3=`
+/* Aplicará 10px de relleno en la parte superior e inferior y 20px en la izquierda y derecha */
+padding: 10px 20px;
+`;
+const codigo4=`
+/*parte superior, izquierda/derecha y parte inferior*/
+padding: 10px 20px 15px;
+`;
+const codigo5=`
+/* Aplicará 10px de relleno en la parte superior, 20px en la derecha, 15px en la parte inferior y 5px en la izquierda */
+padding: 10px 20px 15px 5px; 
+`;
+const codigo6=``;
+
+---
+
+
+
+<Layout title="box-model">
+    <main>
+        <h1 class="title">MODELO DE CAJA (BOX-MODEL)</h1>
+        <Articlep>
+            <h2 class="title-h2">¿Qué es el modelo de cajas en css?</h2>
+            <p class="parrafo"> El modelo de cajas en CSS es una forma de entender cómo se comportan y se presentan los elementos HTML en una página web. Cada elemento en una página web es considerado una "caja" que tiene varias propiedades que determinan su tamaño, posición, márgenes, relleno y borde. Estas propiedades son fundamentales para controlar la apariencia y el diseño de los elementos en la página. </p>
+            <p class="parrafo"> El modelo de cajas consta de cuatro componentes principales: </p>
+            <ol class="parrafo">
+                <li>Contenido (Content): Es el contenido real del elemento, como texto, imágenes, videos, etc. Este es el contenido que se muestra dentro de la caja.</li>
+                <li>Relleno (Padding): Es el espacio entre el contenido y el borde de la caja. Puedes pensar en él como un espacio en blanco que rodea el contenido. Se utiliza para separar el contenido del borde.</li>
+                <li>Borde (Border): Es una línea que rodea el relleno y el contenido. Puedes definir su estilo, grosor y color. El borde separa visualmente el contenido de su entorno.</li>
+                <li>Margen (Margin): Es el espacio fuera del borde de la caja. Se utiliza para controlar la distancia entre esta caja y otras cajas adyacentes.</li>
+            </ol>
+            <p class="parrafo"> Para controlar estas propiedades y el diseño de una caja en CSS, puedes utilizar las siguientes propiedades: </p>
+            <ul class="parrafo">
+                <li>width y height: Establecen el ancho y alto del contenido de la caja.</li>
+                <li>padding: Define el espacio entre el contenido y el borde.</li>
+                <li>border: Controla el estilo, grosor y color del borde.</li>
+                <li>margin: Define el espacio entre la caja y otras cajas cercanas.</li>
+            </ul>
+
+            <div class="img">
+            <img src="../../assets/boxcss.svg" height="250px">
+            </div>
+            
+        </Articlep>
+        
+        <Articlep>
+            <h2 class="title-h2">Padding</h2>
+            <p class="parrafo"> en CSS es una propiedad que controla el espacio entre el contenido de un elemento y su borde. Proporciona un espacio en blanco dentro del elemento, creando un margen interno entre el contenido y el borde. Aquí está la sintaxis básica: </p>
+            <Code codigo={codigo1} typeLan={cssLang}></Code>
+            <p class="parrafo"> Donde selector es el selector de los elementos a los que deseas aplicar el padding, y valor es la cantidad de espacio que deseas aplicar. </p>
+            <h3 class="title-h3">Atributos del padding</h3>
+            <p class="parrafo"> padding-top, padding-right, padding-bottom, padding-left: Estos atributos permiten establecer el valor de relleno individualmente para cada lado del elemento. </p>
+            <ul class="parrafo">
+                <li>padding-top: Define el espacio entre el borde superior del elemento y su contenido.</li>
+                <li>padding-right: Define el espacio entre el borde derecho del elemento y su contenido.</li>
+                <li>padding-bottom: Define el espacio entre el borde inferior del elemento y su contenido.</li>
+                <li>padding-left: Define el espacio entre el borde izquierdo del elemento y su contenido.</li>
+            </ul>
+
+            <p class="parrafo">Un solo valor: Si se especifica un solo valor, se aplicará a todos los lados del elemento. Por ejemplo:</p>
+            <Code codigo={codigo2} typeLan={cssLang}></Code>
+            <p class="parrafo">Dos valores: Si se especifican dos valores, se aplicarán al borde superior e inferior y al borde izquierdo y derecho, respectivamente. El primer valor corresponde a la parte superior y la inferior, y el segundo valor corresponde a la izquierda y la derecha. Por ejemplo:</p>
+            <Code codigo={codigo3} typeLan={cssLang}></Code>
+            <p class="parrafo"> El valor de tres valores para la propiedad padding en CSS se aplica a los siguientes lados en este orden: parte superior, izquierda/derecha y parte inferior.</p>
+            <Code codigo={codigo4} typeLan={cssLang}></Code>
+            <p class="parrafo">    Cuatro valores: Si se especifican cuatro valores, se aplicarán al borde superior, derecho, inferior e izquierdo en ese orden. Por ejemplo:</p>
+            <Code codigo={codigo5} typeLan={cssLang}></Code>
+
+
+            <p class="parrafo"> padding (shorthand): Puedes especificar los valores para los cuatro lados en el mismo orden que las agujas del reloj, separados por espacios. </p>
+            <h3 class="title-h3">Unidades admitidas para el valor del padding:</h3>
+            <ul class="parrafo">
+                <li>px(píxeles)</li>
+                <li>em(tamaño relativo con respecto al tamaño de fuente del elemento)</li>
+                <li>% (porcentaje del ancho del elemento)</li>
+                <li>rem (tamaño relativo con respecto al tamaño de fuente del elemento raíz)</li>
+                <li>vh (porcentaje del alto del viewport)</li>
+                <li>vw (porcentaje del ancho del viewport)</li>
+            </ul>
+            <h3 class="title-h3">Elementos a los que se les puede aplicar padding</h3>
+            <p class="parrafo">La propiedad padding se puede aplicar a casi todos los elementos HTML, incluyendo divs, párrafos, encabezados, imágenes y más.</p>
+            <h3 class="title-h3">Herencia</h3>
+            <p class="parrafo">La propiedad padding se hereda de manera similar a otras propiedades de CSS. Esto significa que los elementos secundarios generalmente heredarán el valor de relleno del elemento padre, a menos que se especifique lo contrario.</p>
+            <h3 class="title-h3">Animable</h3>
+            <p class="parrafo">Sí, la propiedad padding es animable utilizando transiciones o animaciones CSS.</p>
+            
+
+        </Articlep>
+
+    </main>
+</Layout>
+
+<style>
+    .img{
+        min-width: 250px;
+        max-width: 900px;
+        overflow: auto;
+    }
+</style>

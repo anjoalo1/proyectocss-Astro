@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598.28 191.59">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7d4e24;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 24px;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        fill: #e6007e;
+      }
+
+      .cls-5 {
+        fill: #9a63a6;
+        stroke: #1d1d1b;
+        stroke-width: 10px;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        fill: #cad400;
+        stroke: #cad400;
+        stroke-width: 3px;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        fill: #1d1d1b;
+      }
+
+      .cls-7 {
+        fill: #4f84c4;
+        stroke: #2d2e83;
+        stroke-dasharray: 0 5;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" x="1.5" y="1.5" width="595.28" height="188.59"/>
+  <rect class="cls-5" x="89.4" y="47" width="419.48" height="97.59"/>
+  <rect class="cls-7" x="133.73" y="76.26" width="330.82" height="39.06"/>
+  <text class="cls-3" transform="translate(20.87 28.78)"><tspan x="0" y="0">ma</tspan><tspan class="cls-10" x="31.58" y="0">r</tspan><tspan class="cls-4" x="39.24" y="0">g</tspan><tspan x="52.51" y="0">in</tspan></text>
+  <text class="cls-3" transform="translate(106.54 71.43)"><tspan x="0" y="0">padding</tspan></text>
+  <text class="cls-1" transform="translate(255.96 102.96)"><tspan class="cls-4" x="0" y="0">c</tspan><tspan x="10.61" y="0">o</tspan><tspan class="cls-8" x="23.78" y="0">n</tspan><tspan class="cls-4" x="37.01" y="0">t</tspan><tspan x="44.81" y="0">ent</tspan></text>
+  <text class="cls-2" transform="translate(269.62 53.84)"><tspan x="0" y="0">bo</tspan><tspan class="cls-9" x="26.83" y="0">r</tspan><tspan x="34.44" y="0">der</tspan></text>
+</svg>
