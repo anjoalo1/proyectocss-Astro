@@ -26,7 +26,38 @@ const codigo5=`
 /* Aplicará 10px de relleno en la parte superior, 20px en la derecha, 15px en la parte inferior y 5px en la izquierda */
 padding: 10px 20px 15px 5px; 
 `;
-const codigo6=``;
+const codigo6=`.mi-elemento {
+  width: 200px;
+}
+`;
+const codigo7=`.mi-elemento {
+  width: 50%;
+}
+`;
+const codigo8=`.mi-elemento {
+  height: 100px;
+}
+`;
+const codigo9=`.mi-elemento {
+  height: 50%;
+}
+`;
+const codigo10=`.ejemplo {
+  margin: 20px;
+}
+`;
+const codigo11=`.ejemplo {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+`;
+const codigo12=`.ejemplo {
+  margin: 10px 20px 15px 5px;
+}
+`;
+const codigo13=``;
 
 ---
 
@@ -34,23 +65,23 @@ const codigo6=``;
 
 <Layout title="box-model">
     <main>
-        <h1 class="title">MODELO DE CAJA (BOX-MODEL)</h1>
+        <h1 class="title-h1">MODELO DE CAJA (BOX-MODEL)</h1>
         <Articlep>
             <h2 class="title-h2">¿Qué es el modelo de cajas en css?</h2>
             <p class="parrafo"> El modelo de cajas en CSS es una forma de entender cómo se comportan y se presentan los elementos HTML en una página web. Cada elemento en una página web es considerado una "caja" que tiene varias propiedades que determinan su tamaño, posición, márgenes, relleno y borde. Estas propiedades son fundamentales para controlar la apariencia y el diseño de los elementos en la página. </p>
             <p class="parrafo"> El modelo de cajas consta de cuatro componentes principales: </p>
             <ol class="parrafo">
-                <li>Contenido (Content): Es el contenido real del elemento, como texto, imágenes, videos, etc. Este es el contenido que se muestra dentro de la caja.</li>
-                <li>Relleno (Padding): Es el espacio entre el contenido y el borde de la caja. Puedes pensar en él como un espacio en blanco que rodea el contenido. Se utiliza para separar el contenido del borde.</li>
-                <li>Borde (Border): Es una línea que rodea el relleno y el contenido. Puedes definir su estilo, grosor y color. El borde separa visualmente el contenido de su entorno.</li>
-                <li>Margen (Margin): Es el espacio fuera del borde de la caja. Se utiliza para controlar la distancia entre esta caja y otras cajas adyacentes.</li>
+                <li><span class="res">Contenido (Content):</span> Es el contenido real del elemento, como texto, imágenes, videos, etc. Este es el contenido que se muestra dentro de la caja.</li>
+                <li><span class="res">Relleno (Padding):</span> Es el espacio entre el contenido y el borde de la caja. Puedes pensar en él como un espacio en blanco que rodea el contenido. Se utiliza para separar el contenido del borde.</li>
+                <li><span class="res">Borde (Border):</span> Es una línea que rodea el relleno y el contenido. Puedes definir su estilo, grosor y color. El borde separa visualmente el contenido de su entorno.</li>
+                <li><span class="res">Margen (Margin):</span> Es el espacio fuera del borde de la caja. Se utiliza para controlar la distancia entre esta caja y otras cajas adyacentes.</li>
             </ol>
             <p class="parrafo"> Para controlar estas propiedades y el diseño de una caja en CSS, puedes utilizar las siguientes propiedades: </p>
             <ul class="parrafo">
-                <li>width y height: Establecen el ancho y alto del contenido de la caja.</li>
-                <li>padding: Define el espacio entre el contenido y el borde.</li>
-                <li>border: Controla el estilo, grosor y color del borde.</li>
-                <li>margin: Define el espacio entre la caja y otras cajas cercanas.</li>
+                <li><span class="res">width y height:</span> Establecen el ancho y alto del contenido de la caja.</li>
+                <li><span class="res">padding:</span> Define el espacio entre el contenido y el borde.</li>
+                <li><span class="res">border:</span> Controla el estilo, grosor y color del borde.</li>
+                <li><span class="res">margin:</span> Define el espacio entre la caja y otras cajas cercanas.</li>
             </ul>
 
             <div class="img">
@@ -67,10 +98,10 @@ const codigo6=``;
             <h3 class="title-h3">Atributos del padding</h3>
             <p class="parrafo"> padding-top, padding-right, padding-bottom, padding-left: Estos atributos permiten establecer el valor de relleno individualmente para cada lado del elemento. </p>
             <ul class="parrafo">
-                <li>padding-top: Define el espacio entre el borde superior del elemento y su contenido.</li>
-                <li>padding-right: Define el espacio entre el borde derecho del elemento y su contenido.</li>
-                <li>padding-bottom: Define el espacio entre el borde inferior del elemento y su contenido.</li>
-                <li>padding-left: Define el espacio entre el borde izquierdo del elemento y su contenido.</li>
+                <li><span class="res">padding-top:</span> Define el espacio entre el borde superior del elemento y su contenido.</li>
+                <li><span class="res">padding-right:</span> Define el espacio entre el borde derecho del elemento y su contenido.</li>
+                <li><span class="res">padding-bottom:</span> Define el espacio entre el borde inferior del elemento y su contenido.</li>
+                <li><span class="res">padding-left:</span> Define el espacio entre el borde izquierdo del elemento y su contenido.</li>
             </ul>
 
             <p class="parrafo">Un solo valor: Si se especifica un solo valor, se aplicará a todos los lados del elemento. Por ejemplo:</p>
@@ -99,8 +130,80 @@ const codigo6=``;
             <p class="parrafo">La propiedad padding se hereda de manera similar a otras propiedades de CSS. Esto significa que los elementos secundarios generalmente heredarán el valor de relleno del elemento padre, a menos que se especifique lo contrario.</p>
             <h3 class="title-h3">Animable</h3>
             <p class="parrafo">Sí, la propiedad padding es animable utilizando transiciones o animaciones CSS.</p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Width</h2>
+
+            <p class="parrafo">width se utiliza para establecer el ancho de un elemento HTML, como un div, una imagen o un párrafo.</p>
+
+            <p class="parrafo">Puedes definir el ancho de un elemento en diferentes unidades, como píxeles (px), porcentaje (%) o incluso en unidades relativas como "em" o "rem".</p>
+            <p class="parrafo">Cuando estableces un valor fijo en píxeles, el ancho del elemento será constante. Por ejemplo:</p>
+            <Code codigo={codigo6} typeLan={cssLang}></Code>
+            <p class="parrafo">En este caso, el elemento con la clase <span class="res">.mi-elemento</span> tendrá un ancho de 200 píxeles.</p>
+            <p class="parrafo">También puedes usar porcentajes para que el ancho sea relativo al ancho del elemento padre. Por ejemplo:</p>
+            <Code codigo={codigo7} typeLan={cssLang}></Code>
+            <p class="parrafo">En este caso, el elemento tomará la mitad del ancho de su elemento contenedor.</p>
+            <h3 class="title-h3">Valor inicial</h3>
+            <p class="parrafo">auto</p>
+
+            <h3 class="title-h3">Elementos a los que se les puede aplicar width</h3>
+
+            <p class="parrafo">El atributo width se puede aplicar a una amplia variedad de elementos HTML.</p>
+           
+            <h3 class="title-h3">Elementos a los que No se les puede aplicar width</h3>
+            <p class="parrafo"><span class="res">Elementos en línea (Inline elements):</span></p>
+
+            <p class="parrafo">Elementos como &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;abbr&gt;, &lt;code&gt;, &lt;time&gt;, etc., son elementos en línea que normalmente no tienen dimensiones visuales por sí mismos. Aplicar width a estos elementos puede no tener un efecto visible, a menos que se cambie su comportamiento de diseño con CSS (por ejemplo, usando display: block para convertirlos en elementos de bloque).</p>
             
 
+
+            <p class="parrafo"><span class="res">Elementos de texto (Text elements):</span></p>
+            <p class="parrafo">Los elementos de texto puro, como &lt;p&gt;, &lt;em&gt;, &lt;strong&gt;, &lt;span&gt;, etc., generalmente no se ven afectados por el atributo width. Su ancho se ajusta automáticamente al tamaño del contenido de texto dentro de ellos.</p>
+
+
+            <p class="parrafo"><span class="res">Elementos estructurales sin contenido visible:</span></p>
+
+            <p class="parrafo">Algunos elementos, como &lt;div&gt;, &lt;section&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;aside&gt; , entre otros, son elementos de bloque que se utilizan principalmente para estructurar el contenido de la página, pero no tienen contenido visible por sí mismos. Si no tienen contenido o contenido vacío, aplicar width a estos elementos no tendrá un impacto visual.</p>
+            <p class="parrafo"><span class="res">Elementos de formulario sin contenido visible:</span></p>
+            <p class="parrafo">    Elementos de formulario como &lt;form&gt;, &lt;fieldset&gt;, &lt;legend&gt;, etc., también pueden ser elementos de bloque sin contenido visual por sí mismos. Aplicar width a estos elementos puede no tener un efecto visible si no contienen elementos visuales (como campos de entrada o botones).</p>
+        </Articlep>
+
+
+        <Articlep>
+            <h2 class="title-h2">Height (Alto):</h2>
+            <p class="parrafo">height se utiliza para establecer la altura de un elemento HTML de manera similar a width, pero controla la dimensión vertical en lugar de la horizontal.</p>
+            <p class="parrafo">Al igual que con width, puedes definir la altura en unidades como píxeles, porcentaje u otras unidades relativas.</p>
+            <p class="parrafo">Ejemplo con píxeles:</p>
+            <Code codigo={codigo8} typeLan={cssLang}></Code>
+            <p class="parrafo">Esto establece la altura del elemento con la clase <span class="res">.mi-elemento</span> en 100 píxeles.</p>
+            <p class="parrafo">Ejemplo con porcentaje:</p>
+            <Code codigo={codigo9} typeLan={cssLang}></Code>
+            <p class="parrafo">En este caso, la altura del elemento será la mitad de la altura de su elemento contenedor.</p>
+            <h3 class="title-h3">Valor inicial</h3>
+            <p class="parrafo">auto</p>
+        </Articlep>
+
+
+        <Articlep>
+            <h2 class="title-h2">Margin</h2>
+            <p class="parrafo">La propiedad margin en CSS se utiliza para controlar el espacio alrededor de un elemento HTML. Puedes definir márgenes para los cuatro lados de un elemento: superior, derecho, inferior e izquierdo. Aquí tienes una explicación y ejemplos de cómo funciona:</p>
+            <p class="parrafo">La propiedad margin se puede especificar de las siguientes maneras:</p>
+            <p class="parrafo"><span class="res">Margen individual para todos los lados:</span> Puedes definir un valor único para todos los lados del elemento. Por ejemplo:</p>
+            <Code codigo={codigo10} typeLan={cssLang}></Code>
+            <p class="parrafo">Esto aplicará un margen de 20 píxeles a todos los lados del elemento con la clase "ejemplo".</p>
+            <p class="parrafo"><span class="res">Margen individual para cada lado:</span> Puedes definir márgenes específicos para cada lado del elemento en el siguiente orden: arriba, derecha, abajo e izquierda. Por ejemplo:</p>
+            <Code codigo={codigo11} typeLan={cssLang}></Code>
+            <p class="parrafo">Esto aplicará un margen de 10 píxeles en la parte superior, 20 píxeles a la derecha, 15 píxeles en la parte inferior y 5 píxeles a la izquierda del elemento con la clase "ejemplo".</p>
+            <p class="parrafo"><span class="res">Margen en forma abreviada:</span> También puedes utilizar una forma abreviada para definir los márgenes de los cuatro lados en un solo valor. Por ejemplo:</p>
+            <Code codigo={codigo12} typeLan={cssLang}></Code>
+            <p class="parrafo">Esto es equivalente a la definición individual de márgenes para cada lado en el ejemplo anterior.</p>
+            <p class="parrafo">Además, puedes usar valores relativos como porcentajes o valores absolutos como píxeles o ems para definir los márgenes. También puedes combinar estas propiedades para crear diseños más complejos.</p>
+            <h3 class="title-h3">Elementos a los que se les puede aplicar margin</h3>
+            <p class="parrafo">La propiedad margin se puede aplicar a casi todos los elementos HTML, incluyendo divs, párrafos, encabezados, imágenes y más.</p>
+            <h3 class="title-h3">Herencia</h3>
+            <p class="parrafo"> La propiedad margin en CSS no es heredable.</p>
+            <h3 class="title-h3">Animable</h3>
+            <p class="parrafo">Sí, la propiedad padding es animable utilizando transiciones o animaciones CSS.</p>   
         </Articlep>
 
     </main>
@@ -112,4 +215,7 @@ const codigo6=``;
         max-width: 900px;
         overflow: auto;
     }
+
+
+ 
 </style>
