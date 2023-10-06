@@ -57,7 +57,28 @@ const codigo12=`.ejemplo {
   margin: 10px 20px 15px 5px;
 }
 `;
-const codigo13=``;
+const codigo13=`border-width: 2px;`;
+const codigo14=`border-style: dashed;
+`;
+const codigo15=`
+border-top-style: none; 
+border-top-style: hidden;
+border-top-style: dotted;
+border-top-style: dashed;
+border-top-style: solid;
+border-top-style: double;
+border-top-style: groove;
+border-top-style: ridge;
+border-top-style: inset;
+border-top-style: outset;
+`;
+const codigo16=`/* Establece diferentes estilos de borde para cada lado */
+border-top-style: solid;      /* Borde superior sólido */
+border-right-style: dotted;   /* Borde derecho punteado */
+border-bottom-style: dashed;  /* Borde inferior discontinuo */
+border-left-style: double;    /* Borde izquierdo doble */
+`;
+const codigo17=``;
 
 ---
 
@@ -203,7 +224,45 @@ const codigo13=``;
             <h3 class="title-h3">Herencia</h3>
             <p class="parrafo"> La propiedad margin en CSS no es heredable.</p>
             <h3 class="title-h3">Animable</h3>
-            <p class="parrafo">Sí, la propiedad padding es animable utilizando transiciones o animaciones CSS.</p>   
+            <p class="parrafo">Sí, la propiedad margin es animable utilizando transiciones o animaciones CSS.</p>   
+        </Articlep>
+
+        <Articlep>
+          <h2 class="title-h2">border</h2>
+          <p class="parrafo"> La propiedad border en CSS se utiliza para definir el borde de un elemento HTML, como un div, un botón o cualquier otro elemento de bloque. Un borde es una línea que rodea un elemento y puede tener diferentes propiedades, como ancho, estilo y color. La propiedad border se compone de tres subpropiedades principales que permiten controlar estas características: border-width, border-style y border-color. A continuación, te explico cada una de ellas:</p>
+          <p class="parrafo"><span class="res">border-width:</span> Esta subpropiedad se utiliza para establecer el ancho del borde. Puedes definirlo con un valor en píxeles, ems, porcentajes u otras unidades de medida. Por ejemplo:</p>
+          <Code codigo={codigo13} typeLan={cssLang}></Code>
+          <p class="parrafo">Esto establece un borde con un ancho de 2 píxeles alrededor del elemento.</p>
+          <p class="parrafo"><span class="res">border-style:</span> Esta subpropiedad se usa para especificar el estilo del borde. Puedes elegir entre varios estilos, como solid (sólido), dashed (guiones), dotted (puntos), double (doble línea), entre otros. Por ejemplo:</p>
+          <Code codigo={codigo14} typeLan={cssLang}></Code>
+          <p class="parrafo">Esto crea un borde con líneas discontinuas.</p>
+          <h3 class="title-h3">Ejemplos de border-style</h3>
+          <p class="parrafo" style="border-style: none;">border-style: none;</p>
+          <p class="parrafo" style="border-style: hidden;">border-style: hidden;</p>
+          <p class="parrafo" style="border-style: dotted;">border-style: dotted;</p>
+          <p class="parrafo" style="border-style: dashed;">border-style: dashed;</p>
+          <p class="parrafo" style="border-style: solid;">border-style: solid;</p>
+          <p class="parrafo" style="border-style: double;">border-style: double;</p>
+          <p class="parrafo" style="border-style: groove;">border-style: groove;</p>
+          <p class="parrafo" style="border-style: ridge;">border-style: ridge;</p>
+          <p class="parrafo" style="border-style: inset;">border-style: inset;</p>
+          <p class="parrafo" style="border-style: outset;">border-style: outset;</p>
+          <Code codigo={codigo15} typeLan={cssLang}></Code>
+          
+
+          <p class="parrafo" class="parrafo">También puedes utilizar las propiedades border-style con border-top-style, border-right-style, border-bottom-style y border-left-style para definir estilos de borde específicos para cada lado de un elemento en CSS.</p>
+          <p class="parrafo" class="parrafo">Cuando trabajas con estas propiedades, puedes establecer estilos de borde diferentes para cada lado de un elemento, es decir, el borde superior, el derecho, el inferior y el izquierdo. Aquí tienes cómo se hace:</p>
+
+          <p class="parrafo" style="border-top-style: solid;
+          border-right-style: dotted;   
+          border-bottom-style: dashed;  
+          border-left-style: double;">border-top-style: solid;<br>
+          border-right-style: dotted;<br>   
+          border-bottom-style: dashed;<br> 
+          border-left-style: double;</p>
+          <Code codigo={codigo16} typeLan={cssLang}></Code>
+          <p class="parrafo" class="parrafo"></p>
+          <p class="parrafo" class="parrafo"></p>
         </Articlep>
 
     </main>
