@@ -15,7 +15,8 @@ padding: 10px;
 
 `;
 const codigo3=`
-/* Aplicará 10px de relleno en la parte superior e inferior y 20px en la izquierda y derecha */
+/* Aplicará 10px de relleno en la parte superior e inferior
+ y 20px en la izquierda y derecha */
 padding: 10px 20px;
 `;
 const codigo4=`
@@ -23,13 +24,16 @@ const codigo4=`
 padding: 10px 20px 15px;
 `;
 const codigo5=`
-/* Aplicará 10px de relleno en la parte superior, 20px en la derecha, 15px en la parte inferior y 5px en la izquierda */
+/* Aplicará 10px de relleno en la parte superior,
+ 20px en la derecha, 15px en la parte inferior y
+  5px en la izquierda */
 padding: 10px 20px 15px 5px; 
 `;
 const codigo6=`.mi-elemento {
   width: 200px;
 }
 `;
+
 const codigo7=`.mi-elemento {
   width: 50%;
 }
@@ -84,7 +88,36 @@ const codigo18=`border-width: 2px 1px 3px;
 `;
 const codigo19=`border-width: 2px 1px 3px 4px;
 `;
-const codigo20=``;
+const codigo20=`/* Establecer diferentes anchos de borde para cada lado del elemento */
+border-top-width: 10px;
+border-right-width: 5px;
+border-bottom-width: 1px;
+border-left-width: 15px;
+`;
+const codigo21=`border-color: #FF0000; 
+/* Establece el color rojo para todos los lados */
+`;
+const codigo22=`border-color: #FF0000 #00FF00; 
+/* Rojo en los lados superior e inferior,
+ verde en los lados izquierdo y derecho */
+`;
+const codigo23=`border-color: #FF0000 #00FF00 #0000FF; 
+/* Rojo en el lado superior,
+ verde en los lados izquierdo/derecho, azul en el lado inferior */
+`;
+const codigo24=`border-color: #FF0000 #00FF00 #0000FF #FFFF00;
+ /* Rojo en el lado superior,
+  verde en el lado derecho,
+   azul en el lado inferior,
+    amarillo en el lado izquierdo */
+`;
+const codigo25=`/* Establecer colores de borde para cada lado */
+border-top-color: #FF0000;    /* Rojo para el borde superior */
+border-right-color: #00FF00;  /* Verde para el borde derecho */
+border-bottom-color: #0000FF; /* Azul para el borde inferior */
+border-left-color: #FFFF00;   /* Amarillo para el borde izquierdo */
+`;
+const codigo26=``;
 
 ---
 
@@ -235,7 +268,15 @@ const codigo20=``;
 
         <Articlep>
           <h2 class="title-h2">border</h2>
-          <p class="parrafo"> La propiedad border en CSS se utiliza para definir el borde de un elemento HTML, como un div, un botón o cualquier otro elemento de bloque. Un borde es una línea que rodea un elemento y puede tener diferentes propiedades, como ancho, estilo y color. La propiedad border se compone de tres subpropiedades principales que permiten controlar estas características: border-width, border-style y border-color. A continuación, te explico cada una de ellas:</p>
+          <p class="parrafo"> La propiedad border en CSS se utiliza para definir el borde de un elemento HTML, como un div, un botón o cualquier otro elemento de bloque. Un borde es una línea que rodea un elemento y puede tener diferentes propiedades, como ancho, estilo y color. La propiedad border se compone de tres subpropiedades principales que permiten controlar estas características:</p>
+          <ol class="parrafo">
+            <li> border-width</li>
+            <li>border-style</li>
+            <li> border-color</li>
+          </ol>
+          <p class="parrafo">A continuación, te explico cada una de ellas:</p>
+
+
           <h2 class="title-h2">border-width</h2>
           <p class="parrafo"><span class="res">border-width:</span> Esta subpropiedad se utiliza para establecer el ancho del borde. Puedes definirlo con un valor en píxeles, ems, porcentajes u otras unidades de medida.</p>
           <p class="parrafo"><span class="res">Valor único:</span> Puedes establecer un valor único para todos los lados del elemento. Por ejemplo:</p>
@@ -257,9 +298,32 @@ const codigo20=``;
           <p class="parrafo">Esto aplicará un borde de 2 píxeles de ancho en la parte superior, 1 píxel en la derecha, 3 píxeles en la parte inferior y 4 píxeles en la izquierda.</p>
 
 
+          <p class="parrafo"> Puedes utilizar esta propiedad junto con las propiedades border-top-width, border-right-width, border-bottom-width y border-left-width para definir el ancho de cada borde de manera individual. Esto te permite personalizar los anchos de los bordes en los cuatro lados de un elemento. Aquí está cómo se utiliza cada una de estas propiedades:</p>
+
+          <ul class="parrafo">
+            <li><span class="res">border-top-width</span>Define el ancho del borde superior del elemento.</li>
+            <li><span class="res">order-right-width</span>Establece el ancho del borde derecho del elemento.</li>
+            <li><span class="res">border-bottom-width</span>Define el ancho del borde inferior del elemento.</li>
+            <li><span class="res">border-left-width</span>Establece el ancho del borde izquierdo del elemento.</li>
+          </ul>
+          <p class="parrafo">Cada una de estas propiedades puede aceptar valores en diferentes unidades de medida, como píxeles, ems, porcentajes, etc. Por ejemplo:</p>
 
 
+          <Code codigo={codigo20} typeLan={cssLang}></Code>
 
+          <p class="parrafo" style="
+          border-style: solid;
+          border-top-width: 10px;
+          border-right-width: 5px;
+          border-bottom-width: 1px;
+          border-left-width: 15px; padding:20px">border-top-width: 10px;<br>
+          border-right-width: 5px;<br>
+          border-bottom-width: 1px;<br>
+          border-left-width: 15px;
+        </p>
+
+          <p class="parrafo">En este ejemplo, hemos definido anchos de borde diferentes para cada lado del elemento. El borde superior tiene un ancho de 10 píxeles, el derecho de 5 píxeles, el inferior de 1 píxel y el izquierdo de 15 píxeles. Esto permite una mayor flexibilidad en el diseño y te permite controlar de manera precisa cómo se ven los bordes de tu elemento.</p>
+         
 
 
 
@@ -268,16 +332,16 @@ const codigo20=``;
           <Code codigo={codigo14} typeLan={cssLang}></Code>
           <p class="parrafo">Esto crea un borde con líneas discontinuas.</p>
           <h3 class="title-h3">Ejemplos de border-style</h3>
-          <p class="parrafo" style="border-style: none;">border-style: none;</p>
-          <p class="parrafo" style="border-style: hidden;">border-style: hidden;</p>
-          <p class="parrafo" style="border-style: dotted;">border-style: dotted;</p>
-          <p class="parrafo" style="border-style: dashed;">border-style: dashed;</p>
-          <p class="parrafo" style="border-style: solid;">border-style: solid;</p>
-          <p class="parrafo" style="border-style: double;">border-style: double;</p>
-          <p class="parrafo" style="border-style: groove;">border-style: groove;</p>
-          <p class="parrafo" style="border-style: ridge;">border-style: ridge;</p>
-          <p class="parrafo" style="border-style: inset;">border-style: inset;</p>
-          <p class="parrafo" style="border-style: outset;">border-style: outset;</p>
+          <p class="parrafo" style="border-style: none; padding:20px">border-style: none;</p>
+          <p class="parrafo" style="border-style: hidden; padding:20px">border-style: hidden;</p>
+          <p class="parrafo" style="border-style: dotted; padding:20px">border-style: dotted;</p>
+          <p class="parrafo" style="border-style: dashed; padding:20px">border-style: dashed;</p>
+          <p class="parrafo" style="border-style: solid; padding:20px">border-style: solid;</p>
+          <p class="parrafo" style="border-style: double; padding:20px">border-style: double;</p>
+          <p class="parrafo" style="border-style: groove; padding:20px">border-style: groove;</p>
+          <p class="parrafo" style="border-style: ridge; padding:20px">border-style: ridge;</p>
+          <p class="parrafo" style="border-style: inset; padding:20px">border-style: inset;</p>
+          <p class="parrafo" style="border-style: outset; padding:20px">border-style: outset;</p>
           <Code codigo={codigo15} typeLan={cssLang}></Code>
           
 
@@ -297,6 +361,41 @@ const codigo20=``;
           <p class="parrafo" class="parrafo">En este ejemplo, hemos asignado diferentes estilos de borde a cada lado de un elemento. El borde superior es sólido, el borde derecho es punteado, el borde inferior es discontinuo y el borde izquierdo es doble.</p>
           <p class="parrafo" class="parrafo">Puedes utilizar cualquier estilo de borde válido en cada propiedad (border-top-style, border-right-style, border-bottom-style, border-left-style) para personalizar los bordes según tus necesidades. Esto es especialmente útil cuando deseas crear diseños detallados y precisos en tu sitio web.</p>
           <p class="parrafo" class="parrafo"></p>
+
+          <h2 class="title-h2">border-color</h2>
+          <p class="parrafo">La propiedad border-color se utiliza para establecer el color de los bordes de un elemento HTML. Esta propiedad puede tomar uno o más valores para especificar el color de todos los lados del elemento o de manera individual para cada lado. A continuación, describiré las diferentes formas de utilizar estas propiedades:</p>
+
+
+
+          <p class="parrafo"><span class="res">Valor único:</span> Puedes establecer un valor único para todos los lados del elemento. Por ejemplo:</p>
+          <Code codigo={codigo21} typeLan={cssLang}></Code>
+          <p class="parrafo">Esto aplicará un borde de 2 píxeles de ancho en todos los lados del elemento.</p>
+
+          <p class="parrafo"><span class="res">Dos valores:</span> Si especificas dos valores, estos se aplicarán al borde superior/inferior y al borde izquierdo/derecho por igual. Por ejemplo:</p>
+          <Code codigo={codigo22} typeLan={cssLang}></Code>
+          <p class="parrafo"><span class="res">Tres valores:</span> También puedes especificar tres valores para controlar el ancho de los bordes de la siguiente manera:</p>
+          <Code codigo={codigo23} typeLan={cssLang}></Code>
+          <p class="parrafo"><span class="res">Cuatro valores (para cada lado individual):</span>Si proporcionas cuatro valores, se aplican respectivamente al borde superior, derecho, inferior e izquierdo.</p>
+          <Code codigo={codigo24} typeLan={cssLang}></Code>
+          
+          
+          
+          <p class="parrafo"> border-top-color, border-right-color, border-bottom-color y border-left-color para definir colores de borde en cada lado de un elemento individualmente:</p>
+          <Code codigo={codigo25} typeLan={cssLang}></Code>
+          <p class="parrafo" style="
+          border-style: solid;
+          border-top-color: #FF0000;
+          border-right-color: #00FF00;
+          border-bottom-color: #0000FF;
+          border-left-color: #FFFF00; padding:20px">border-top-color: #FF0000;<br>
+        border-right-color: #00FF00;<br>
+        border-bottom-color: #0000FF;<br>
+        border-left-color: #FFFF00;
+        </p>
+          <p class="parrafo">En este ejemplo, hemos asignado colores diferentes a cada lado del elemento. El color rojo se aplica al borde superior, el verde al borde derecho, el azul al borde inferior y el amarillo al borde izquierdo.</p>
+          <p class="parrafo">Puedes personalizar los colores según tus necesidades de diseño utilizando valores de color en diferentes formatos, como nombres de colores, códigos hexadecimales, valores RGB, valores RGBA, valores HSL o valores HSLA. Esto te permite tener un control preciso sobre cómo se ven los bordes de tus elementos HTML en cada lado.</p>
+          <p class="parrafo"></p>
+          <p class="parrafo"></p>
         </Articlep>
 
     </main>
