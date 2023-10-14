@@ -1,0 +1,224 @@
+---
+import Articlep from "../../components/Articlep.astro";
+import Code from "../../components/Code.astro";
+import Layout from "../../layouts/Layout.astro";
+
+
+const cssLang = "language-css line-numbers";
+
+const codigo1=`p {
+    /* Establece el color del texto del párrafo en rojo. */
+  color: red; 
+  /* Establece el color de fondo del párrafo en amarillo. */
+  background-color: yellow; 
+  /* Establece un borde sólido azul de 2 píxeles de ancho alrededor del párrafo. */
+  border: 2px solid blue;
+}
+`;
+const codigo2=`color: #RRGGBB;
+`;
+const codigo3=`color: #FF0000; /* Esto representa el color rojo puro */
+background-color: #00FF00; /* Esto representa el color verde puro */
+border: 2px solid #0000FF; /* Esto representa el color azul puro */
+`;
+const codigo4=``;
+const codigo5=``;
+const codigo6=``;
+const codigo7=``;
+const codigo8=``;
+const codigo9=``;
+---
+
+<Layout title="colors">
+    <main>
+        <h1 class="title-h1">COLORES</h1>
+        <Articlep>
+            <p class="parrafo">Los colores desempeñan un papel esencial en la creación de diseños web atractivos y atractivos en CSS. Aquí tienes una explicación sobre los colores y su importancia en CSS:</p>
+            <p class="parrafo">Los colores en CSS son una herramienta fundamental para definir la estética y la apariencia visual de las páginas web. Permiten dar vida a los elementos HTML, resaltar información importante y establecer una identidad visual distintiva para un sitio web. Los colores se pueden aplicar a una amplia variedad de propiedades CSS, como el texto, el fondo, los bordes y las sombras, lo que permite una personalización completa del diseño.</p>
+            <p class="parrafo">La elección de colores adecuada desempeña un papel crucial en la usabilidad y la experiencia del usuario. Los colores no solo atraen la atención del visitante, sino que también transmiten información y emociones. Por ejemplo, un botón de "Enviar" en verde puede indicar que una acción es segura, mientras que un botón rojo podría alertar sobre una acción potencialmente riesgosa.</p>
+            <p class="parrafo">CSS ofrece múltiples formas de definir colores, desde nombres de colores predefinidos hasta valores hexadecimales, RGB, HSL y más. Además, la capacidad de especificar transparencia (alfa) permite crear efectos visuales sutiles o destacar contenido sin abrumar al usuario.</p>
+            <p class="parrafo">En CSS, puedes especificar colores utilizando varios tipos de valores. Los tipos de valores de color comunes incluyen:</p>
+
+            <ol class="parrafo">
+                <li><span class="res">Nombres de colores:</span> CSS admite una serie de nombres de colores predefinidos, como red (rojo), green (verde), blue (azul), yellow (amarillo), entre otros. Ejemplo: color: red;.</li>
+                <li><span class="res">Códigos hexadecimales:</span> Los códigos hexadecimales son representaciones de colores utilizando una combinación de seis caracteres alfanuméricos, que van desde #000000 (negro) hasta #FFFFFF (blanco). Ejemplo: color: #FFA500; para el color naranja.</li>
+                <li><span class="res">Valores RGB:</span> Puedes especificar colores mediante sus componentes rojo, verde y azul (RGB) utilizando la función rgb(). Por ejemplo: color: rgb(255, 0, 0); para el rojo.</li>
+                <li><span class="res">Valores RGBA:</span> Similar a RGB, pero con un cuarto parámetro para la transparencia (alfa). Ejemplo: background-color: rgba(0, 128, 0, 0.5); para un verde semitransparente.</li>
+                <li><span class="res">Valores HSL:</span> Puedes especificar colores mediante matiz (hue), saturación y luminosidad utilizando la función hsl(). Ejemplo: background-color: hsl(120, 100%, 50%); para un verde brillante.</li>
+                <li><span class="res">Valores HSLA:</span> Similar a HSL, pero con un cuarto parámetro para la transparencia. Ejemplo: background-color: hsla(0, 100%, 50%, 0.5); para un rojo semitransparente.</li>
+                <li><span class="res">Valores de color transparente:</span> Puedes usar la palabra clave transparent para definir un color completamente transparente, que no es visible. Ejemplo: border-color: transparent;.</li>
+                <li><span class="res">Valores de color heredado:</span> Puedes utilizar la palabra clave inherit para que el color se herede del elemento padre.</li>
+            </ol>
+            
+        </Articlep>
+
+        <Articlep>
+            <h2 class="title-h2">Nombres de colores</h2>
+            <p class="parrafo">Los nombres de colores en CSS son palabras clave que representan colores específicos. CSS tiene una lista de nombres de colores predefinidos que puedes utilizar para definir colores en tus reglas de estilo. Estos nombres son fáciles de recordar y pueden ser una forma rápida y sencilla de definir colores sin necesidad de conocer los códigos hexadecimales o los valores RGB. Algunos ejemplos de nombres de colores comunes incluyen:</p>
+            <ul class="parrafo">
+                <li>Rojo (red)</li>
+                <li >Azul (blue)</li>
+                <li>Verde (green)</li>
+                <li>Amarillo (yellow)</li>
+                <li>Naranja (orange)</li>
+                <li>Púrpura (purple)</li>
+                <li>Rosa (pink)</li>
+                <li>Marrón (brown)</li>
+                <li>Gris (gray)</li>
+                <li>Negro (black)</li>
+                <li>Blanco (white)</li>
+            </ul>
+
+            <p class="parrafo">Para utilizar un nombre de color en una regla CSS, simplemente especifica el nombre de color como el valor de una propiedad relacionada con el color. Por ejemplo:</p>
+            <Code codigo={codigo1} typeLan={cssLang}></Code>
+            <p class="parrafo">La ventaja de utilizar nombres de colores es que son legibles y fáciles de entender en el código, lo que facilita el proceso de definir colores en tu hoja de estilo. Sin embargo, ten en cuenta que la disponibilidad de nombres de colores específicos puede variar según el navegador, y es posible que algunos navegadores no reconozcan todos los nombres. En esos casos, es recomendable proporcionar una alternativa utilizando códigos hexadecimales o valores RGB para garantizar la coherencia del color en todos los navegadores.</p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Códigos hexadecimales:</h2>
+            <p class="parrafo">La numeración hexadecimal es un sistema de numeración que utiliza una base de 16 en lugar de la base 10 que usamos comúnmente en la vida cotidiana. En este sistema, los dígitos van desde 0 hasta 9, y luego de 10 a 15 se representan con letras de la A a la F. En el contexto de CSS, la numeración hexadecimal se utiliza para especificar colores utilizando códigos hexadecimales. A continuación, te explicaré cómo funciona y cómo se utiliza en CSS:</p>
+
+            <h3 class="title-h3">Cómo funciona la numeración hexadecimal:</h3>
+            <p class="parrafo">Los dígitos en un número hexadecimal pueden ser del 0 al 9 y de la A a la F. En este sistema, A representa 10, B representa 11, y así sucesivamente hasta F, que representa 15 en decimal.</p>
+            <p class="parrafo">Los números hexadecimales se escriben con el prefijo "0x" o simplemente con el número. Por ejemplo, "0x1A" y "1A" son equivalentes y representan el número decimal 26.</p>
+            <h3 class="title-h3">Cómo se utiliza en CSS:</h3>
+            <p class="parrafo">La numeración hexadecimal se utiliza en CSS para definir colores mediante códigos hexadecimales. Cada código hexadecimal consta de 6 caracteres alfanuméricos (0-9 y A-F), y se utiliza para representar una combinación de valores rojo, verde y azul (RGB) que, a su vez, determina un color específico.</p>
+            
+
+            <div class="table">
+                <table border="1">
+                    <caption>Códigos hexadecimales</caption>
+                   <thead>
+                    <tr>
+                        <th>Dígito Decimal</th>
+                        <th>Dígito Hexadecimal</th>
+                    </tr>
+                   </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>D</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>E</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="parrafo">Un código hexadecimal en CSS se especifica de la siguiente manera:</p>
+            <Code codigo={codigo2} typeLan={cssLang}></Code>
+            <p class="parrafo">Donde:</p>
+            <ul class="parrafo">
+                <li><span class="res">#</span> indica que se trata de un valor hexadecimal.</li>
+                <li><span class="res">RR</span> representa la intensidad del rojo en dos dígitos hexadecimales (00 a FF).</li>
+                <li><span class="res">GG</span> representa la intensidad del verde en dos dígitos hexadecimales (00 a FF).</li>
+                <li><span class="res">BB</span> representa la intensidad del azul en dos dígitos hexadecimales (00 a FF).</li>
+            </ul>
+            <p class="parrafo">Por ejemplo:</p>
+            <Code codigo={codigo3} typeLan={cssLang}></Code>
+            <p class="parrafo">El código hexadecimal permite una forma precisa y concisa de especificar colores en CSS y es ampliamente utilizado en diseño web. Puedes encontrar herramientas en línea que generan códigos hexadecimales a partir de colores específicos, lo que facilita la personalización de la paleta de colores de tu sitio web.</p>
+
+          
+
+
+
+
+
+
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+        </Articlep>
+    </main>
+</Layout>
+
+
+<style>
+    .table{
+        max-width: 500px;
+        min-width: 200px;
+        overflow: auto;
+        margin: 0 auto;
+    }
+   table {
+    border-collapse: collapse;
+    box-shadow: 15px 15px 20px rgb(0, 0, 0, 0.5);
+    max-width: 500px;
+        min-width: 200px;
+  }
+
+  tr th{
+    background-color: rgb(9, 2, 36);
+    font-weight: bold;
+  }
+
+  th, td {
+    text-align: center;
+    border: 1px solid white;
+    padding: 8px;
+    font-size: 1.5rem;
+  }
+
+</style>
