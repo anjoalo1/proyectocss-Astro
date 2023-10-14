@@ -117,7 +117,12 @@ border-right-color: #00FF00;  /* Verde para el borde derecho */
 border-bottom-color: #0000FF; /* Azul para el borde inferior */
 border-left-color: #FFFF00;   /* Amarillo para el borde izquierdo */
 `;
-const codigo26=``;
+const codigo26=`border: 2px solid #FF0000;
+/* Borde de 2 píxeles de ancho, sólido y de color rojo */
+`;
+const codigo27=`border: 1px dashed #00FF00 2px double #0000FF 3px groove #FFFF00 4px;
+`;
+const codigo28=``;
 
 ---
 
@@ -163,14 +168,14 @@ const codigo26=``;
                 <li><span class="res">padding-bottom:</span> Define el espacio entre el borde inferior del elemento y su contenido.</li>
                 <li><span class="res">padding-left:</span> Define el espacio entre el borde izquierdo del elemento y su contenido.</li>
             </ul>
-
-            <p class="parrafo">Un solo valor: Si se especifica un solo valor, se aplicará a todos los lados del elemento. Por ejemplo:</p>
+            
+            <p class="parrafo"> <span class="res">Un solo valor:</span> Si se especifica un solo valor, se aplicará a todos los lados del elemento. Por ejemplo:</p>
             <Code codigo={codigo2} typeLan={cssLang}></Code>
-            <p class="parrafo">Dos valores: Si se especifican dos valores, se aplicarán al borde superior e inferior y al borde izquierdo y derecho, respectivamente. El primer valor corresponde a la parte superior y la inferior, y el segundo valor corresponde a la izquierda y la derecha. Por ejemplo:</p>
+            <p class="parrafo"><span class="res">Dos valores:</span> Si se especifican dos valores, se aplicarán al borde superior e inferior y al borde izquierdo y derecho, respectivamente. El primer valor corresponde a la parte superior y la inferior, y el segundo valor corresponde a la izquierda y la derecha. Por ejemplo:</p>
             <Code codigo={codigo3} typeLan={cssLang}></Code>
-            <p class="parrafo"> El valor de tres valores para la propiedad padding en CSS se aplica a los siguientes lados en este orden: parte superior, izquierda/derecha y parte inferior.</p>
+            <p class="parrafo"> <span class="res">Tres valores:</span> para la propiedad padding en CSS se aplica a los siguientes lados en este orden: parte superior, izquierda/derecha y parte inferior.</p>
             <Code codigo={codigo4} typeLan={cssLang}></Code>
-            <p class="parrafo">    Cuatro valores: Si se especifican cuatro valores, se aplicarán al borde superior, derecho, inferior e izquierdo en ese orden. Por ejemplo:</p>
+            <p class="parrafo"><span class="res">Cuatro valores:</span> Si se especifican cuatro valores, se aplicarán al borde superior, derecho, inferior e izquierdo en ese orden. Por ejemplo:</p>
             <Code codigo={codigo5} typeLan={cssLang}></Code>
 
 
@@ -286,15 +291,16 @@ const codigo26=``;
           <p class="parrafo"><span class="res">Dos valores:</span> Si especificas dos valores, estos se aplicarán al borde superior/inferior y al borde izquierdo/derecho por igual. Por ejemplo:</p>
           <Code codigo={codigo17} typeLan={cssLang}></Code>
           <p class="parrafo"><span class="res">Tres valores:</span> También puedes especificar tres valores para controlar el ancho de los bordes de la siguiente manera:</p>
+         
+          <Code codigo={codigo18} typeLan={cssLang}></Code>
+          <p class="parrafo">Esto aplicará un borde de 2 píxeles de ancho en la parte superior, 1 píxel en los lados derecho e izquierdo, y 3 píxeles en la parte inferior.</p>
+          <p class="parrafo"><span class="res">Cuatro valores:</span> Puedes especificar cuatro valores para controlar el ancho de cada borde de manera individual, en el orden superior, derecho, inferior e izquierdo. Por ejemplo:</p>
+          <Code codigo={codigo19} typeLan={cssLang}></Code>
           <ul class="parrafo">
             <li>El primer valor se aplica al borde superior.</li>
             <li>El segundo valor se aplica a los bordes izquierdo y derecho.</li>
             <li>El tercer valor se aplica al borde inferior.</li>
           </ul>
-          <Code codigo={codigo18} typeLan={cssLang}></Code>
-          <p class="parrafo">Esto aplicará un borde de 2 píxeles de ancho en la parte superior, 1 píxel en los lados derecho e izquierdo, y 3 píxeles en la parte inferior.</p>
-          <p class="parrafo"><span class="res">Cuatro valores:</span> Puedes especificar cuatro valores para controlar el ancho de cada borde de manera individual, en el orden superior, derecho, inferior e izquierdo. Por ejemplo:</p>
-          <Code codigo={codigo19} typeLan={cssLang}></Code>
           <p class="parrafo">Esto aplicará un borde de 2 píxeles de ancho en la parte superior, 1 píxel en la derecha, 3 píxeles en la parte inferior y 4 píxeles en la izquierda.</p>
 
 
@@ -394,8 +400,24 @@ const codigo26=``;
         </p>
           <p class="parrafo">En este ejemplo, hemos asignado colores diferentes a cada lado del elemento. El color rojo se aplica al borde superior, el verde al borde derecho, el azul al borde inferior y el amarillo al borde izquierdo.</p>
           <p class="parrafo">Puedes personalizar los colores según tus necesidades de diseño utilizando valores de color en diferentes formatos, como nombres de colores, códigos hexadecimales, valores RGB, valores RGBA, valores HSL o valores HSLA. Esto te permite tener un control preciso sobre cómo se ven los bordes de tus elementos HTML en cada lado.</p>
-          <p class="parrafo"></p>
-          <p class="parrafo"></p>
+          <h2 class="title-h2">Definiendo Estilo, Ancho y Color de Bordes en CSS</h2>
+          <p class="parrafo">La propiedad border en CSS es un atajo versátil que permite definir el estilo, el ancho y el color de los bordes de un elemento HTML en una sola declaración. Esto simplifica el proceso de personalizar la apariencia de los bordes de un elemento, ya que se pueden especificar estos tres aspectos clave en un solo lugar. Puedes utilizar border con un solo valor para aplicar el mismo estilo, ancho y color a los cuatro lados del elemento, o puedes proporcionar valores individuales para cada lado en el orden superior, derecho, inferior e izquierdo. Esto ofrece una mayor flexibilidad en el diseño de páginas web y facilita la creación de elementos con bordes personalizados y atractivos.</p>
+          <p class="parrafo"><span class="res">Especificando un solo valor para todos los lados:</span> Puedes definir el ancho, el estilo y el color del borde en un solo valor, y esto se aplicará a los cuatro lados del elemento. Por ejemplo:</p>
+          <Code codigo={codigo26} typeLan={cssLang}></Code>
+          
+          
+          <p class="parrafo"><span class="res">Especificando valores para cada lado individualmente: </span>
+            También puedes proporcionar valores separados para cada lado en el orden: superior, derecho, inferior e izquierdo. Por ejemplo:</p>
+            <Code codigo={codigo27} typeLan={cssLang}></Code>
+          <p class="parrafo">En este ejemplo, los valores se aplican de la siguiente manera:</p>
+          <ul class="parrafo">
+            <li>Borde superior: 1 píxel de ancho, estilo discontinuo (dashed), color verde (#00FF00).</li>
+            <li>Borde derecho: 2 píxeles de ancho, estilo doble (double), color azul (#0000FF).</li>
+            <li>Borde inferior: 3 píxeles de ancho, estilo en relieve (groove), color amarillo (#FFFF00).</li>
+            <li>Borde izquierdo: 4 píxeles de ancho.</li>
+          </ul>
+          <p class="parrafo">Estos ejemplos muestran cómo puedes utilizar la propiedad border para definir de manera compacta el ancho, el estilo y el color de los bordes de tus elementos HTML. Puedes personalizar los valores de acuerdo con tus necesidades de diseño, ya sea aplicando un solo conjunto de valores a todos los lados o configurando valores individuales para cada lado.</p>
+          
         </Articlep>
 
     </main>

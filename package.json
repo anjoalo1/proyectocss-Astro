@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@simonwep/pickr": "^1.9.0",
     "astro": "^3.0.6",
     "prism-themes": "^1.9.0"
   },
