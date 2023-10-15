@@ -21,12 +21,71 @@ const codigo3=`color: #FF0000; /* Esto representa el color rojo puro */
 background-color: #00FF00; /* Esto representa el color verde puro */
 border: 2px solid #0000FF; /* Esto representa el color azul puro */
 `;
-const codigo4=``;
-const codigo5=``;
-const codigo6=``;
-const codigo7=``;
-const codigo8=``;
-const codigo9=``;
+const codigo4=`rgb(valor_rojo, valor_verde, valor_azul)
+`;
+const codigo5=`color: rgb(255, 0, 0);
+ /* Rojo puro */
+background-color: rgb(0, 255, 0);
+ /* Verde puro */
+border: 2px solid rgb(0, 0, 255);
+ /* Azul puro */
+`;
+const codigo6=`color: rgb(100%, 0%, 0%);
+ /* Rojo puro */
+background-color: rgb(0%, 100%, 0%);
+ /* Verde puro */
+border: 2px solid rgb(0%, 0%, 100%);
+ /* Azul puro */
+`;
+const codigo7=`rgba(valor_rojo, valor_verde, valor_azul, valor_alfa)
+`;
+const codigo8=`color: rgba(255, 0, 0, 0.5);
+ /* Rojo con 50% de transparencia */
+background-color: rgba(0, 255, 0, 0.75);
+ /* Verde con 75% de transparencia */
+border: 2px solid rgba(0, 0, 255, 0.25);
+ /* Azul con 25% de transparencia */
+`;
+const codigo9=`color: rgba(255, 0, 0, 50%);
+ /* Rojo con 50% de transparencia */
+background-color: rgba(0, 255, 0, 75%);
+ /* Verde con 75% de transparencia */
+border: 2px solid rgba(0, 0, 255, 25%);
+ /* Azul con 25% de transparencia */
+`;
+const codigo10=`hsl(valor_tono, valor_saturacion, valor_luminosidad)
+`;
+const codigo11=`color: hsl(0, 100%, 50%);
+ /* Rojo puro */
+background-color: hsl(120, 100%, 50%);
+ /* Verde puro */
+border: 2px solid hsl(240, 100%, 50%);
+ /* Azul puro */
+`;
+const codigo12=`color: hsl(30, 90%, 60%); 
+/* Amarillo anaranjado con saturación reducida */
+background-color: hsl(200, 70%, 40%); 
+/* Azul oscuro con saturación reducida y luminosidad reducida */
+border: 2px solid hsl(60, 100%, 75%);
+ /* Amarillo claro con máxima saturación y alta luminosidad */
+`;
+const codigo13=`hsla(valor_tono, valor_saturacion, valor_luminosidad, valor_alfa)
+`;
+const codigo14=`color: hsla(0, 100%, 50%, 0.5); 
+/* Rojo con 50% de transparencia */
+background-color: hsla(120, 100%, 50%, 0.75); 
+/* Verde con 75% de transparencia */
+border: 2px solid hsla(240, 100%, 50%, 0.25); 
+/* Azul con 25% de transparencia */
+`;
+const codigo15=`color: hsla(0, 100%, 50%, 50%); 
+/* Rojo con 50% de transparencia */
+background-color: hsla(120, 100%, 50%, 75%); 
+/* Verde con 75% de transparencia */
+border: 2px solid hsla(240, 100%, 50%, 25%); 
+/* Azul con 25% de transparencia */
+`;
+const codigo16=``;
 ---
 
 <Layout title="colors">
@@ -174,22 +233,82 @@ const codigo9=``;
             <p class="parrafo">Por ejemplo:</p>
             <Code codigo={codigo3} typeLan={cssLang}></Code>
             <p class="parrafo">El código hexadecimal permite una forma precisa y concisa de especificar colores en CSS y es ampliamente utilizado en diseño web. Puedes encontrar herramientas en línea que generan códigos hexadecimales a partir de colores específicos, lo que facilita la personalización de la paleta de colores de tu sitio web.</p>
-
-          
-
-
-
-
-
-
-            <p class="parrafo"></p>
-            <p class="parrafo"></p>
-            <p class="parrafo"></p>
-            <p class="parrafo"></p>
-            <p class="parrafo"></p>
-            <p class="parrafo"></p>
-            <p class="parrafo"></p>
-            <p class="parrafo"></p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Valores RGB</h2>
+            <p class="parrafo">En CSS se utilizan para definir colores mediante la intensidad de tres componentes: rojo, verde y azul. Cada componente tiene un valor que varía entre 0 y 255 (o entre 0 y 100% en algunas implementaciones). Combinando estos valores, puedes crear una amplia gama de colores. Aquí tienes una explicación detallada:</p>
+            <h2 class="title-h2">Valores RGB en CSS</h2>
+            <ul class="parrafo">
+                <li><span class="res">R (Red):</span> Representa la intensidad del color rojo en el rango de 0 a 255 o de 0% a 100%. Un valor de 0 significa que no hay rojo, y un valor de 255 (o 100%) significa que el rojo está al máximo.</li>
+                <li><span class="res">G (Green):</span> Representa la intensidad del color verde en el rango de 0 a 255 o de 0% a 100%. Un valor de 0 significa que no hay verde, y un valor de 255 (o 100%) significa que el verde está al máximo.</li>
+                <li><span class="res">B (Blue):</span> Representa la intensidad del color azul en el rango de 0 a 255 o de 0% a 100%. Un valor de 0 significa que no hay azul, y un valor de 255 (o 100%) significa que el azul está al máximo.</li>
+            </ul>
+            <h3 class="title-h3">Sintaxis de Valores RGB:</h3>
+            <p class="parrafo">En CSS, los valores RGB se especifican utilizando la función rgb(). Puedes usar una combinación de valores enteros o porcentajes para cada componente. La sintaxis general es la siguiente:</p>
+            <Code codigo={codigo4} typeLan={cssLang}></Code>
+            <p class="parrafo">Ejemplos:</p>
+            <Code codigo={codigo5} typeLan={cssLang}></Code>
+            <p class="parrafo">También puedes utilizar porcentajes para especificar los valores RGB:</p>
+            <Code codigo={codigo6} typeLan={cssLang}></Code>
+            <p class="parrafo">Estos son solo ejemplos básicos de cómo se pueden utilizar los valores RGB en CSS para definir colores. Al ajustar los valores de los componentes R, G y B, puedes crear una variedad infinita de colores personalizados para tu diseño web. Además, puedes utilizar herramientas en línea o paletas de colores predefinidas para ayudarte a seleccionar los valores RGB deseados.</p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Valores RGBA</h2>
+            <p class="parrafo">Los valores RGBA en CSS son una extensión de los valores RGB (Red, Green, Blue) y permiten especificar colores con un cuarto parámetro, que representa la transparencia o la opacidad del color. La "A" en RGBA significa "Alpha", que se refiere a la transparencia. Al agregar un valor alfa, puedes hacer que un color sea transparente y, por lo tanto, ver a través de él.</p>
+            <h3 class="title-h3">Valores RGBA en CSS:</h3>
+            <ul class="parrafo">
+                <li>R <span class="res">R (Red): Al igual que en los valores RGB, representa la intensidad del color rojo en el rango de 0 a 255 o de 0% a 100%.</span> Al igual que en los valores RGB, representa la intensidad del color rojo en el rango de 0 a 255 o de 0% a 100%.</li>
+                <li><span class="res">G (Green):</span> Al igual que en los valores RGB, representa la intensidad del color verde en el rango de 0 a 255 o de 0% a 100%.</li>
+                <li><span class="res">B (Blue):</span> Al igual que en los valores RGB, representa la intensidad del color azul en el rango de 0 a 255 o de 0% a 100%.</li>
+                <li><span class="res">A (Alpha):</span> Representa la transparencia del color en el rango de 0 a 1, donde 0 significa completamente transparente y 1 significa completamente opaco. También se puede expresar en porcentaje, donde 0% es completamente transparente y 100% es completamente opaco.</li>
+            </ul>
+            <h3 class="title-h3">Sintaxis de Valores RGBA:</h3>
+            <p class="parrafo">En CSS, los valores RGBA se especifican utilizando la función rgba(). La sintaxis general es la siguiente:</p>
+            <Code codigo={codigo7} typeLan={cssLang}></Code>
+            
+            <p class="parrafo">Ejemplos:</p>
+            <Code codigo={codigo8} typeLan={cssLang}></Code>
+            <p class="parrafo">También puedes utilizar porcentajes para especificar el valor alfa:</p>
+            <Code codigo={codigo9} typeLan={cssLang}></Code>
+            <p class="parrafo">Los valores RGBA son útiles cuando deseas crear efectos de transparencia en elementos HTML. Puedes combinar colores y ajustar la transparencia para lograr efectos visuales sutiles o destacar contenido sin que se vuelva completamente opaco. Los valores RGBA se utilizan comúnmente en propiedades como color, background-color, border-color y box-shadow.</p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Valores HSL:</h2>
+            <p class="parrafo">Los valores HSL en CSS son una forma alternativa de definir colores. HSL significa "Hue, Saturation, Lightness" (Matiz, Saturación, Luminosidad) y se utiliza para especificar colores basados en el tono, la saturación y el brillo en lugar de los componentes rojo, verde y azul (RGB). Aquí tienes una explicación más detallada de los valores HSL en CSS:</p>
+            <h3 class="title-h3">Valores HSL en CSS:</h3>
+            <ul class="parrafo">
+                <li><span class="res">Hue (H):</span> El tono es el aspecto cromático del color y se mide en grados en un círculo de colores que va de 0 a 360. Cada valor de tono representa un color específico en el círculo de colores, donde 0 y 360 corresponden al rojo, 120 al verde y 240 al azul.</li>
+                <li><span class="res">Saturation (S):</span> La saturación mide la intensidad del color y se expresa en porcentaje (%). Un valor del 100% significa que el color está en su máxima saturación, y 0% significa que el color está completamente desaturado (escala de grises).</li>
+                <li><span class="res">Lightness (L):</span> La luminosidad se refiere al brillo del color y también se expresa en porcentaje (%). Un valor del 0% indica negro puro (sin brillo), 100% representa blanco puro (máximo brillo) y 50% es un tono de color neutro.</li>
+            </ul>
+            <h2 class="title-h3">Sintaxis de Valores HSL:</h2>
+            <p class="parrafo">En CSS, los valores HSL se especifican utilizando la función hsl(). La sintaxis general es la siguiente:</p>
+            <Code codigo={codigo10} typeLan={cssLang}></Code>
+            <p class="parrafo">Ejemplos:</p>
+            <Code codigo={codigo11} typeLan={cssLang}></Code>
+            <p class="parrafo">En estos ejemplos, los valores HSL se utilizan para definir colores. El tono define el color, la saturación controla la intensidad y la luminosidad regula el brillo.</p>
+            <p class="parrafo">Ejemplo adicional con ajustes:</p>
+            <Code codigo={codigo12} typeLan={cssLang}></Code>
+            <p class="parrafo">Los valores HSL son una forma más intuitiva de definir colores para algunos diseñadores, ya que se relacionan con las propiedades perceptuales de los colores. Permiten un mayor control y personalización de la apariencia de los elementos en una página web.</p>
+        </Articlep>
+        <Articlep>
+            <h2 class="title-h2">Valores HSLA:</h2>
+            <p class="parrafo">Los valores HSLA en CSS son una extensión de los valores HSL (Hue, Saturation, Lightness) y permiten especificar colores con un cuarto parámetro, que representa la transparencia o la opacidad del color. Los valores HSLA son útiles cuando deseas definir colores con efectos de transparencia o superposición en elementos HTML.</p>
+            <h3 class="title-h">Valores HSLA en CSS:</h3>
+            <ul class="parrafo">
+                <li><span class="res">Hue (H):</span> Al igual que en los valores HSL, el tono es el aspecto cromático del color y se mide en grados en un círculo de colores que va de 0 a 360.</li>
+                <li><span class="res">Saturation (S):</span> Al igual que en los valores HSL, la saturación mide la intensidad del color y se expresa en porcentaje (%).</li>
+                <li><span class="res">Lightness (L):</span> Al igual que en los valores HSL, la luminosidad se refiere al brillo del color y se expresa en porcentaje (%).</li>
+                <li><span class="res">Alpha (A):</span> El valor alfa representa la transparencia del color y se mide en un rango de 0 a 1, donde 0 significa completamente transparente y 1 significa completamente opaco. También se puede expresar en porcentaje, donde 0% es completamente transparente y 100% es completamente opaco.</li>
+            </ul>
+            <h3 class="title-h3">Sintaxis de Valores HSLA:</h3>
+            <p class="parrafo">En CSS, los valores HSLA se especifican utilizando la función hsla(). La sintaxis general es la siguiente:</p>
+            <Code codigo={codigo13} typeLan={cssLang}></Code> 
+            <p class="parrafo">Ejemplos:</p>
+            <Code codigo={codigo14} typeLan={cssLang}></Code>
+            <p class="parrafo">También puedes utilizar porcentajes para especificar el valor alfa:</p>
+            <Code codigo={codigo15} typeLan={cssLang}></Code>
+            <p class="parrafo">En estos ejemplos, los valores HSLA se utilizan para definir colores con transparencia. Esto puede ser útil cuando deseas crear efectos visuales que permitan ver a través de un elemento, como superposiciones o sombreado en elementos HTML. Los valores HSLA se utilizan comúnmente en propiedades como color, background-color, border-color y box-shadow.</p>
         </Articlep>
     </main>
 </Layout>
@@ -197,6 +316,7 @@ const codigo9=``;
 
 <style>
     .table{
+        padding: 20px;
         max-width: 500px;
         min-width: 200px;
         overflow: auto;
