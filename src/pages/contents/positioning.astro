@@ -1,0 +1,59 @@
+---
+import Articlep from "../../components/Articlep.astro";
+import Layout from "../../layouts/Layout.astro";
+import Code from "../../components/Code.astro";
+const cssLang = "language-css line-numbers";
+
+const posicionamiento ={
+    codigo1:`
+    div {
+  position: static;
+}
+
+    `,
+    codigo2:`
+    `,
+    codigo3:`
+    `,
+    codigo4:`
+    `,
+    codigo5:`
+    `,
+    codigo6:`
+    `,
+    codigo7:`
+    `,
+    codigo8:`
+    `,
+    codigo9:`
+    `,
+    codigo10:`
+    `,
+    codigo11:`
+    `,
+}
+---
+
+<Layout title="Posicionamiento">
+
+    <main>
+        <h1 class="title-h1">POSICIONAMIENTO</h1>
+        <Articlep>
+            <h2 class="title-h2"></h2>
+            <p class="parrafo">En CSS, el "posicionamiento" se refiere a cómo se coloca y posiciona un elemento en relación con otros elementos en la página web. El posicionamiento es fundamental para controlar el diseño y la presentación de una página web.</p>
+        </Articlep>
+
+        <Articlep>
+            <h2 class="title-h2">Tipos de Posicionamiento</h2>
+            <h3 class="title-h3">static</h3>
+            <p class="parrafo">Es el valor predeterminado. Los elementos con position: static; se colocan en el flujo normal del documento, es decir, uno después del otro en el orden en que aparecen en el HTML.</p>
+            <Code codigo={posicionamiento.codigo1} typeLan={cssLang}></Code>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+        </Articlep>
+    </main>
+
+</Layout>

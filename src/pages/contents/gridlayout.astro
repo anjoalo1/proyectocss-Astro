@@ -1,0 +1,177 @@
+---
+import Articlep from "../../components/Articlep.astro";
+import Layout from "../../layouts/Layout.astro";
+import Code from "../../components/Code.astro";
+import Addimagen from "../../components/Addimagen.astro";
+import ImagenAncha from "../../components/ImagenAncha.astro";
+
+const cssLang = "language-css line-numbers";
+const htmlLang = "language-html line-numbers";
+
+
+const grid ={
+    codigo1:`
+    .grid-container {
+  display: grid;
+}
+
+    `,
+    codigo2:`
+    <!-- contenedor padre -->
+    <div class="grid-container">
+
+    </div>
+	
+    `,
+    codigo3:`
+    .grid-item {
+  /* Propiedades para colocar el elemento en la cuadrícula */
+}
+
+    `,
+    codigo4:`
+    <div class="grid-item">
+
+    </div>    
+    `,
+    codigo5:`
+    .grid-container {
+  grid-template-columns: 100px 200px 100px;
+   /* Define tres columnas con anchos específicos */
+  grid-template-rows: 50px 100px;
+   /* Define dos filas con alturas específicas */
+}
+
+    `,
+    codigo6:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: 100px 200px 150px;
+}
+
+    `,
+    codigo7:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+    `,
+    codigo8:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+}
+
+    `,
+    codigo9:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: 100px 20% 1fr;
+}
+
+    `,
+    codigo10:`
+    .grid-container {
+  display: grid;
+  grid-template-rows: 100px 200px 150px;
+}
+
+    `,
+    codigo11:`
+    .grid-container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+    `,
+    codigo12:`
+    .grid-container {
+  display: grid;
+  grid-template-rows: 1fr 2fr auto;
+}
+
+    `,
+    codigo13:`
+    .grid-container {
+  display: grid;
+  grid-template-rows: 100px 20% 1fr;
+}
+
+    `,
+    codigo14:`
+    `,
+    codigo15:`
+    `,
+}
+---
+
+<Layout title="grid layour">
+    <main>
+        <h1 class="title-h1">GRID LAYOUT</h1>
+        <Articlep>
+            <h2 class="title-h2">¿Qué es Grid Layout?</h2>
+            <p class="parrafo">En CSS, Grid Layout es un sistema de diseño que permite organizar los elementos de una página web en filas y columnas. Con Grid Layout, puedes crear diseños más complejos y flexibles que los que se pueden lograr con métodos más tradicionales, como Float o Flexbox.</p>
+            <p class="parrafo">Las características principales de CSS Grid Layout incluyen:</p>
+
+
+            <p class="parrafo"><strong>Contenedor de Cuadrícula (Grid Container):</strong> Es el elemento que contiene todos los elementos hijos que formarán parte de la cuadrícula. Se declara con la propiedad display: grid.</p>
+
+            <Code codigo={grid.codigo1} typeLan={cssLang}></Code>
+            <Code codigo={grid.codigo2} typeLan={htmlLang}></Code>
+            
+            <p class="parrafo"><strong>Ítems de la Cuadrícula (Grid Items):</strong> Son los elementos hijos del contenedor de la cuadrícula que participan en la disposición de la cuadrícula. Estos elementos se colocan en celdas específicas de la cuadrícula.</p>
+            <Code codigo={grid.codigo3} typeLan={cssLang}></Code>
+            <Code codigo={grid.codigo4} typeLan={htmlLang}></Code>
+            <p class="parrafo">Líneas de Cuadrícula (Grid Lines): Son las líneas que definen los límites de las filas y columnas de la cuadrícula. Pueden ser referenciadas para posicionar elementos.</p>
+            <Code codigo={grid.codigo5} typeLan={cssLang}></Code>
+            <Addimagen direccion="../assets/grid_layout_css.svg"></Addimagen>
+            <p class="parrafo"><strong>"grid track"</strong> se refiere a una fila o columna individual en una cuadrícula. Estas filas y columnas se crean al definir las propiedades grid-template-rows y grid-template-columns respectivamente</p>
+            <p class="parrafo">Grid Track para Filas (grid-template-rows): Cada fila en una cuadrícula se considera un "grid track". </p>
+            
+            <p class="parrafo">Grid Track para Columnas (grid-template-columns): Similarmente, cada columna en una cuadrícula se considera un "grid track".</p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            
+          </Articlep>
+          
+          <Articlep>
+            <h2 class="title-h2">grid-template-columns</h2>
+            <p class="parrafo">La propiedad grid-template-columns se utiliza para definir las columnas de la cuadrícula. Puedes especificar el tamaño de cada columna individualmente o usar funciones como repeat() para repetir el mismo tamaño varias veces. Aquí hay algunos ejemplos:</p>
+            <p class="parrafo">Definición de columnas con tamaños específicos:</p>
+            <Code codigo={grid.codigo6} typeLan={cssLang}></Code>
+            <Addimagen direccion="../public/assets/grid_t_c_100_200_150.svg"></Addimagen>
+            <p class="parrafo">En este ejemplo, se definen tres columnas con anchos específicos: la primera columna tiene 100 píxeles, la segunda 200 píxeles y la tercera 150 píxeles.</p>
+            <p class="parrafo">Uso de la función repeat():</p>
+            <Code codigo={grid.codigo7} typeLan={cssLang}></Code>
+            <p class="parrafo">La función repeat(3, 1fr) crea tres columnas, cada una con un tamaño igual. La unidad fr significa "fracción" y distribuirá el espacio disponible de manera equitativa entre las tres columnas.</p>
+            <p class="parrafo">Columnas con tamaños mixtos y auto:</p>
+            <Code codigo={grid.codigo8} typeLan={cssLang}></Code>
+            <p class="parrafo">En este caso, la primera columna ocupa una fracción del espacio disponible, la segunda columna ocupa el doble de la fracción de la primera, y la tercera columna se ajusta automáticamente al contenido.</p>
+            <p class="parrafo">Uso de valores explícitos y porcentaje:</p>
+            <Code codigo={grid.codigo9} typeLan={cssLang}></Code>
+            <p class="parrafo">Aquí, la primera columna tiene un ancho fijo de 100 píxeles, la segunda columna ocupa el 20% del ancho total y la tercera columna ocupa el resto del espacio disponible.</p>
+          </Articlep>
+          <Articlep>
+            <h2 class="title-h2">grid-template-rows</h2>
+            
+            <p class="parrafo">La propiedad grid-template-rows en CSS Grid Layout se utiliza para definir las filas de la cuadrícula. Al igual que grid-template-columns, puedes especificar el tamaño de cada fila individualmente o usar funciones como repeat() para repetir el mismo tamaño varias veces. Aquí hay algunos ejemplos:</p>
+            <p class="parrafo">Definición de filas con tamaños específicos:</p>
+            <Code codigo={grid.codigo10} typeLan={cssLang}></Code>
+            <Addimagen direccion="../public/assets/grid_t_r_100_200_150.svg"></Addimagen>
+            <p class="parrafo">En este ejemplo, se definen tres filas con alturas específicas: la primera fila tiene 100 píxeles, la segunda 200 píxeles y la tercera 150 píxeles.</p>
+            <p class="parrafo">Uso de la función repeat():</p>
+            <Code codigo={grid.codigo11} typeLan={cssLang}></Code>
+            <p class="parrafo">La función repeat(3, 1fr) crea tres filas, cada una con un tamaño igual. Al igual que en el caso de grid-template-columns, la unidad fr significa "fracción" y distribuirá el espacio disponible de manera equitativa entre las tres filas.</p>
+            <p class="parrafo">Filas con tamaños mixtos y auto:</p>
+            <Code codigo={grid.codigo12} typeLan={cssLang}></Code>
+            <p class="parrafo">En este caso, la primera fila ocupa una fracción del espacio disponible, la segunda fila ocupa el doble de la fracción de la primera, y la tercera fila se ajusta automáticamente al contenido.</p>
+            <p class="parrafo">Uso de valores explícitos y porcentaje:</p>
+            <Code codigo={grid.codigo13} typeLan={cssLang}></Code>
+            <p class="parrafo">Aquí, la primera fila tiene una altura fija de 100 píxeles, la segunda fila ocupa el 20% de la altura total y la tercera fila ocupa el resto del espacio disponible en altura.</p>
+            <p class="parrafo"></p>
+
+        </Articlep>
+    </main>
+</Layout>
