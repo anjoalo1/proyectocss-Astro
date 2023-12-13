@@ -197,8 +197,42 @@ const grid ={
 
     `,
     codigo21:`
+    <div class="grid-container">
+    <div class="item item1">Item 1</div>
+    <div class="item item2">Item 2</div>
+  </div>
     `,
     codigo22:`
+    .grid-container {
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+   /* 4 filas, cada una de 100px de altura */
+  grid-template-columns: repeat(3, 1fr);
+   /* 3 columnas, distribuidas igualmente */
+  gap: 10px;
+   /* Espacio entre las celdas */
+}
+
+.item {
+  border: 1px solid #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.item1 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
     `,
     codigo23:`
     `,
@@ -332,12 +366,31 @@ const grid ={
             <p class="parrafo">A continuación, te muestro un ejemplo:</p>
             <Code codigo={grid.codigo19} typeLan={cssLang}></Code>
             <Addimagen direccion="../../assets/grid-areas-grid.svg"></Addimagen>
-
+            
             <p class="parrafo">En este ejemplo, el contenedor de la cuadrícula (grid-container) tiene tres filas y tres columnas definidas por grid-template-areas. Las áreas se llaman "header", "sidebar", "main" y "footer". Luego, cada elemento secundario (grid-item) se coloca en una de estas áreas utilizando la propiedad grid-area.</p>
             <Code codigo={grid.codigo20} typeLan={htmlLang}></Code>
             <p class="parrafo">En este caso, la cuadrícula se organiza según las áreas definidas, lo que facilita la creación de diseños complejos y su mantenimiento. Si deseas cambiar la disposición, solo necesitas modificar la propiedad grid-template-areas en lugar de ajustar las propiedades de fila y columna de cada elemento individualmente.</p>
             <Addimagen direccion="../../assets/grid-template-areas.svg"></Addimagen>
-            <p class="parrafo"></p>
+          </Articlep>
+          <Articlep>
+            <h2 class="title-h2">grid-row-start, grid-row-end, grid-column-start y grid-column-end</h2>
+            <p class="parrafo">Las propiedades grid-row-start, grid-row-end, grid-column-start y grid-column-end son parte del sistema de diseño de cuadrícula en CSS, específicamente en el módulo Grid Layout. Estas propiedades te permiten definir dónde comienza y termina un elemento en la cuadrícula, tanto en términos de filas como de columnas.</p>
+            <ol class="parrafo">
+              <li><strong>grid-row-start:</strong> Define en qué fila comienza un elemento en la cuadrícula.</li>
+              <li><strong>grid-row-end:</strong> Define en qué fila termina un elemento en la cuadrícula.</li>
+              <li><strong>grid-column-start: </strong>Define en qué columna comienza un elemento en la cuadrícula.</li>
+              <li><strong>grid-column-end:</strong> Define en qué columna termina un elemento en la cuadrícula.</li>
+              
+            </ol>
+            <p class="parrafo">La numeración de filas y columnas comienza desde 1. También puedes utilizar valores como span para indicar cuántas filas o columnas debería abarcar un elemento.</p>
+            <p class="parrafo">Estructura HTML:</p>
+            <Code codigo={grid.codigo21} typeLan={htmlLang}></Code>
+            <p class="parrafo">Archivo CSS</p>
+            <Code codigo={grid.codigo22} typeLan={cssLang}></Code>
+            <p class="parrafo">En este ejemplo, el contenedor .grid-container se define como una cuadrícula con 4 filas y 3 columnas. Se establece un espacio de 10px entre las celdas. Los estilos para los elementos .item definen un borde, un relleno y alineación de texto para mejorar la visualización.</p>
+            <p class="parrafo">Los estilos específicos para cada elemento (.item1 y .item2) aplican las propiedades grid-row-start, grid-row-end, grid-column-start, y grid-column-end para posicionar los elementos en la cuadrícula de manera deseada.</p>
+            <Addimagen direccion="../../assets/grid/grid-col-row.svg"></Addimagen>
+            <p class="parrafo">En este ejemplo, hay dos elementos en una cuadrícula con cuatro filas y tres columnas. El primer elemento (Item 1) comienza en la segunda fila, primera columna y termina en la cuarta fila, tercera columna. El segundo elemento (Item 2) comienza en la primera fila, segunda columna y termina en la segunda fila, cuarta columna.</p>
             <p class="parrafo"></p>
           </Articlep>
         </main>
