@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409 270.23">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #009fe3;
+        stroke: #312783;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        fill: #f39200;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-3 {
+        fill: #95c11f;
+      }
+
+      .cls-6 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-7 {
+        fill: #1d1d1b;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 48px;
+      }
+
+      .cls-4 {
+        fill: #e30613;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" x=".5" y=".5" width="408" height="68.71"/>
+  <rect class="cls-1" x=".5" y="201.03" width="408" height="68.71"/>
+  <rect class="cls-2" x=".5" y="69.21" width="151.06" height="131.76"/>
+  <rect class="cls-3" x="151.56" y="69.21" width="256.94" height="131.76"/>
+  <text class="cls-7" transform="translate(130.42 53.68)"><tspan x="0" y="0">header</tspan></text>
+  <text class="cls-7" transform="translate(128.6 252.99)"><tspan class="cls-6" x="0" y="0">f</tspan><tspan x="13.39" y="0">oo</tspan><tspan class="cls-5" x="66.1" y="0">t</tspan><tspan x="81.7" y="0">er</tspan></text>
+  <text class="cls-7" transform="translate(.5 147.46)"><tspan x="0" y="0">sidebar</tspan></text>
+  <text class="cls-7" transform="translate(231.1 147.46)"><tspan x="0" y="0">main</tspan></text>
+</svg>

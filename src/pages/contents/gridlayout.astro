@@ -100,8 +100,115 @@ const grid ={
 
     `,
     codigo14:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) minmax(200px, 2fr) minmax(150px, 1fr);
+}
+
     `,
     codigo15:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+}
+
+.grid-item {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+    `,
+    codigo16:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: fit-content(100px) 1fr fit-content(200px);
+}
+
+.grid-item {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+    `,
+    codigo17:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.grid-item {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+    `,
+    codigo18:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.grid-item {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+    `,
+    codigo19:`
+    .grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+.grid-item {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+    `,
+    codigo20:`
+    <div class="grid-container">
+  <div class="grid-item header">Header</div>
+  <div class="grid-item sidebar">Sidebar</div>
+  <div class="grid-item main">Main Content</div>
+  <div class="grid-item footer">Footer</div>
+</div>
+
+    `,
+    codigo21:`
+    `,
+    codigo22:`
+    `,
+    codigo23:`
+    `,
+    codigo24:`
+    `,
+    codigo25:`
+    `,
+    codigo226:`
+    `,
+    codigo27:`
     `,
 }
 ---
@@ -171,11 +278,67 @@ const grid ={
             <Code codigo={grid.codigo13} typeLan={cssLang}></Code>
             <p class="parrafo">Aquí, la primera fila tiene una altura fija de 100 píxeles, la segunda fila ocupa el 20% de la altura total y la tercera fila ocupa el resto del espacio disponible en altura.</p>
             <p class="parrafo"></p>
+            
+          </Articlep>
+          
+          <Articlep>
+            <h2 class="title-h2">minmax()</h2>
+            <p class="parrafo">La función minmax() se utiliza para establecer un rango entre un valor mínimo y máximo para el tamaño de una columna o fila en un diseño de cuadrícula. Esta función toma dos argumentos: el valor mínimo y el valor máximo.</p>
+            <p class="parrafo">Ejemplo de uso en una cuadrícula CSS:</p>
+            <Code codigo={grid.codigo14} typeLan={cssLang}></Code>
+            <p class="parrafo">En este ejemplo, las columnas de la cuadrícula tendrán un tamaño mínimo especificado (100px, 200px, 150px) y un tamaño máximo especificado (1fr, 2fr, 1fr).</p>
+            
+          </Articlep>
+          
+          <Articlep>
+            <h2 class="title-h2">max-content</h2>
+            <p class="parrafo">La propiedad max-content en CSS se utiliza en contextos de diseño de cuadrícula (grid) y de diseño de caja (flexbox). Esta propiedad permite establecer el tamaño máximo de un elemento en función de su contenido, es decir, el elemento se expandirá hasta el tamaño máximo necesario para contener todo su contenido sin que haya desbordamiento</p>
+            <p class="parrafo">A continuación, te mostraré un ejemplo de cómo se puede usar max-content en una cuadrícula CSS:</p>
+            <Code codigo={grid.codigo15} typeLan={cssLang}></Code>
+            <p class="parrafo">En este ejemplo, el contenedor de la cuadrícula (grid-container) tiene tres columnas. La primera y la tercera columna se establecen con un tamaño máximo de acuerdo con su contenido, mientras que la segunda columna se expandirá para llenar el espacio restante disponible en el contenedor (1fr indica que debe ocupar una fracción igual del espacio restante).</p>
+            <p class="parrafo">En este ejemplo, las columnas con max-content se expandirán para ajustarse al contenido más largo dentro de esas columnas, mientras que la segunda columna se expandirá para llenar el espacio restante en el contenedor.</p>
+            <p class="parrafo">Recuerda que la propiedad max-content no es compatible con todos los navegadores, especialmente versiones más antiguas. Asegúrate de verificar la compatibilidad del navegador si planeas utilizar esta propiedad en tu proyecto.</p>
+          </Articlep>
+          <Articlep>
+            <h2 class="title-h2">fit-content</h2>
+            <p class="parrafo">La propiedad fit-content en CSS se utiliza en contextos de diseño de cuadrícula (grid) y de diseño de caja (flexbox). Esta propiedad permite establecer el tamaño de un elemento de acuerdo con su contenido, pero limitando ese tamaño al valor máximo especificado. En otras palabras, el tamaño del elemento será el contenido más el espacio adicional necesario para alcanzar el tamaño máximo definido.</p>
+            <p class="parrafo">Aquí tienes una definición y ejemplos de cómo se utiliza fit-content:</p>
+            <Code codigo={grid.codigo16} typeLan={cssLang}></Code>
+            <p class="parrafo">En este ejemplo, el contenedor de la cuadrícula (grid-container) tiene tres columnas. La primera y la tercera columna se ajustan al tamaño de su contenido, pero se limitan a un máximo de 100px y 200px respectivamente, mientras que la segunda columna se expande para ocupar el espacio restante.</p>
+          </Articlep>
+          <Articlep>
+            <h2 class="title-h2">auto-fill</h2>
+            
+            <p class="parrafo">La propiedad auto-fill en CSS se utiliza en combinación con el diseño de cuadrícula (grid) para distribuir automáticamente el número máximo de columnas (o filas) que caben en un contenedor según el tamaño especificado de las columnas (o filas). Esta propiedad es especialmente útil cuando no sabes cuántos elementos vas a tener y quieres que se ajusten automáticamente en el contenedor.</p>
+            <p class="parrafo">Aquí tienes un ejemplo de cómo se puede utilizar auto-fill en una cuadrícula CSS:</p>
+            <Code codigo={grid.codigo17} typeLan={cssLang}></Code>
+            <p class="parrafo">En este ejemplo, el contenedor de la cuadrícula (grid-container) tiene un diseño de cuadrícula con columnas generadas automáticamente utilizando auto-fill. La función repeat(auto-fill, minmax(100px, 1fr)) significa que se crearán tantas columnas como quepan en el contenedor, cada una con un tamaño mínimo de 100px y un tamaño máximo de 1fr (una fracción del espacio disponible).</p>
+          </Articlep>
+          <Articlep>
+            <h2 class="title-h2">auto-fit</h2>
+            <p class="parrafo">La propiedad auto-fit en CSS se utiliza en combinación con el diseño de cuadrícula (grid). Al igual que auto-fill, auto-fit se utiliza para distribuir automáticamente el número máximo de columnas (o filas) que caben en un contenedor según el tamaño especificado de las columnas (o filas). Sin embargo, hay una diferencia clave entre auto-fit y auto-fill.</p>
+            <p class="parrafo">La principal diferencia es cómo manejan el espacio extra o faltante. auto-fill crea todas las filas o columnas posibles, incluso si no hay suficiente contenido para llenarlas todas, lo que puede resultar en filas o columnas vacías. Por otro lado, auto-fit solo crea filas o columnas según sea necesario para llenar el contenedor. Si hay espacio extra, auto-fit se ajusta para llenar ese espacio sin crear filas o columnas adicionales vacías.</p>
+            <p class="parrafo">Aquí tienes un ejemplo de cómo se puede utilizar auto-fit en una cuadrícula CSS:</p>
+            <Code codigo={grid.codigo18} typeLan={cssLang}></Code>
+            <p class="parrafo">En este ejemplo, el contenedor de la cuadrícula (grid-container) utiliza auto-fit en lugar de auto-fill. La función repeat(auto-fit, minmax(100px, 1fr)) significa que se crearán tantas columnas como sea necesario para llenar el contenedor, cada una con un tamaño mínimo de 100px y un tamaño máximo de 1fr.</p>
+            <p class="parrafo">Si hay más espacio disponible, las columnas se expandirán automáticamente para llenar ese espacio, sin crear columnas adicionales vacías. Esto es útil cuando deseas que la cuadrícula se ajuste automáticamente al espacio disponible sin crear filas o columnas innecesarias.</p>
+          </Articlep>
+          
+          <Articlep>
+            <h2 class="title-h2">grid-template-areas</h2>
+            
+            <p class="parrafo">La propiedad grid-template-areas en CSS se utiliza en el diseño de cuadrículas (grid) para asignar nombres a áreas específicas dentro de la cuadrícula. Esto facilita la definición de la disposición de los elementos en la cuadrícula mediante la asignación de nombres a las áreas y luego utilizando esos nombres en la propiedad grid-area de los elementos secundarios.</p>
+            <p class="parrafo">La sintaxis de grid-template-areas implica especificar una cadena de caracteres que representa la disposición de las áreas en filas y columnas. Cada área se nombra y se representa por una cadena. Los puntos (.) se utilizan para indicar celdas vacías.</p>
+            <p class="parrafo">A continuación, te muestro un ejemplo:</p>
+            <Code codigo={grid.codigo19} typeLan={cssLang}></Code>
+            <Addimagen direccion="../../assets/grid-areas-grid.svg"></Addimagen>
 
-        </Articlep>
-
-        <Articlep>
-          <h2 class="title-h2">minmax()</h2>
-        </Articlep>
-    </main>
-</Layout>
+            <p class="parrafo">En este ejemplo, el contenedor de la cuadrícula (grid-container) tiene tres filas y tres columnas definidas por grid-template-areas. Las áreas se llaman "header", "sidebar", "main" y "footer". Luego, cada elemento secundario (grid-item) se coloca en una de estas áreas utilizando la propiedad grid-area.</p>
+            <Code codigo={grid.codigo20} typeLan={htmlLang}></Code>
+            <p class="parrafo">En este caso, la cuadrícula se organiza según las áreas definidas, lo que facilita la creación de diseños complejos y su mantenimiento. Si deseas cambiar la disposición, solo necesitas modificar la propiedad grid-template-areas en lugar de ajustar las propiedades de fila y columna de cada elemento individualmente.</p>
+            <Addimagen direccion="../../assets/grid-template-areas.svg"></Addimagen>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+          </Articlep>
+        </main>
+      </Layout>
