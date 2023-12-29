@@ -36,6 +36,12 @@ const { title } = Astro.props;
 	<body>
 		<Header></Header>
 		<Sectionimage></Sectionimage>
+		<div class="presentation-course">
+			<div>
+				<h1 class="presentation-h1">Curso de CSS</h1>
+				<p class="parrafo">Aprende las nociones de aplicar estilos a tus paginas web.</p>
+			</div>
+		</div>
 		
 		<div class="container-grid">
 				
@@ -69,6 +75,22 @@ const { title } = Astro.props;
 		max-width: 900px;
 		margin: 0 auto;
 
+	}
+
+	.presentation-course{
+		background-color: #252832;
+		padding: 50px 100px;
+		margin-bottom: 20px;
+	}
+
+	.presentation-course>div{
+		margin: 0  auto;
+		width: 50%;
+		
+	}
+
+	.presentation-h1{
+		font-size: 3rem;
 	}
 	
 
