@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1_copia" data-name="Capa 1 copia" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583.59 703.25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e94e1b;
+      }
+
+      .cls-2 {
+        fill: #878787;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #d60b52;
+      }
+
+      .cls-4 {
+        fill: #008d36;
+      }
+
+      .cls-5 {
+        font-size: 14px;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #1d1d1b;
+      }
+
+      .cls-5, .cls-7 {
+        font-family: Verdana-Bold, Verdana;
+        font-weight: 700;
+      }
+
+      .cls-7 {
+        font-size: 18px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="1.12" y="32.1" width="437.85" height="181.14" rx="9.82" ry="9.82"/>
+  <g>
+    <rect class="cls-3" x="16.32" y="48.83" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(34.04 79.22)"><tspan x="0" y="0">Item 1</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-3" x="313.82" y="48.83" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(331.55 79.22)"><tspan x="0" y="0">Item 4</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-3" x="407" y="48.83" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(424.73 79.22)"><tspan x="0" y="0">Item 5</tspan></text>
+  </g>
+  <rect class="cls-3" x="114.3" y="48.83" width="80.12" height="51.53"/>
+  <text class="cls-5" transform="translate(132.02 79.22)"><tspan x="0" y="0">Item 2</tspan></text>
+  <rect class="cls-3" x="215.77" y="48.83" width="80.12" height="51.53"/>
+  <text class="cls-5" transform="translate(233.49 79.22)"><tspan x="0" y="0">Item 3</tspan></text>
+  <text class="cls-7" transform="translate(16.32 16.99)"><tspan class="cls-4" x="0" y="0">flex-wrap</tspan><tspan class="cls-6" x="97.58" y="0">: </tspan><tspan class="cls-1" x="110.97" y="0">nowrap</tspan><tspan class="cls-6" x="187.34" y="0">;</tspan></text>
+  <rect class="cls-2" x="1.12" y="277.62" width="437.85" height="181.14" rx="9.82" ry="9.82"/>
+  <g>
+    <rect class="cls-3" x="16.32" y="294.35" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(34.04 324.74)"><tspan x="0" y="0">Item 1</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-3" x="313.82" y="294.35" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(331.55 324.74)"><tspan x="0" y="0">Item 4</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-3" x="16.32" y="360.71" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(34.04 391.09)"><tspan x="0" y="0">Item 5</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-3" x="114.3" y="360.71" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(132.02 391.09) scale(.94 1)"><tspan x="0" y="0">Item 6</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-3" x="500.18" y="48.83" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(517.9 79.22) scale(.94 1)"><tspan x="0" y="0">Item 6</tspan></text>
+  </g>
+  <rect class="cls-3" x="114.3" y="294.35" width="80.12" height="51.53"/>
+  <text class="cls-5" transform="translate(132.02 324.74)"><tspan x="0" y="0">Item 2</tspan></text>
+  <rect class="cls-3" x="215.77" y="294.35" width="80.12" height="51.53"/>
+  <text class="cls-5" transform="translate(233.49 324.74)"><tspan x="0" y="0">Item 3</tspan></text>
+  <text class="cls-7" transform="translate(16.32 265.35)"><tspan class="cls-4" x="0" y="0">flex-wrap</tspan><tspan class="cls-6" x="97.58" y="0">: </tspan><tspan class="cls-1" x="110.97" y="0">wrap</tspan><tspan class="cls-6" x="162.16" y="0">;</tspan></text>
+  <rect class="cls-2" x=".5" y="521.6" width="437.85" height="181.14" rx="9.82" ry="9.82"/>
+  <g>
+    <rect class="cls-3" x="21.69" y="618.9" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(39.41 649.29)"><tspan x="0" y="0">Item 1</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-3" x="319.19" y="618.9" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(336.91 649.29)"><tspan x="0" y="0">Item 4</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-3" x="21.69" y="542.98" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(39.41 573.37)"><tspan x="0" y="0">Item 5</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-3" x="119.66" y="542.98" width="80.12" height="51.53"/>
+    <text class="cls-5" transform="translate(137.39 573.37) scale(.94 1)"><tspan x="0" y="0">Item 6</tspan></text>
+  </g>
+  <rect class="cls-3" x="119.66" y="618.9" width="80.12" height="51.53"/>
+  <text class="cls-5" transform="translate(137.39 649.29)"><tspan x="0" y="0">Item 2</tspan></text>
+  <rect class="cls-3" x="221.13" y="618.9" width="80.12" height="51.53"/>
+  <text class="cls-5" transform="translate(238.86 649.29)"><tspan x="0" y="0">Item 3</tspan></text>
+  <text class="cls-7" transform="translate(15.7 509.34)"><tspan class="cls-4" x="0" y="0">flex-wrap</tspan><tspan class="cls-6" x="97.58" y="0">: </tspan><tspan class="cls-1" x="110.97" y="0">wrap-reverse</tspan><tspan class="cls-6" x="246.93" y="0">;</tspan></text>
+</svg>

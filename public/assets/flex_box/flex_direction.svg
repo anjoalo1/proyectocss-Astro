@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 572.44 637.92">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #36a9e1;
+      }
+
+      .cls-2 {
+        fill: #9d9d9c;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3, .cls-5, .cls-6 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-7 {
+        fill: #e94e1b;
+      }
+
+      .cls-3 {
+        fill: #878787;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #36a9e1;
+        stroke-width: 2px;
+      }
+
+      .cls-5 {
+        fill: #d60b52;
+      }
+
+      .cls-8 {
+        fill: #008d36;
+      }
+
+      .cls-6, .cls-9, .cls-10 {
+        fill: #1d1d1b;
+      }
+
+      .cls-9 {
+        font-size: 14px;
+      }
+
+      .cls-9, .cls-11 {
+        font-family: Verdana-Bold, Verdana;
+        font-weight: 700;
+      }
+
+      .cls-11 {
+        font-size: 18px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" x="23.87" y="51.11" width="320.76" height="85" rx="9.82" ry="9.82"/>
+  <rect class="cls-5" x="38.7" y="67.84" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(56.42 98.23)"><tspan x="0" y="0">Item 1</tspan></text>
+  <rect class="cls-5" x="137.05" y="67.84" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(154.78 98.23)"><tspan x="0" y="0">Item 2</tspan></text>
+  <rect class="cls-5" x="238.52" y="67.84" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(256.25 98.23)"><tspan x="0" y="0">Item 3</tspan></text>
+  <rect class="cls-2" x="23.87" y="217.83" width="320.76" height="85" rx="9.82" ry="9.82"/>
+  <rect class="cls-5" x="40.11" y="234.57" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(57.83 264.95) scale(.97 1)"><tspan x="0" y="0">Item 3</tspan></text>
+  <rect class="cls-5" x="138.46" y="234.57" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(156.19 264.95)"><tspan x="0" y="0">Item 2</tspan></text>
+  <rect class="cls-5" x="239.93" y="234.57" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(257.66 264.95)"><tspan x="0" y="0">Item 1</tspan></text>
+  <rect class="cls-6" x="62.18" y="473.85" width="232" height="95.15" rx="9.82" ry="9.82" transform="translate(699.6 343.24) rotate(90)"/>
+  <rect class="cls-6" x="250.13" y="469.96" width="232" height="95.15" rx="9.82" ry="9.82" transform="translate(883.67 151.4) rotate(90)"/>
+  <rect class="cls-5" x="138.12" y="426.24" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(155.84 456.63)"><tspan x="0" y="0">Item 1</tspan></text>
+  <rect class="cls-5" x="138.12" y="497.54" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(155.84 527.92)"><tspan x="0" y="0">Item 2</tspan></text>
+  <rect class="cls-5" x="138.12" y="568.83" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(155.84 599.22)"><tspan x="0" y="0">Item 3</tspan></text>
+  <rect class="cls-5" x="326.08" y="418.01" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(343.8 448.39)"><tspan x="0" y="0">Item 3</tspan></text>
+  <rect class="cls-5" x="326.08" y="489.3" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(343.8 519.69)"><tspan x="0" y="0">Item 2</tspan></text>
+  <rect class="cls-5" x="326.08" y="560.59" width="80.12" height="51.53"/>
+  <text class="cls-9" transform="translate(343.8 590.98)"><tspan x="0" y="0">Item 1</tspan></text>
+  <text class="cls-11" transform="translate(38.7 15.54)"><tspan class="cls-8" x="0" y="0">flex-direction</tspan><tspan class="cls-10" x="136.15" y="0">: </tspan><tspan class="cls-7" x="149.55" y="0">row</tspan><tspan class="cls-10" x="188.48" y="0">;</tspan></text>
+  <text class="cls-11" transform="translate(0 388.56)"><tspan class="cls-8" x="0" y="0">flex-direction</tspan><tspan class="cls-10" x="136.15" y="0">: </tspan><tspan class="cls-7" x="149.55" y="0">column</tspan><tspan class="cls-10" x="223.34" y="0">;</tspan></text>
+  <text class="cls-11" transform="translate(257.09 388.56)"><tspan class="cls-8" x="0" y="0">flex-direction</tspan><tspan class="cls-10" x="136.15" y="0">: </tspan><tspan class="cls-7" x="149.55" y="0">column-reverse</tspan><tspan class="cls-10" x="308.11" y="0">;</tspan></text>
+  <text class="cls-11" transform="translate(40.11 182.87)"><tspan class="cls-8" x="0" y="0">flex-direction</tspan><tspan class="cls-10" x="136.15" y="0">: </tspan><tspan class="cls-7" x="149.55" y="0">row-reverse</tspan><tspan class="cls-10" x="273.25" y="0">;</tspan></text>
+  <g>
+    <line class="cls-4" x1="31.4" y1="37.63" x2="300.1" y2="37.63"/>
+    <path class="cls-1" d="m286.43,47.23c-.3-.46-.16-1.08.31-1.38l12.9-8.22-12.9-8.22c-.47-.3-.61-.92-.31-1.38.3-.46.92-.6,1.38-.31l14.23,9.06c.29.18.46.5.46.84s-.18.66-.46.84l-14.23,9.06c-.17.11-.35.16-.54.16-.33,0-.65-.16-.85-.46Z"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="42.28" y1="204.42" x2="311.22" y2="204.42"/>
+    <polygon class="cls-1" points="48.91 212.6 50.27 211.13 43.05 204.42 50.27 197.71 48.91 196.24 40.11 204.42 48.91 212.6"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="242.04" y1="634.01" x2="242.04" y2="410.43"/>
+    <polygon class="cls-1" points="250.22 627.38 248.75 626.02 242.04 633.24 235.33 626.02 233.86 627.38 242.04 636.18 250.22 627.38"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="430.67" y1="408.98" x2="430.67" y2="632.56"/>
+    <polygon class="cls-1" points="422.49 415.61 423.95 416.97 430.67 409.75 437.38 416.97 438.85 415.61 430.67 406.81 422.49 415.61"/>
+  </g>
+</svg>

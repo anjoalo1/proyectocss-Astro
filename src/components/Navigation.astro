@@ -1,42 +1,57 @@
-<div>
-    <details>
-        <summary class="summary-left">
-            <a>Contenido Del Curso</a>
-        </summary>
-        <ul class="ul-summary">
-            <li><a href="/">¿Qué es CSS?</a></li>
-            <li><a href="/contents/selectores">Selectores</a></li>
-            <li><a href="/contents/especificidad">Especificidad</a></li>
 
-           <li><a href="/contents/boxmodel">Box model</a></li>
-           <li><a href="/contents/unidades">Unidades</a></li>
-           <li><a href="/contents/colors">Colores</a></li>
-           <li><a href="/contents/positioning">Pocicionamiento</a></li>
-           <li><a href="/contents/gridlayout">Grid Layout</a></li>
-           <li><a href="/contents/flexbox">Flex-box</a></li>
-           <!-- 1 <li><a href="./pages/varoper.html">Variables y Tipos de Operadores</a></li>
-            <li><a href="./pages/estructuras.html">Estructuras de control</a></li>
-            <li><a href="./pages/funciones.html">Funciones</a></li>
-            <li><a href="#">Eventos</a></li>
-            <li><a href="#">Clases y objetos</a></li>
-            <li><a href="#">DOM</a></li>
-            <li><a href="#">Asincronía y Callbacks</a></li>
-            <li><a href="#">APIs y JSON</a></li> -->
-        </ul>
-    </details>
+<div class="container-navigation">
+    <div class="container-absolute">
+        <details>
+            <summary class="summary-left">
+                <!-- <img src="../../public/assets//icons/icon_navigation.svg" height="40px"> -->
+                <img src="../../public/assets//icons/icon_navigation2.svg" height="40px">
+            </summary>
+            <ul class="ul-summary">
+                <li>
+                    <div>Contenido</div>
+                </li>
+                <li><a href="/">¿Qué es CSS?</a></li>
+                <li><a href="/contents/selectores">Selectores</a></li>
+                <li><a href="/contents/especificidad">Especificidad</a></li>
+                
+                <li><a href="/contents/boxmodel">Box model</a></li>
+                <li><a href="/contents/unidades">Unidades</a></li>
+                <li><a href="/contents/colors">Colores</a></li>
+                <li><a href="/contents/positioning">Pocicionamiento</a></li>
+                <li><a href="/contents/gridlayout">Grid Layout</a></li>
+                <li><a href="/contents/flexbox">Flex-box</a></li>
+            </ul>
+        </details>
+    </div>
 </div>
-
+    
 
 <style>
+    .container-navigation{
+        width: auto;
+        position: sticky;
+        top: 5px;
+        z-index: 999;
+    }
+    
+    .container-absolute{
+        position: absolute;
+    }
+    .contenido{
+        display: none;
+    }
+
     details{
-    background: rgb(63, 58, 58);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+        width: 250px;
+    background: rgba(63, 58, 58, 0);
+    /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
 }
 
 
 details[open] summary ~ *{
     animation: load 0.8s ease-in-out;
+    background: rgba(72, 67, 67, 0.671);
 }
 
 
@@ -46,21 +61,34 @@ details[open] summary ~ *{
 }
 
 .summary-left{
+    width: 40px;
+    height: 40px;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
     color: rgb(166, 76, 15);
     list-style-type: none;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 1rem;
-    background: #02020233; 
+    /* border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
+    padding: 15px;
+
+    background: #220d2100; 
     cursor: pointer;
     transition: 0.5s;
+    border-radius: 50%;
+    z-index: 1000;
+}
+.summary-left:hover{
+    /* background-color: rgb(252, 252, 252); */
+    outline: 5px solid green;
+    
+    
 }
 
 .ul-summary{
-    padding: 0 10px 20px;
+    padding: 10px 10px 20px;
+    border: 1px solid rgb(30, 6, 6);
+    outline: 1px solid;
 }
 
 
@@ -71,7 +99,7 @@ details ul li{
     /* border-top: 1px solid grey; */
     font-weight: bold;
     font-size: 1.2rem;
-    margin: 5px;
+    /* margin: 5px; */
     padding: 5px;
     padding: 0 0;
     cursor: pointer;
@@ -83,6 +111,10 @@ details ul li{
 ul li>a{
     display: block;
     padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid grey;
+    margin: 5px 0;
+    color: rgb(130, 31, 31);
 }
 
 
@@ -91,4 +123,7 @@ ul li>a{
   details ul li>a:hover{
     background-color: rgb(31, 19, 10);
   }
+
+
+
 </style>

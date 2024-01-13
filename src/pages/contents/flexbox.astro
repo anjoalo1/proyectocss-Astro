@@ -46,8 +46,42 @@ const codigos ={
   flex-direction: row;
 }
     `,
-    codigo3:``,
-    codigo4:``,
+    codigo3:`
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+</div>
+
+</body>
+</html>
+    `,
+    codigo4:`
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+       /* Puedes cambiar este valor para ver cómo afecta la disposición */
+      border: 1px solid #ccc;
+    }
+
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 5px;
+    }
+    `,
     codigo5:``,
     codigo6:``,
     codigo7:``,
@@ -92,6 +126,10 @@ const codigos ={
     <Articlep>
         <h2 class="title-h2">flex-direction</h2>
         <p class="parrafo">La propiedad flex-direction en Flexbox define la dirección principal en la que los elementos hijos de un contenedor flexible se colocan. Esta propiedad controla si los elementos se colocan en una fila (row), en una columna (column), en una fila inversa (row-reverse), o en una columna inversa (column-reverse).</p>
+
+        <p class="parrafo">sintaxix</p>
+        <Code codigo={codigos.codigo2} typeLan={cssLang}></Code>
+
         <p class="parrafo">Aquí están los valores posibles de la propiedad flex-direction:</p>
         <p class="parrafo">row (por defecto): Los elementos se colocan en una fila de izquierda a derecha.</p>
         <Code codigo={codigos.codigo2} typeLan={cssLang}></Code>
@@ -99,10 +137,39 @@ const codigos ={
         <p class="parrafo">column: Los elementos se colocan en una columna de arriba hacia abajo.</p>
         <p class="parrafo">column-reverse: Los elementos se colocan en una columna de abajo hacia arriba.</p>
         <p class="parrafo"></p>
+        
+        <Addimagen direccion="../../assets/flex_box/flex_direction.svg"></Addimagen>
         <!--Code codigo={grid.codigo1} typeLan={cssLang}></Code>
-
+          
+          <Code codigo={grid.codigo2} typeLan={htmlLang}></Code>-->
+        </Articlep>
+        
+        <Articlep>
+          <h2 class="title-h2">flex-wrap</h2>
+          <p class="parrafo">La propiedad flex-wrap es una propiedad de CSS que se utiliza en el modelo de diseño flexible (Flexbox) para controlar si los elementos flexibles (flex items) deben envolverse en múltiples líneas o no. Esta propiedad especifica si el contenedor flexible debe permitir que los elementos flexibles se dispongan en una sola línea o en varias líneas.</p>
+          <ul class="parrafo">
+            <li><strong>nowrap:</strong> Los elementos flexibles se disponen en una sola línea, lo que significa que no se permitirá que se envuelvan en varias líneas.</li>
+            <li><strong>wrap:</strong> Los elementos flexibles se disponen en varias líneas según sea necesario.</li>
+            <li><strong>wrap-reverse:</strong> Los elementos flexibles se disponen en varias líneas, pero en dirección opuesta.</li>
+          </ul>
+          <Code codigo={codigos.codigo3} typeLan={htmlLang}></Code>
+          <Code codigo={codigos.codigo4} typeLan={cssLang}></Code>
+          <p class="parrafo">En este ejemplo, el contenedor .flex-container tiene la propiedad flex-wrap establecida en wrap, lo que permite que los elementos flexibles se envuelvan en varias líneas si el espacio es insuficiente en una sola línea. Puedes cambiar el valor de flex-wrap a nowrap o wrap-reverse para ver cómo afecta la disposición de los elementos flexibles.</p>
+          <Addimagen direccion="../../assets/flex_box/flex_wrap.svg"></Addimagen>
+          <p class="parrafo"></p>
+          <p class="parrafo"></p>
+          <!--Code codigo={grid.codigo1} typeLan={cssLang}></Code>
+            
             <Code codigo={grid.codigo2} typeLan={htmlLang}></Code>-->
-    </Articlep>
+          </Articlep>
+          <Articlep>
+            <h2 class="title-h2">f</h2>
+      <p class="parrafo"></p>
+      <p class="parrafo"></p>
+      <!--Code codigo={grid.codigo1} typeLan={cssLang}></Code>
+        
+          <Code codigo={grid.codigo2} typeLan={htmlLang}></Code>-->
+  </Articlep>
 
 </Layout>
 

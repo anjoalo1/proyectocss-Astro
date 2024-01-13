@@ -9,11 +9,18 @@ interface Props {
     typeLan: string;
 }
 
+
+
+
+
+
+
 const { codigo, typeLan } = Astro.props;
 ---
 
 
 <div class="code-css">
+    <button  class="boton-copiar">copiar</button>
     <pre>
         <code  class={typeLan}>
          {codigo}
@@ -21,6 +28,28 @@ const { codigo, typeLan } = Astro.props;
       </pre>
 </div>
 
+<script>
+ const botoncopiar = document.querySelectorAll('.boton-copiar');
+
+ botoncopiar.forEach((button) => {
+    button.addEventListener('click', (e)=>{
+       
+        let copiar = button.nextElementSibling.textContent;            
+        
+        const copiarContenido = async () => {
+            try {
+              await navigator.clipboard.writeText(`${copiar}`);
+            } catch (err) {
+              console.error('Error al copiar: ', err);
+            }
+          }
+
+  copiarContenido();
+
+    });
+});
+
+</script>
 
 
 
@@ -28,6 +57,13 @@ const { codigo, typeLan } = Astro.props;
 
 
 <style>
+
+    .boton-copiar{
+        position:absolute;
+        z-index: 999;
+        right: 5px;
+        top: 5px;
+    }
 
  pre{
         overflow: auto;
@@ -40,6 +76,7 @@ const { codigo, typeLan } = Astro.props;
 
 
     .code-css{
+        position: relative;
         min-width: none;
         max-width: 800px;
         font-size: 1rem;
