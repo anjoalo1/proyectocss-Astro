@@ -9,46 +9,85 @@ interface Props {
     typeLan: string;
 }
 
-
-
-
-
-
-
 const { codigo, typeLan } = Astro.props;
+
+
+
+
+
+
 ---
 
 
 <div class="code-css">
-    <button  class="boton-copiar">copiar</button>
+    <button  class="boton-copiar">
+        
+   <span>
+    <img src="../../public/assets/icon_copy/icon_copy.svg" width="20px"></img>
+   </span>
+    </button>
     <pre>
         <code  class={typeLan}>
          {codigo}
         </code>
       </pre>
+    <div class="modal-code">
+      <p>Element Copied</p>
+    </div>
+  
 </div>
 
 <script>
- const botoncopiar = document.querySelectorAll('.boton-copiar');
+  
+const botoncopiar = document.querySelectorAll('.boton-copiar');
+const modal = document.querySelectorAll('.modal-code');
 
- botoncopiar.forEach((button) => {
-    button.addEventListener('click', (e)=>{
+
+//let verTag = document.querySelectorAll('.modal-code')
+
+function delayDe5Segundos() {
+ console.log("Inicio de la función");
+ // Utiliza setTimeout para crear un retraso de 5 segundos (5000 milisegundos)
+ setTimeout(function () {
+   console.log("Finalización de la función después de 5 segundos");
+ 
+   // Coloca aquí el código que deseas ejecutar después del retraso
+ }, 5000);
+}
+
+
+botoncopiar.forEach((button) => {
+   button.addEventListener('click', (e)=>{
+      
+       let copiar = button.nextElementSibling.textContent;
+       let copiaModal = button.parentElement.lastElementChild;
        
-        let copiar = button.nextElementSibling.textContent;            
-        
-        const copiarContenido = async () => {
-            try {
-              await navigator.clipboard.writeText(`${copiar}`);
-            } catch (err) {
-              console.error('Error al copiar: ', err);
-            }
-          }
+       console.log(copiaModal.classList.replace("modal-code", "show-modal-code"));
 
-  copiarContenido();
+       const copiarContenido = async () => {
+           try {
+             await navigator.clipboard.writeText(`${copiar}`);
+             
+             delayDe5Segundos();
+             
+             setTimeout(function () {
+               // Coloca aquí el código que deseas ejecutar después del retraso
+               copiaModal.classList.replace("show-modal-code", "modal-code");
+                }, 2000);
 
-    });
+             
+           } catch (err) {
+             console.error('Error al copiar: ', err);
+           }
+         }
+
+ copiarContenido();
+
+
+   });
 });
 
+ 
 </script>
 
 
@@ -59,10 +98,42 @@ const { codigo, typeLan } = Astro.props;
 <style>
 
     .boton-copiar{
+        background-color: transparent;
         position:absolute;
         z-index: 999;
         right: 5px;
         top: 5px;
+        padding: 0;
+        margin: 0;
+        border: 0px;
+        
+    }
+    
+    img:hover{
+        filter: invert(1);
+        transform: scale: (1.5);;
+    }
+
+    .modal-code{
+      display: none;
+      
+    }
+
+    .show-modal-code{
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      background-color: rgb(0, 0,255,0.1);
+      /* padding: 5px; */
+      font-size: 16px;
+      border-radius: 5px;
+      color: red;
+      font-weight: bold;
+      width: auto;
+
+      padding: 0;
+      animation: load 0.3s ease-in-out;
     }
 
  pre{
@@ -73,18 +144,17 @@ const { codigo, typeLan } = Astro.props;
         font-size: 1rem;
     }
 
-
-
     .code-css{
         position: relative;
-        min-width: none;
+        min-width: 100px;
         max-width: 800px;
         font-size: 1rem;
     }
 
+    @keyframes load {
+    from{opacity: 0; margin-left: -50px}
+    to{opacity: 0.5; margin-left: 0px}
+}
 
-    
 
-
- 
 </style>

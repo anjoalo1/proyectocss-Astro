@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="grid-auto-flow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560.05 668.54">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #009640;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6, .cls-7 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        font-size: 26.05px;
+      }
+
+      .cls-6, .cls-8, .cls-9 {
+        fill: #1d1d1b;
+      }
+
+      .cls-10 {
+        font-size: 24px;
+      }
+
+      .cls-10, .cls-8 {
+        font-family: Verdana, Verdana;
+      }
+
+      .cls-11 {
+        fill: #e30613;
+      }
+
+      .cls-12 {
+        fill: #009fe3;
+      }
+
+      .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20 {
+        fill: none;
+        stroke-linecap: square;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-13, .cls-17, .cls-18 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-21 {
+        letter-spacing: 0em;
+      }
+
+      .cls-22 {
+        fill: #d60b52;
+      }
+
+      .cls-14 {
+        stroke: #009fe3;
+      }
+
+      .cls-15, .cls-16, .cls-20 {
+        stroke: #9d9d9c;
+      }
+
+      .cls-15, .cls-18 {
+        stroke-dasharray: 0 0 .02 4.96;
+      }
+
+      .cls-7 {
+        fill: #9d9d9c;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-17, .cls-20 {
+        stroke-dasharray: 0 0 .02 4.98;
+      }
+
+      .cls-23 {
+        letter-spacing: .02em;
+      }
+
+      .cls-19 {
+        stroke: #e6007e;
+      }
+
+      .cls-24 {
+        fill: #e6007e;
+      }
+
+      .cls-25 {
+        letter-spacing: .02em;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-22" x="118.39" y="44.38" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-13" points="118.39 44.39 118.39 44.38 118.4 44.38"/>
+      <line class="cls-17" x1="123.38" y1="44.38" x2="250.97" y2="44.38"/>
+      <polyline class="cls-13" points="253.46 44.38 253.47 44.38 253.47 44.39"/>
+      <line class="cls-18" x1="253.47" y1="49.34" x2="253.47" y2="151.34"/>
+      <polyline class="cls-13" points="253.47 153.82 253.47 153.83 253.46 153.83"/>
+      <line class="cls-17" x1="248.48" y1="153.83" x2="120.89" y2="153.83"/>
+      <polyline class="cls-13" points="118.4 153.83 118.39 153.83 118.39 153.82"/>
+      <line class="cls-18" x1="118.39" y1="148.86" x2="118.39" y2="46.87"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-22" x="253.47" y="44.38" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-13" points="253.47 44.39 253.47 44.38 253.48 44.38"/>
+      <line class="cls-17" x1="258.46" y1="44.38" x2="386.05" y2="44.38"/>
+      <polyline class="cls-13" points="388.54 44.38 388.55 44.38 388.55 44.39"/>
+      <line class="cls-18" x1="388.55" y1="49.34" x2="388.55" y2="151.34"/>
+      <polyline class="cls-13" points="388.55 153.82 388.55 153.83 388.54 153.83"/>
+      <line class="cls-17" x1="383.56" y1="153.83" x2="255.97" y2="153.83"/>
+      <polyline class="cls-13" points="253.48 153.83 253.47 153.83 253.47 153.82"/>
+      <line class="cls-18" x1="253.47" y1="148.86" x2="253.47" y2="46.87"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-22" x="118.39" y="153.83" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-13" points="118.39 153.84 118.39 153.83 118.4 153.83"/>
+      <line class="cls-17" x1="123.38" y1="153.83" x2="250.97" y2="153.83"/>
+      <polyline class="cls-13" points="253.46 153.83 253.47 153.83 253.47 153.84"/>
+      <line class="cls-18" x1="253.47" y1="158.79" x2="253.47" y2="260.79"/>
+      <polyline class="cls-13" points="253.47 263.27 253.47 263.28 253.46 263.28"/>
+      <line class="cls-17" x1="248.48" y1="263.28" x2="120.89" y2="263.28"/>
+      <polyline class="cls-13" points="118.4 263.28 118.39 263.28 118.39 263.27"/>
+      <line class="cls-18" x1="118.39" y1="258.31" x2="118.39" y2="156.31"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-22" x="253.47" y="153.83" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-13" points="253.47 153.84 253.47 153.83 253.48 153.83"/>
+      <line class="cls-17" x1="258.46" y1="153.83" x2="386.05" y2="153.83"/>
+      <polyline class="cls-13" points="388.54 153.83 388.55 153.83 388.55 153.84"/>
+      <line class="cls-18" x1="388.55" y1="158.79" x2="388.55" y2="260.79"/>
+      <polyline class="cls-13" points="388.55 263.27 388.55 263.28 388.54 263.28"/>
+      <line class="cls-17" x1="383.56" y1="263.28" x2="255.97" y2="263.28"/>
+      <polyline class="cls-13" points="253.48 263.28 253.47 263.28 253.47 263.27"/>
+      <line class="cls-18" x1="253.47" y1="258.31" x2="253.47" y2="156.31"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-4" x="118.39" y="260.62" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-16" points="118.39 260.63 118.39 260.62 118.4 260.62"/>
+      <line class="cls-20" x1="123.38" y1="260.62" x2="250.97" y2="260.62"/>
+      <polyline class="cls-16" points="253.46 260.62 253.47 260.62 253.47 260.63"/>
+      <line class="cls-15" x1="253.47" y1="265.58" x2="253.47" y2="367.58"/>
+      <polyline class="cls-16" points="253.47 370.06 253.47 370.07 253.46 370.07"/>
+      <line class="cls-20" x1="248.48" y1="370.07" x2="120.89" y2="370.07"/>
+      <polyline class="cls-16" points="118.4 370.07 118.39 370.07 118.39 370.06"/>
+      <line class="cls-15" x1="118.39" y1="365.1" x2="118.39" y2="263.1"/>
+    </g>
+  </g>
+  <text class="cls-6" transform="translate(282.37 108.22)"><tspan class="cls-23" x="0" y="0">I</tspan><tspan class="cls-5" x="6.64" y="0">t</tspan><tspan class="cls-1" x="15.11" y="0">em 2</tspan></text>
+  <text class="cls-6" transform="translate(150.05 107.96)"><tspan class="cls-23" x="0" y="0">I</tspan><tspan class="cls-5" x="6.64" y="0">t</tspan><tspan class="cls-1" x="15.11" y="0">em 1</tspan></text>
+  <text class="cls-6" transform="translate(152.02 221.6)"><tspan class="cls-23" x="0" y="0">I</tspan><tspan class="cls-5" x="6.64" y="0">t</tspan><tspan class="cls-1" x="15.11" y="0">em 3</tspan></text>
+  <text class="cls-6" transform="translate(284.35 215.37)"><tspan class="cls-23" x="0" y="0">I</tspan><tspan class="cls-5" x="6.64" y="0">t</tspan><tspan x="15.11" y="0">em 4</tspan></text>
+  <text class="cls-7" transform="translate(154 324.69) scale(.95 1)"><tspan class="cls-25" x="0" y="0">I</tspan><tspan class="cls-21" x="6.64" y="0">t</tspan><tspan x="15.11" y="0">em 5</tspan></text>
+  <text class="cls-8" transform="translate(268.05 335.14) scale(.95 1)"><tspan x="0" y="0">Elementos adicionales</tspan></text>
+  <text class="cls-10" transform="translate(152.03 20.72)"><tspan class="cls-2" x="0" y="0" xml:space="preserve">  grid</tspan><tspan class="cls-3" x="63.61" y="0">-</tspan><tspan class="cls-2" x="74.27" y="0">auto-flow:</tspan><tspan class="cls-9" x="198.93" y="0"> </tspan><tspan class="cls-11" x="207.36" y="0">row</tspan><tspan class="cls-9" x="251.81" y="0">;</tspan></text>
+  <g>
+    <rect class="cls-12" x="11.18" y="448.14" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-13" points="11.18 448.15 11.18 448.14 11.19 448.14"/>
+      <line class="cls-17" x1="16.18" y1="448.14" x2="143.77" y2="448.14"/>
+      <polyline class="cls-13" points="146.26 448.14 146.27 448.14 146.27 448.15"/>
+      <line class="cls-18" x1="146.27" y1="453.11" x2="146.27" y2="555.1"/>
+      <polyline class="cls-13" points="146.27 557.58 146.27 557.59 146.26 557.59"/>
+      <line class="cls-17" x1="141.27" y1="557.59" x2="13.69" y2="557.59"/>
+      <polyline class="cls-13" points="11.19 557.59 11.18 557.59 11.18 557.58"/>
+      <line class="cls-18" x1="11.18" y1="552.63" x2="11.18" y2="450.63"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-12" x="146.27" y="448.14" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-13" points="146.27 448.15 146.27 448.14 146.28 448.14"/>
+      <line class="cls-17" x1="151.26" y1="448.14" x2="278.85" y2="448.14"/>
+      <polyline class="cls-13" points="281.34 448.14 281.35 448.14 281.35 448.15"/>
+      <line class="cls-18" x1="281.35" y1="453.11" x2="281.35" y2="555.1"/>
+      <polyline class="cls-13" points="281.35 557.58 281.35 557.59 281.34 557.59"/>
+      <line class="cls-17" x1="276.36" y1="557.59" x2="148.77" y2="557.59"/>
+      <polyline class="cls-13" points="146.28 557.59 146.27 557.59 146.27 557.58"/>
+      <line class="cls-18" x1="146.27" y1="552.63" x2="146.27" y2="450.63"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-12" x="11.18" y="557.59" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-13" points="11.18 557.6 11.18 557.59 11.19 557.59"/>
+      <line class="cls-17" x1="16.18" y1="557.59" x2="143.77" y2="557.59"/>
+      <polyline class="cls-13" points="146.26 557.59 146.27 557.59 146.27 557.6"/>
+      <line class="cls-18" x1="146.27" y1="562.56" x2="146.27" y2="664.55"/>
+      <polyline class="cls-13" points="146.27 667.03 146.27 667.04 146.26 667.04"/>
+      <line class="cls-17" x1="141.27" y1="667.04" x2="13.69" y2="667.04"/>
+      <polyline class="cls-13" points="11.19 667.04 11.18 667.04 11.18 667.03"/>
+      <line class="cls-18" x1="11.18" y1="662.08" x2="11.18" y2="560.08"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-12" x="146.27" y="557.59" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-13" points="146.27 557.6 146.27 557.59 146.28 557.59"/>
+      <line class="cls-17" x1="151.26" y1="557.59" x2="278.85" y2="557.59"/>
+      <polyline class="cls-13" points="281.34 557.59 281.35 557.59 281.35 557.6"/>
+      <line class="cls-18" x1="281.35" y1="562.56" x2="281.35" y2="664.55"/>
+      <polyline class="cls-13" points="281.35 667.03 281.35 667.04 281.34 667.04"/>
+      <line class="cls-17" x1="276.36" y1="667.04" x2="148.77" y2="667.04"/>
+      <polyline class="cls-13" points="146.28 667.04 146.27 667.04 146.27 667.03"/>
+      <line class="cls-18" x1="146.27" y1="662.08" x2="146.27" y2="560.08"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-4" x="281.35" y="448.14" width="135.08" height="109.45"/>
+    <g>
+      <polyline class="cls-16" points="281.35 448.15 281.35 448.14 281.36 448.14"/>
+      <line class="cls-20" x1="286.34" y1="448.14" x2="413.93" y2="448.14"/>
+      <polyline class="cls-16" points="416.42 448.14 416.43 448.14 416.43 448.15"/>
+      <line class="cls-15" x1="416.43" y1="453.11" x2="416.43" y2="555.1"/>
+      <polyline class="cls-16" points="416.43 557.58 416.43 557.59 416.42 557.59"/>
+      <line class="cls-20" x1="411.44" y1="557.59" x2="283.85" y2="557.59"/>
+      <polyline class="cls-16" points="281.36 557.59 281.35 557.59 281.35 557.58"/>
+      <line class="cls-15" x1="281.35" y1="552.63" x2="281.35" y2="450.63"/>
+    </g>
+  </g>
+  <text class="cls-6" transform="translate(175.16 511.98)"><tspan class="cls-23" x="0" y="0">I</tspan><tspan class="cls-5" x="6.64" y="0">t</tspan><tspan class="cls-1" x="15.11" y="0">em 3</tspan></text>
+  <text class="cls-6" transform="translate(42.84 511.72)"><tspan class="cls-23" x="0" y="0">I</tspan><tspan class="cls-5" x="6.64" y="0">t</tspan><tspan class="cls-1" x="15.11" y="0">em 1</tspan></text>
+  <text class="cls-6" transform="translate(44.82 625.36)"><tspan class="cls-23" x="0" y="0">I</tspan><tspan class="cls-5" x="6.64" y="0">t</tspan><tspan class="cls-1" x="15.11" y="0">em 2</tspan></text>
+  <text class="cls-6" transform="translate(177.14 619.13)"><tspan class="cls-23" x="0" y="0">I</tspan><tspan class="cls-5" x="6.64" y="0">t</tspan><tspan x="15.11" y="0">em 4</tspan></text>
+  <text class="cls-7" transform="translate(316.97 509.55) scale(.95 1)"><tspan class="cls-25" x="0" y="0">I</tspan><tspan class="cls-21" x="6.64" y="0">t</tspan><tspan x="15.11" y="0">em 5</tspan></text>
+  <text class="cls-8" transform="translate(286.33 597.55) scale(.95 1)"><tspan x="0" y="0">Elementos adicionales</tspan></text>
+  <text class="cls-10" transform="translate(44.82 424.49)"><tspan class="cls-2" x="0" y="0" xml:space="preserve">  grid</tspan><tspan class="cls-3" x="63.61" y="0">-</tspan><tspan class="cls-2" x="74.27" y="0">auto-flow:</tspan><tspan class="cls-9" x="198.93" y="0"> </tspan><tspan class="cls-11" x="207.36" y="0">column</tspan><tspan class="cls-9" x="294.74" y="0">;</tspan></text>
+  <g>
+    <line class="cls-14" x1="446.15" y1="448.84" x2="446.15" y2="535.37"/>
+    <polygon class="cls-12" points="431.19 530.99 446.15 556.9 461.11 530.99 431.19 530.99"/>
+  </g>
+  <g>
+    <line class="cls-19" x1="280.27" y1="291.88" x2="351.92" y2="291.88"/>
+    <polygon class="cls-24" points="347.54 306.83 373.44 291.88 347.54 276.92 347.54 306.83"/>
+  </g>
+</svg>

@@ -82,7 +82,10 @@ const codigos ={
       margin: 5px;
     }
     `,
-    codigo5:``,
+    codigo5:`
+    flex-flow: <flex-direction> <flex-wrap>;
+
+    `,
     codigo6:``,
     codigo7:``,
     codigo8:``,
@@ -120,11 +123,28 @@ const codigos ={
         
         <Code codigo={codigos.codigo1} typeLan={htmlLang}></Code>
         <p class="parrafo">En este ejemplo, el div &lt;class="flex-container"&gt; es el contenedor flexible, y los &lt;div&gt; dentro de él con la clase "flex-item" son los elementos flexibles. El contenedor flexible determina cómo se distribuyen y alinean los elementos hijos según las propiedades de Flexbox que se apliquen a él.</p>
+
+        <div style="display: flex; border: 1px solid #111; background-color: blue; gap: 10px; flex-wrap:wrap; overflow: auto">
+          <div style=" margin: 10px; padding: 20px;border: 1px solid #ccc;">Elemento 1</div>
+        <div style=" margin: 10px; padding: 20px;border: 1px solid #ccc;">Elemento 2</div>
+        <div style=" margin: 10px; padding: 20px;border: 1px solid #ccc;">Elemento 3</div>
+        </div>
     </Articlep>
     
     
     <Articlep>
         <h2 class="title-h2">flex-direction</h2>
+        <table style="width:100%">
+          <caption>flex-direction</caption>
+          <tr>
+            <th>Valores:</th>
+            <td>row, row-reverse, column, column-reverse</td>
+          </tr>
+          <tr>
+            <th>Valor inicial:</th>
+            <td>row</td>
+          </tr>
+        </table>
         <p class="parrafo">La propiedad flex-direction en Flexbox define la dirección principal en la que los elementos hijos de un contenedor flexible se colocan. Esta propiedad controla si los elementos se colocan en una fila (row), en una columna (column), en una fila inversa (row-reverse), o en una columna inversa (column-reverse).</p>
 
         <p class="parrafo">sintaxix</p>
@@ -146,6 +166,17 @@ const codigos ={
         
         <Articlep>
           <h2 class="title-h2">flex-wrap</h2>
+          <table style="width:100%">
+            <caption>flex-wrap</caption>
+            <tr>
+              <th>Valores:</th>
+              <td>nowrap, rap, rap-reverse</td>
+            </tr>
+            <tr>
+              <th>Valor inicial:</th>
+              <td>nowrap</td>
+            </tr>
+          </table>
           <p class="parrafo">La propiedad flex-wrap es una propiedad de CSS que se utiliza en el modelo de diseño flexible (Flexbox) para controlar si los elementos flexibles (flex items) deben envolverse en múltiples líneas o no. Esta propiedad especifica si el contenedor flexible debe permitir que los elementos flexibles se dispongan en una sola línea o en varias líneas.</p>
           <ul class="parrafo">
             <li><strong>nowrap:</strong> Los elementos flexibles se disponen en una sola línea, lo que significa que no se permitirá que se envuelvan en varias líneas.</li>
@@ -162,14 +193,54 @@ const codigos ={
             
             <Code codigo={grid.codigo2} typeLan={htmlLang}></Code>-->
           </Articlep>
+
+
+
+          <Articlep>
+          
+            <h2 class="title-h2">flex-flow</h2>
+            <p class="parrafo">La propiedad flex-flow en CSS es una propiedad abreviada que combina las propiedades flex-direction y flex-wrap. Estas propiedades se utilizan para controlar la dirección de los elementos flexibles en un contenedor y cómo deben envolverse (o no) cuando no hay espacio suficiente.<br>
+              La sintaxis de flex-flow es la siguiente:</p>
+              <Code codigo={codigos.codigo5} typeLan={cssLang}></Code>
+            <p class="parrafo">&lt;flex-direction&gt; especifica la dirección en la que se colocan los elementos flexibles dentro del contenedor y puede ser row, row-reverse, column, o column-reverse.</p>
+            <p class="parrafo">&lt;flex-wrap&gt; especifica si los elementos flexibles deben envolverse o no y puede ser nowrap (sin envoltura), wrap (envoltura normal), o wrap-reverse (envoltura inversa).</p>
+            <p class="parrafo"></p>
+         
+          </Articlep>
+
+
           <Articlep>
             <h2 class="title-h2">f</h2>
-      <p class="parrafo"></p>
-      <p class="parrafo"></p>
-      <!--Code codigo={grid.codigo1} typeLan={cssLang}></Code>
-        
-          <Code codigo={grid.codigo2} typeLan={htmlLang}></Code>-->
-  </Articlep>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <!--Code codigo={grid.codigo1} typeLan={cssLang}></Code>
+            <Code codigo={grid.codigo2} typeLan={htmlLang}></Code>-->
+          </Articlep>
 
 </Layout>
+
+<style>
+  table{
+    border-collapse: collapse;
+  width: 100%;
+  }
+
+  tr{
+    border-collapse: collapse;
+  }
+
+  th{
+    border: 1px solid white;
+    color: black;
+    font-size: 1.5rem;
+    background-color: rgb(132, 28, 63);
+  }
+
+  td{
+    border: 1px solid white;
+    padding: 8px;
+    color: black;
+    font-size: 1.2rem;
+  }
+</style>
 

@@ -283,10 +283,30 @@ const grid ={
 </html>
 
     `,
-    codigo226:`
+    codigo26:`
+    grid-auto-flow: <valor>;
     `,
     codigo27:`
+    .grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 50px 50px;
+  grid-auto-flow: row;
+}
+
     `,
+    codigo28:``,
+    codigo29:``,
+    codigo30:``,
+    codigo31:``,
+    codigo32:``,
+    codigo33:``,
+    codigo34:``,
+    codigo35:``,
+    codigo36:``,
+    codigo37:``,
+    codigo38:``,
+    codigo39:``,
 }
 ---
 
@@ -448,9 +468,26 @@ const grid ={
               .item1 ocupa desde la fila 2 hasta la fila 3 y desde la columna 1 hasta la columna 2.
               .item2 ocupa desde la fila 3 hasta la fila 4 y desde la columna 3 hasta la columna 4.</p>
               <Addimagen direccion="../../assets/grid/shor-cut-grid-row-column.svg"></Addimagen>
-              <p class="parrafo"></p>
-              <p class="parrafo"></p>
-              <p class="parrafo"></p>
+              
             </Articlep>
+            
+            <Articlep>
+              <h2 class="title-h2">grid-auto-flow</h2>
+              <p class="parrafo">La propiedad grid-auto-flow en CSS se utiliza en el contexto de CSS Grid Layout para controlar cómo se colocan los elementos en el grid cuando no hay suficientes celdas explícitas definidas para todos los elementos.</p>
+              <p class="parrafo">La sintaxis básica es:</p>
+              <Code codigo={grid.codigo26} typeLan={cssLang}></Code>
+              <p class="parrafo">Donde <valor> puede ser uno de los siguientes:</p>
+                <p class="parrafo"><strong>row:</strong> Los elementos se colocan en filas, llenando cada fila antes de pasar a la siguiente.</p>
+                <p class="parrafo"><strong>column:</strong> Los elementos se colocan en columnas, llenando cada columna antes de pasar a la siguiente.</p>
+                <p class="parrafo"><strong>dense:</strong> Similar a row o column, pero intenta llenar "huecos" vacíos si es posible.</p>
+                <p class="parrafo">Ejemplo:</p>
+                <Code codigo={grid.codigo27} typeLan={cssLang}></Code>
+                <p class="parrafo">En este ejemplo, se está utilizando un grid con dos columnas y dos filas explícitas, pero si se agregan más elementos de los que pueden caber en esas celdas explícitas, grid-auto-flow: row; especifica que los elementos adicionales se colocarán en filas adicionales.</p>
+                <p class="parrafo">Es importante destacar que grid-auto-flow se aplica solo a los elementos que no se pueden colocar en las celdas explícitas ya definidas en la plantilla del grid.</p>
+                <Addimagen direccion="../../assets/grid/grid-auto-flow.svg"></Addimagen>
+                <p class="parrafo"></p>
+                <p class="parrafo"></p>
+                <p class="parrafo"></p>
+              </Articlep>
         </main>
       </Layout>
