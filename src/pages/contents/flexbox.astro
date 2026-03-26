@@ -86,8 +86,67 @@ const codigos ={
     flex-flow: <flex-direction> <flex-wrap>;
 
     `,
-    codigo6:``,
-    codigo7:``,
+    codigo6:`
+    .galeria {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imagen {
+  width: 200px;
+  margin: 10px;
+}
+    `,
+    codigo7:`
+    /* Sintaxis básica de justify-content */
+.contenedor {
+    display: flex; /* Activa el modelo flexbox */
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | initial | inherit;
+}
+
+/* Descripción de los valores */
+.flex-start { /* Valor por defecto */
+    justify-content: flex-start; 
+    /* Alinea los elementos al inicio del contenedor */
+}
+
+.flex-end {
+    justify-content: flex-end;
+     /* Alinea los elementos al final del contenedor */
+}
+
+.center {
+    justify-content: center;
+     /* Alinea los elementos en el centro del contenedor */
+}
+
+.space-between {
+    justify-content: space-between;
+     /* Distribuye los elementos con espacio entre ellos */
+}
+
+.space-around {
+    justify-content: space-around;
+     /* Distribuye los elementos con espacio alrededor de cada uno */
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+     /* Distribuye los elementos con espacio igual entre ellos y los bordes */
+}
+
+/* Valores globales */
+.initial {
+    justify-content: initial;
+     /* Establece el valor por defecto */
+}
+
+.inherit {
+    justify-content: inherit;
+     /* Hereda el valor del elemento padre */
+}
+
+    `,
     codigo8:``,
     codigo9:``,
     codigo10:``
@@ -210,11 +269,37 @@ const codigos ={
 
 
           <Articlep>
-            <h2 class="title-h2">f</h2>
+            <h2 class="title-h2">¿Cuándo usar flex-flow?</h2>
+            <p class="parrafo">flex-flow es una herramienta muy útil cuando quieres crear diseños flexibles y responsivos. Te permite controlar de manera precisa la distribución de los elementos dentro de un contenedor, adaptándose a diferentes tamaños de pantalla y dispositivos.</p>
+            <h2 class="title-h2">Ejemplo práctico:</h2>
+            <p class="parrafo">Imagina que quieres crear una galería de imágenes que se adapte a diferentes tamaños de pantalla. Puedes utilizar flex-flow para que las imágenes se distribuyan en filas y se envuelvan cuando la pantalla se haga más estrecha.</p>
+            <Code codigo={codigos.codigo6} typeLan={cssLang}></Code>
+            <p class="parrafo">En este caso, las imágenes se distribuirán en filas y se envolverán cuando no quepan más en la línea actual.</p>
             <p class="parrafo"></p>
             <p class="parrafo"></p>
+           
             <!--Code codigo={grid.codigo1} typeLan={cssLang}></Code>
             <Code codigo={grid.codigo2} typeLan={htmlLang}></Code>-->
+          </Articlep>
+
+          <Articlep>
+            <h2 class="title-h2">justify-content</h2>
+            <p class="parrafo">La propiedad justify-content en CSS se utiliza para alinear los elementos flexibles (flex items) dentro del eje principal de un contenedor flex. En otras palabras, define cómo se distribuye el espacio extra entre los elementos cuando estos no ocupan todo el espacio disponible en esa dirección.</p>
+            <h2 class="title-h2">¿Para qué sirve?</h2>
+            <p class="parrafo">La propiedad justify-content se utiliza para alinear los elementos flexibles dentro del contenedor en función de la dirección del eje principal. Esto es esencial para controlar la distribución del espacio disponible entre los elementos flexibles.</p>
+            <h2 class="title-h2">Valores comunes de justify-content:</h2>
+            <p class="parrafo"></p>
+            <p class="parrafo"></p>
+            <p class="parrafo">flex-start: Alinea los elementos al inicio del eje principal.</p>
+            <p class="parrafo">flex-end: Alinea los elementos al final del eje principal.</p>
+            <p class="parrafo">center: Centra los elementos en el eje principal.</p>
+            <p class="parrafo">space-between: Distribuye los elementos uniformemente, con espacios iguales entre ellos y sin espacio al inicio ni al final.</p>
+            <p class="parrafo">space-around: Distribuye los elementos uniformemente, con espacios iguales entre ellos y con la mitad de ese espacio al inicio y al final.</p>
+            <p class="parrafo">space-evenly: Distribuye los elementos uniformemente, con espacios iguales entre todos los elementos, incluidos los extremos.</p>
+            <Code codigo={codigos.codigo7} typeLan={cssLang}></Code>
+            <!--Code codigo={grid.codigo1} typeLan={cssLang}></Code>
+            <Code codigo={grid.codigo2} typeLan={htmlLang}></Code>-->
+            <Addimagen direccion="../../assets/flex_box/justify.svg"></Addimagen>
           </Articlep>
 
 </Layout>

@@ -1,44 +1,33 @@
 ---
-
-
-
-
-
 interface Props {
 	codigo: string;
     typeLan: string;
 }
-
 const { codigo, typeLan } = Astro.props;
-
-
-
-
-
-
 ---
 
 
 <div class="code-css">
-    <button  class="boton-copiar">
+ <!--    <button  class="boton-copiar">
         
    <span>
     <img src="../../public/assets/icon_copy/icon_copy.svg" width="20px"></img>
    </span>
-    </button>
+    </button> -->
     <pre>
-        <code  class={typeLan}>
+        <code   class={typeLan + ' match-braces rainbow-braces no-brace-hover'} data-previewers="color time" data-prismjs-copy="Copy" >
          {codigo}
         </code>
       </pre>
-    <div class="modal-code">
+ <!--    <div class="modal-code">
       <p>Element Copied</p>
-    </div>
+    </div> -->
   
 </div>
 
 <script>
   
+  /*
 const botoncopiar = document.querySelectorAll('.boton-copiar');
 const modal = document.querySelectorAll('.modal-code');
 
@@ -87,7 +76,7 @@ botoncopiar.forEach((button) => {
    });
 });
 
- 
+ */
 </script>
 
 
